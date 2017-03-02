@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "659A164C1E688FB500D26397"
+               BlueprintIdentifier = "650BE41E1E689456001CC0D8"
                BuildableName = "StudyUp.app"
                BlueprintName = "StudyUp"
                ReferencedContainer = "container:StudyUp.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "659A16631E688FB500D26397"
+               BlueprintIdentifier = "650BE4351E689456001CC0D8"
                BuildableName = "StudyUpTests.xctest"
                BlueprintName = "StudyUpTests"
                ReferencedContainer = "container:StudyUp.xcodeproj">
@@ -42,7 +42,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "659A166E1E688FB500D26397"
+               BlueprintIdentifier = "650BE4401E689456001CC0D8"
                BuildableName = "StudyUpUITests.xctest"
                BlueprintName = "StudyUpUITests"
                ReferencedContainer = "container:StudyUp.xcodeproj">
@@ -52,7 +52,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "659A164C1E688FB500D26397"
+            BlueprintIdentifier = "650BE41E1E689456001CC0D8"
             BuildableName = "StudyUp.app"
             BlueprintName = "StudyUp"
             ReferencedContainer = "container:StudyUp.xcodeproj">
@@ -75,7 +75,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "659A164C1E688FB500D26397"
+            BlueprintIdentifier = "650BE41E1E689456001CC0D8"
             BuildableName = "StudyUp.app"
             BlueprintName = "StudyUp"
             ReferencedContainer = "container:StudyUp.xcodeproj">
@@ -94,7 +94,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "659A164C1E688FB500D26397"
+            BlueprintIdentifier = "650BE41E1E689456001CC0D8"
             BuildableName = "StudyUp.app"
             BlueprintName = "StudyUp"
             ReferencedContainer = "container:StudyUp.xcodeproj">

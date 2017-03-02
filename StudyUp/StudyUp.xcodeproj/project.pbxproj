@@ -7,66 +7,66 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		659A16511E688FB500D26397 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659A16501E688FB500D26397 /* AppDelegate.swift */; };
-		659A16531E688FB500D26397 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659A16521E688FB500D26397 /* ViewController.swift */; };
-		659A16561E688FB500D26397 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 659A16541E688FB500D26397 /* Main.storyboard */; };
-		659A16591E688FB500D26397 /* StudyUp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 659A16571E688FB500D26397 /* StudyUp.xcdatamodeld */; };
-		659A165B1E688FB500D26397 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 659A165A1E688FB500D26397 /* Assets.xcassets */; };
-		659A165E1E688FB500D26397 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 659A165C1E688FB500D26397 /* LaunchScreen.storyboard */; };
-		659A16691E688FB500D26397 /* StudyUpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659A16681E688FB500D26397 /* StudyUpTests.swift */; };
-		659A16741E688FB500D26397 /* StudyUpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659A16731E688FB500D26397 /* StudyUpUITests.swift */; };
+		650BE4231E689456001CC0D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650BE4221E689456001CC0D8 /* AppDelegate.swift */; };
+		650BE4251E689456001CC0D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650BE4241E689456001CC0D8 /* ViewController.swift */; };
+		650BE4281E689456001CC0D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 650BE4261E689456001CC0D8 /* Main.storyboard */; };
+		650BE42B1E689456001CC0D8 /* StudyUp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 650BE4291E689456001CC0D8 /* StudyUp.xcdatamodeld */; };
+		650BE42D1E689456001CC0D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 650BE42C1E689456001CC0D8 /* Assets.xcassets */; };
+		650BE4301E689456001CC0D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 650BE42E1E689456001CC0D8 /* LaunchScreen.storyboard */; };
+		650BE43B1E689456001CC0D8 /* StudyUpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650BE43A1E689456001CC0D8 /* StudyUpTests.swift */; };
+		650BE4461E689456001CC0D8 /* StudyUpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650BE4451E689456001CC0D8 /* StudyUpUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		659A16651E688FB500D26397 /* PBXContainerItemProxy */ = {
+		650BE4371E689456001CC0D8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 659A16451E688FB500D26397 /* Project object */;
+			containerPortal = 650BE4171E689456001CC0D8 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 659A164C1E688FB500D26397;
+			remoteGlobalIDString = 650BE41E1E689456001CC0D8;
 			remoteInfo = StudyUp;
 		};
-		659A16701E688FB500D26397 /* PBXContainerItemProxy */ = {
+		650BE4421E689456001CC0D8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 659A16451E688FB500D26397 /* Project object */;
+			containerPortal = 650BE4171E689456001CC0D8 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 659A164C1E688FB500D26397;
+			remoteGlobalIDString = 650BE41E1E689456001CC0D8;
 			remoteInfo = StudyUp;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		659A164D1E688FB500D26397 /* StudyUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		659A16501E688FB500D26397 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		659A16521E688FB500D26397 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		659A16551E688FB500D26397 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		659A16581E688FB500D26397 /* StudyUp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StudyUp.xcdatamodel; sourceTree = "<group>"; };
-		659A165A1E688FB500D26397 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		659A165D1E688FB500D26397 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		659A165F1E688FB500D26397 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		659A16641E688FB500D26397 /* StudyUpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudyUpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		659A16681E688FB500D26397 /* StudyUpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyUpTests.swift; sourceTree = "<group>"; };
-		659A166A1E688FB500D26397 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		659A166F1E688FB500D26397 /* StudyUpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudyUpUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		659A16731E688FB500D26397 /* StudyUpUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyUpUITests.swift; sourceTree = "<group>"; };
-		659A16751E688FB500D26397 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		650BE41F1E689456001CC0D8 /* StudyUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		650BE4221E689456001CC0D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		650BE4241E689456001CC0D8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		650BE4271E689456001CC0D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		650BE42A1E689456001CC0D8 /* StudyUp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StudyUp.xcdatamodel; sourceTree = "<group>"; };
+		650BE42C1E689456001CC0D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		650BE42F1E689456001CC0D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		650BE4311E689456001CC0D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		650BE4361E689456001CC0D8 /* StudyUpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudyUpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		650BE43A1E689456001CC0D8 /* StudyUpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyUpTests.swift; sourceTree = "<group>"; };
+		650BE43C1E689456001CC0D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		650BE4411E689456001CC0D8 /* StudyUpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudyUpUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		650BE4451E689456001CC0D8 /* StudyUpUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyUpUITests.swift; sourceTree = "<group>"; };
+		650BE4471E689456001CC0D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		659A164A1E688FB500D26397 /* Frameworks */ = {
+		650BE41C1E689456001CC0D8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		659A16611E688FB500D26397 /* Frameworks */ = {
+		650BE4331E689456001CC0D8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		659A166C1E688FB500D26397 /* Frameworks */ = {
+		650BE43E1E689456001CC0D8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -76,54 +76,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		659A16441E688FB500D26397 = {
+		650BE4161E689456001CC0D8 = {
 			isa = PBXGroup;
 			children = (
-				659A164F1E688FB500D26397 /* StudyUp */,
-				659A16671E688FB500D26397 /* StudyUpTests */,
-				659A16721E688FB500D26397 /* StudyUpUITests */,
-				659A164E1E688FB500D26397 /* Products */,
+				650BE4211E689456001CC0D8 /* StudyUp */,
+				650BE4391E689456001CC0D8 /* StudyUpTests */,
+				650BE4441E689456001CC0D8 /* StudyUpUITests */,
+				650BE4201E689456001CC0D8 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		659A164E1E688FB500D26397 /* Products */ = {
+		650BE4201E689456001CC0D8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				659A164D1E688FB500D26397 /* StudyUp.app */,
-				659A16641E688FB500D26397 /* StudyUpTests.xctest */,
-				659A166F1E688FB500D26397 /* StudyUpUITests.xctest */,
+				650BE41F1E689456001CC0D8 /* StudyUp.app */,
+				650BE4361E689456001CC0D8 /* StudyUpTests.xctest */,
+				650BE4411E689456001CC0D8 /* StudyUpUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		659A164F1E688FB500D26397 /* StudyUp */ = {
+		650BE4211E689456001CC0D8 /* StudyUp */ = {
 			isa = PBXGroup;
 			children = (
-				659A16501E688FB500D26397 /* AppDelegate.swift */,
-				659A16521E688FB500D26397 /* ViewController.swift */,
-				659A16541E688FB500D26397 /* Main.storyboard */,
-				659A165A1E688FB500D26397 /* Assets.xcassets */,
-				659A165C1E688FB500D26397 /* LaunchScreen.storyboard */,
-				659A165F1E688FB500D26397 /* Info.plist */,
-				659A16571E688FB500D26397 /* StudyUp.xcdatamodeld */,
+				650BE4221E689456001CC0D8 /* AppDelegate.swift */,
+				650BE4241E689456001CC0D8 /* ViewController.swift */,
+				650BE4261E689456001CC0D8 /* Main.storyboard */,
+				650BE42C1E689456001CC0D8 /* Assets.xcassets */,
+				650BE42E1E689456001CC0D8 /* LaunchScreen.storyboard */,
+				650BE4311E689456001CC0D8 /* Info.plist */,
+				650BE4291E689456001CC0D8 /* StudyUp.xcdatamodeld */,
 			);
 			path = StudyUp;
 			sourceTree = "<group>";
 		};
-		659A16671E688FB500D26397 /* StudyUpTests */ = {
+		650BE4391E689456001CC0D8 /* StudyUpTests */ = {
 			isa = PBXGroup;
 			children = (
-				659A16681E688FB500D26397 /* StudyUpTests.swift */,
-				659A166A1E688FB500D26397 /* Info.plist */,
+				650BE43A1E689456001CC0D8 /* StudyUpTests.swift */,
+				650BE43C1E689456001CC0D8 /* Info.plist */,
 			);
 			path = StudyUpTests;
 			sourceTree = "<group>";
 		};
-		659A16721E688FB500D26397 /* StudyUpUITests */ = {
+		650BE4441E689456001CC0D8 /* StudyUpUITests */ = {
 			isa = PBXGroup;
 			children = (
-				659A16731E688FB500D26397 /* StudyUpUITests.swift */,
-				659A16751E688FB500D26397 /* Info.plist */,
+				650BE4451E689456001CC0D8 /* StudyUpUITests.swift */,
+				650BE4471E689456001CC0D8 /* Info.plist */,
 			);
 			path = StudyUpUITests;
 			sourceTree = "<group>";
@@ -131,13 +131,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		659A164C1E688FB500D26397 /* StudyUp */ = {
+		650BE41E1E689456001CC0D8 /* StudyUp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 659A16781E688FB500D26397 /* Build configuration list for PBXNativeTarget "StudyUp" */;
+			buildConfigurationList = 650BE44A1E689456001CC0D8 /* Build configuration list for PBXNativeTarget "StudyUp" */;
 			buildPhases = (
-				659A16491E688FB500D26397 /* Sources */,
-				659A164A1E688FB500D26397 /* Frameworks */,
-				659A164B1E688FB500D26397 /* Resources */,
+				650BE41B1E689456001CC0D8 /* Sources */,
+				650BE41C1E689456001CC0D8 /* Frameworks */,
+				650BE41D1E689456001CC0D8 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -145,75 +145,75 @@
 			);
 			name = StudyUp;
 			productName = StudyUp;
-			productReference = 659A164D1E688FB500D26397 /* StudyUp.app */;
+			productReference = 650BE41F1E689456001CC0D8 /* StudyUp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		659A16631E688FB500D26397 /* StudyUpTests */ = {
+		650BE4351E689456001CC0D8 /* StudyUpTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 659A167B1E688FB500D26397 /* Build configuration list for PBXNativeTarget "StudyUpTests" */;
+			buildConfigurationList = 650BE44D1E689456001CC0D8 /* Build configuration list for PBXNativeTarget "StudyUpTests" */;
 			buildPhases = (
-				659A16601E688FB500D26397 /* Sources */,
-				659A16611E688FB500D26397 /* Frameworks */,
-				659A16621E688FB500D26397 /* Resources */,
+				650BE4321E689456001CC0D8 /* Sources */,
+				650BE4331E689456001CC0D8 /* Frameworks */,
+				650BE4341E689456001CC0D8 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				659A16661E688FB500D26397 /* PBXTargetDependency */,
+				650BE4381E689456001CC0D8 /* PBXTargetDependency */,
 			);
 			name = StudyUpTests;
 			productName = StudyUpTests;
-			productReference = 659A16641E688FB500D26397 /* StudyUpTests.xctest */;
+			productReference = 650BE4361E689456001CC0D8 /* StudyUpTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		659A166E1E688FB500D26397 /* StudyUpUITests */ = {
+		650BE4401E689456001CC0D8 /* StudyUpUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 659A167E1E688FB500D26397 /* Build configuration list for PBXNativeTarget "StudyUpUITests" */;
+			buildConfigurationList = 650BE4501E689456001CC0D8 /* Build configuration list for PBXNativeTarget "StudyUpUITests" */;
 			buildPhases = (
-				659A166B1E688FB500D26397 /* Sources */,
-				659A166C1E688FB500D26397 /* Frameworks */,
-				659A166D1E688FB500D26397 /* Resources */,
+				650BE43D1E689456001CC0D8 /* Sources */,
+				650BE43E1E689456001CC0D8 /* Frameworks */,
+				650BE43F1E689456001CC0D8 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				659A16711E688FB500D26397 /* PBXTargetDependency */,
+				650BE4431E689456001CC0D8 /* PBXTargetDependency */,
 			);
 			name = StudyUpUITests;
 			productName = StudyUpUITests;
-			productReference = 659A166F1E688FB500D26397 /* StudyUpUITests.xctest */;
+			productReference = 650BE4411E689456001CC0D8 /* StudyUpUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		659A16451E688FB500D26397 /* Project object */ = {
+		650BE4171E689456001CC0D8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "SFU Health++";
 				TargetAttributes = {
-					659A164C1E688FB500D26397 = {
+					650BE41E1E689456001CC0D8 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 8687349LQB;
 						ProvisioningStyle = Automatic;
 					};
-					659A16631E688FB500D26397 = {
+					650BE4351E689456001CC0D8 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 8687349LQB;
 						ProvisioningStyle = Automatic;
-						TestTargetID = 659A164C1E688FB500D26397;
+						TestTargetID = 650BE41E1E689456001CC0D8;
 					};
-					659A166E1E688FB500D26397 = {
+					650BE4401E689456001CC0D8 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 8687349LQB;
 						ProvisioningStyle = Automatic;
-						TestTargetID = 659A164C1E688FB500D26397;
+						TestTargetID = 650BE41E1E689456001CC0D8;
 					};
 				};
 			};
-			buildConfigurationList = 659A16481E688FB500D26397 /* Build configuration list for PBXProject "StudyUp" */;
+			buildConfigurationList = 650BE41A1E689456001CC0D8 /* Build configuration list for PBXProject "StudyUp" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -221,37 +221,37 @@
 				en,
 				Base,
 			);
-			mainGroup = 659A16441E688FB500D26397;
-			productRefGroup = 659A164E1E688FB500D26397 /* Products */;
+			mainGroup = 650BE4161E689456001CC0D8;
+			productRefGroup = 650BE4201E689456001CC0D8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				659A164C1E688FB500D26397 /* StudyUp */,
-				659A16631E688FB500D26397 /* StudyUpTests */,
-				659A166E1E688FB500D26397 /* StudyUpUITests */,
+				650BE41E1E689456001CC0D8 /* StudyUp */,
+				650BE4351E689456001CC0D8 /* StudyUpTests */,
+				650BE4401E689456001CC0D8 /* StudyUpUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		659A164B1E688FB500D26397 /* Resources */ = {
+		650BE41D1E689456001CC0D8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				659A165E1E688FB500D26397 /* LaunchScreen.storyboard in Resources */,
-				659A165B1E688FB500D26397 /* Assets.xcassets in Resources */,
-				659A16561E688FB500D26397 /* Main.storyboard in Resources */,
+				650BE4301E689456001CC0D8 /* LaunchScreen.storyboard in Resources */,
+				650BE42D1E689456001CC0D8 /* Assets.xcassets in Resources */,
+				650BE4281E689456001CC0D8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		659A16621E688FB500D26397 /* Resources */ = {
+		650BE4341E689456001CC0D8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		659A166D1E688FB500D26397 /* Resources */ = {
+		650BE43F1E689456001CC0D8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -261,60 +261,60 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		659A16491E688FB500D26397 /* Sources */ = {
+		650BE41B1E689456001CC0D8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				659A16591E688FB500D26397 /* StudyUp.xcdatamodeld in Sources */,
-				659A16531E688FB500D26397 /* ViewController.swift in Sources */,
-				659A16511E688FB500D26397 /* AppDelegate.swift in Sources */,
+				650BE42B1E689456001CC0D8 /* StudyUp.xcdatamodeld in Sources */,
+				650BE4251E689456001CC0D8 /* ViewController.swift in Sources */,
+				650BE4231E689456001CC0D8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		659A16601E688FB500D26397 /* Sources */ = {
+		650BE4321E689456001CC0D8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				659A16691E688FB500D26397 /* StudyUpTests.swift in Sources */,
+				650BE43B1E689456001CC0D8 /* StudyUpTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		659A166B1E688FB500D26397 /* Sources */ = {
+		650BE43D1E689456001CC0D8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				659A16741E688FB500D26397 /* StudyUpUITests.swift in Sources */,
+				650BE4461E689456001CC0D8 /* StudyUpUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		659A16661E688FB500D26397 /* PBXTargetDependency */ = {
+		650BE4381E689456001CC0D8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 659A164C1E688FB500D26397 /* StudyUp */;
-			targetProxy = 659A16651E688FB500D26397 /* PBXContainerItemProxy */;
+			target = 650BE41E1E689456001CC0D8 /* StudyUp */;
+			targetProxy = 650BE4371E689456001CC0D8 /* PBXContainerItemProxy */;
 		};
-		659A16711E688FB500D26397 /* PBXTargetDependency */ = {
+		650BE4431E689456001CC0D8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 659A164C1E688FB500D26397 /* StudyUp */;
-			targetProxy = 659A16701E688FB500D26397 /* PBXContainerItemProxy */;
+			target = 650BE41E1E689456001CC0D8 /* StudyUp */;
+			targetProxy = 650BE4421E689456001CC0D8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		659A16541E688FB500D26397 /* Main.storyboard */ = {
+		650BE4261E689456001CC0D8 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				659A16551E688FB500D26397 /* Base */,
+				650BE4271E689456001CC0D8 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		659A165C1E688FB500D26397 /* LaunchScreen.storyboard */ = {
+		650BE42E1E689456001CC0D8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				659A165D1E688FB500D26397 /* Base */,
+				650BE42F1E689456001CC0D8 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -322,7 +322,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		659A16761E688FB500D26397 /* Debug */ = {
+		650BE4481E689456001CC0D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -372,7 +372,7 @@
 			};
 			name = Debug;
 		};
-		659A16771E688FB500D26397 /* Release */ = {
+		650BE4491E689456001CC0D8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -415,7 +415,7 @@
 			};
 			name = Release;
 		};
-		659A16791E688FB500D26397 /* Debug */ = {
+		650BE44B1E689456001CC0D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -428,7 +428,7 @@
 			};
 			name = Debug;
 		};
-		659A167A1E688FB500D26397 /* Release */ = {
+		650BE44C1E689456001CC0D8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -441,7 +441,7 @@
 			};
 			name = Release;
 		};
-		659A167C1E688FB500D26397 /* Debug */ = {
+		650BE44E1E689456001CC0D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -456,7 +456,7 @@
 			};
 			name = Debug;
 		};
-		659A167D1E688FB500D26397 /* Release */ = {
+		650BE44F1E689456001CC0D8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -471,7 +471,7 @@
 			};
 			name = Release;
 		};
-		659A167F1E688FB500D26397 /* Debug */ = {
+		650BE4511E689456001CC0D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -485,7 +485,7 @@
 			};
 			name = Debug;
 		};
-		659A16801E688FB500D26397 /* Release */ = {
+		650BE4521E689456001CC0D8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -502,53 +502,53 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		659A16481E688FB500D26397 /* Build configuration list for PBXProject "StudyUp" */ = {
+		650BE41A1E689456001CC0D8 /* Build configuration list for PBXProject "StudyUp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				659A16761E688FB500D26397 /* Debug */,
-				659A16771E688FB500D26397 /* Release */,
+				650BE4481E689456001CC0D8 /* Debug */,
+				650BE4491E689456001CC0D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		659A16781E688FB500D26397 /* Build configuration list for PBXNativeTarget "StudyUp" */ = {
+		650BE44A1E689456001CC0D8 /* Build configuration list for PBXNativeTarget "StudyUp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				659A16791E688FB500D26397 /* Debug */,
-				659A167A1E688FB500D26397 /* Release */,
+				650BE44B1E689456001CC0D8 /* Debug */,
+				650BE44C1E689456001CC0D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		659A167B1E688FB500D26397 /* Build configuration list for PBXNativeTarget "StudyUpTests" */ = {
+		650BE44D1E689456001CC0D8 /* Build configuration list for PBXNativeTarget "StudyUpTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				659A167C1E688FB500D26397 /* Debug */,
-				659A167D1E688FB500D26397 /* Release */,
+				650BE44E1E689456001CC0D8 /* Debug */,
+				650BE44F1E689456001CC0D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		659A167E1E688FB500D26397 /* Build configuration list for PBXNativeTarget "StudyUpUITests" */ = {
+		650BE4501E689456001CC0D8 /* Build configuration list for PBXNativeTarget "StudyUpUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				659A167F1E688FB500D26397 /* Debug */,
-				659A16801E688FB500D26397 /* Release */,
+				650BE4511E689456001CC0D8 /* Debug */,
+				650BE4521E689456001CC0D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		659A16571E688FB500D26397 /* StudyUp.xcdatamodeld */ = {
+		650BE4291E689456001CC0D8 /* StudyUp.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				659A16581E688FB500D26397 /* StudyUp.xcdatamodel */,
+				650BE42A1E689456001CC0D8 /* StudyUp.xcdatamodel */,
 			);
-			currentVersion = 659A16581E688FB500D26397 /* StudyUp.xcdatamodel */;
+			currentVersion = 650BE42A1E689456001CC0D8 /* StudyUp.xcdatamodel */;
 			path = StudyUp.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = 659A16451E688FB500D26397 /* Project object */;
+	rootObject = 650BE4171E689456001CC0D8 /* Project object */;
 }
