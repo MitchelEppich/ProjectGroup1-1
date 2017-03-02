@@ -93,11 +93,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Urd-fa-OR4">
+                                <rect key="frame" x="16" y="15" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="LEW-jb-pCL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Urd-fa-OR4" firstAttribute="centerY" secondItem="GZW-La-yv1" secondAttribute="centerY" id="8rb-mk-YjK"/>
                             <constraint firstItem="GZW-La-yv1" firstAttribute="top" secondItem="hvb-wq-SkZ" secondAttribute="bottom" id="TP3-f9-xRw"/>
+                            <constraint firstItem="Urd-fa-OR4" firstAttribute="leading" secondItem="6Zu-NK-k2o" secondAttribute="leadingMargin" id="TkR-RI-5wN"/>
                             <constraint firstItem="GZW-La-yv1" firstAttribute="leading" secondItem="6Zu-NK-k2o" secondAttribute="leadingMargin" constant="149" id="V4f-uK-fNa"/>
+                            <constraint firstItem="Urd-fa-OR4" firstAttribute="top" secondItem="6Zu-NK-k2o" secondAttribute="topMargin" constant="15" id="iDG-1V-7Jd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="GZW-La-yv1" secondAttribute="trailing" constant="150" id="zZb-2k-1CR"/>
                         </constraints>
                     </view>
@@ -124,12 +134,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kIU-fa-Jnl">
+                                <rect key="frame" x="16" y="15" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="xnh-Rx-Vqe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="eg5-fp-pfU" firstAttribute="top" secondItem="PNm-UD-Q9w" secondAttribute="bottom" id="4wH-7P-M9R"/>
                             <constraint firstAttribute="trailingMargin" secondItem="eg5-fp-pfU" secondAttribute="trailing" constant="147" id="AO0-Hy-9wY"/>
+                            <constraint firstItem="kIU-fa-Jnl" firstAttribute="centerY" secondItem="eg5-fp-pfU" secondAttribute="centerY" id="MQc-Bc-B97"/>
                             <constraint firstItem="eg5-fp-pfU" firstAttribute="leading" secondItem="c7C-EZ-hMC" secondAttribute="leadingMargin" constant="147" id="hkG-JK-pLQ"/>
+                            <constraint firstItem="kIU-fa-Jnl" firstAttribute="top" secondItem="c7C-EZ-hMC" secondAttribute="topMargin" constant="15" id="lC5-ma-nM3"/>
+                            <constraint firstItem="kIU-fa-Jnl" firstAttribute="leading" secondItem="c7C-EZ-hMC" secondAttribute="leadingMargin" id="tvw-gj-Ct5"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -155,11 +175,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I79-ex-95p">
+                                <rect key="frame" x="16" y="15" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="YVs-P0-6mU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="COb-FI-nXU" firstAttribute="top" secondItem="yXw-G4-xpE" secondAttribute="bottom" id="ACP-lo-GWH"/>
+                            <constraint firstItem="I79-ex-95p" firstAttribute="leading" secondItem="UQW-Ww-uf2" secondAttribute="leadingMargin" id="EjO-za-RR5"/>
+                            <constraint firstItem="I79-ex-95p" firstAttribute="centerY" secondItem="COb-FI-nXU" secondAttribute="centerY" id="SJi-ru-cfm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="COb-FI-nXU" secondAttribute="trailing" constant="155" id="dG5-Gd-vzF"/>
+                            <constraint firstItem="I79-ex-95p" firstAttribute="top" secondItem="UQW-Ww-uf2" secondAttribute="topMargin" constant="15" id="jnT-fl-qJe"/>
                             <constraint firstItem="COb-FI-nXU" firstAttribute="leading" secondItem="UQW-Ww-uf2" secondAttribute="leadingMargin" constant="154" id="mpM-QB-hF8"/>
                         </constraints>
                     </view>
@@ -186,12 +216,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gl9-T8-UYe">
+                                <rect key="frame" x="23" y="15" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="6Gj-VH-0jw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Y6H-Vl-4od" firstAttribute="leading" secondItem="LVq-Zt-dcp" secondAttribute="leadingMargin" constant="150" id="5gB-Sb-jE2"/>
+                            <constraint firstItem="Gl9-T8-UYe" firstAttribute="centerY" secondItem="Y6H-Vl-4od" secondAttribute="centerY" id="JmF-UP-9sB"/>
+                            <constraint firstItem="Gl9-T8-UYe" firstAttribute="top" secondItem="LVq-Zt-dcp" secondAttribute="topMargin" constant="15" id="MDq-Fa-JiW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Y6H-Vl-4od" secondAttribute="trailing" constant="137" id="YbI-hK-1aW"/>
                             <constraint firstItem="Y6H-Vl-4od" firstAttribute="top" secondItem="NVy-Gf-c1R" secondAttribute="bottom" id="fN0-Dz-CSA"/>
+                            <constraint firstItem="Gl9-T8-UYe" firstAttribute="leading" secondItem="LVq-Zt-dcp" secondAttribute="leadingMargin" constant="7" id="hmx-fm-BFL"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -200,4 +240,7 @@
             <point key="canvasLocation" x="1180" y="-584"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="xnh-Rx-Vqe"/>
+    </inferredMetricsTieBreakers>
 </document>
