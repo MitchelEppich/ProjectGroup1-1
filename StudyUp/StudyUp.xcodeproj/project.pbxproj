@@ -172,17 +172,14 @@
 		650BE4211E689456001CC0D8 /* StudyUp */ = {
 			isa = PBXGroup;
 			children = (
+				65BFBA301E6B3748001630B6 /* Resources */,
+				65BFBA2F1E6B3731001630B6 /* Delegates */,
 				65BFBA1C1E6B32AA001630B6 /* ViewControllers */,
-				650BE4221E689456001CC0D8 /* AppDelegate.swift */,
-				650BE4241E689456001CC0D8 /* ViewController.swift */,
 				650BE4261E689456001CC0D8 /* Main.storyboard */,
 				6565DFDE1E6ACCAD002683F3 /* GeoFire */,
 				650BE42C1E689456001CC0D8 /* Assets.xcassets */,
-				6565DFDC1E6AC9F6002683F3 /* GoogleService-Info.plist */,
 				650BE42E1E689456001CC0D8 /* LaunchScreen.storyboard */,
-				650BE4311E689456001CC0D8 /* Info.plist */,
 				650BE4291E689456001CC0D8 /* StudyUp.xcdatamodeld */,
-				65D668C91E6ACDE2006EDB67 /* StudyUp-Bridging-Header.h */,
 			);
 			path = StudyUp;
 			sourceTree = "<group>";
@@ -247,6 +244,7 @@
 		65BFBA1C1E6B32AA001630B6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				650BE4241E689456001CC0D8 /* ViewController.swift */,
 				65BFBA211E6B32D7001630B6 /* Timer */,
 				65BFBA201E6B32D2001630B6 /* Profile */,
 				65BFBA1F1E6B32CB001630B6 /* Group */,
@@ -294,6 +292,24 @@
 				65BFBA281E6B34F4001630B6 /* TimerViewController.swift */,
 			);
 			name = Timer;
+			sourceTree = "<group>";
+		};
+		65BFBA2F1E6B3731001630B6 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				650BE4221E689456001CC0D8 /* AppDelegate.swift */,
+			);
+			name = Delegates;
+			sourceTree = "<group>";
+		};
+		65BFBA301E6B3748001630B6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6565DFDC1E6AC9F6002683F3 /* GoogleService-Info.plist */,
+				65D668C91E6ACDE2006EDB67 /* StudyUp-Bridging-Header.h */,
+				650BE4311E689456001CC0D8 /* Info.plist */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		B173937C6657A1DA02B12236 /* Frameworks */ = {
