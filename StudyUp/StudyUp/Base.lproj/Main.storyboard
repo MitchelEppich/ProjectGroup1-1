@@ -13,7 +13,7 @@
         <!--Homepage-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="Homepage" customClass="ViewController" customModule="StudyUp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="Homepage" customClass="HomepageViewController" customModule="StudyUp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -26,21 +26,21 @@
                                 <rect key="frame" x="165" y="318" width="44" height="30"/>
                                 <state key="normal" title="Profile"/>
                                 <connections>
-                                    <segue destination="Bsq-Hi-RA8" kind="show" id="869-wq-WAr"/>
+                                    <segue destination="Bsq-Hi-RA8" kind="show" identifier="showProfileViewController" id="869-wq-WAr"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Xf-rO-Z4H">
                                 <rect key="frame" x="167" y="356" width="40" height="30"/>
                                 <state key="normal" title="Timer"/>
                                 <connections>
-                                    <segue destination="Fpl-gr-NWa" kind="show" id="lvZ-Dg-Dhg"/>
+                                    <segue destination="Fpl-gr-NWa" kind="show" identifier="showTimerViewController" id="lvZ-Dg-Dhg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ktb-dH-bCq">
                                 <rect key="frame" x="172" y="394" width="30" height="30"/>
                                 <state key="normal" title="Map"/>
                                 <connections>
-                                    <segue destination="DHH-Zb-Ayi" kind="show" id="CAA-hM-9oO"/>
+                                    <segue destination="DHH-Zb-Ayi" kind="show" identifier="showMapViewController" id="CAA-hM-9oO"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Home" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nzq-Np-omo">
@@ -54,7 +54,7 @@
                                 <rect key="frame" x="162" y="432" width="50" height="30"/>
                                 <state key="normal" title="Groups"/>
                                 <connections>
-                                    <segue destination="4Sq-nm-nD5" kind="show" id="gDJ-ve-AZD"/>
+                                    <segue destination="4Sq-nm-nD5" kind="show" identifier="showGroupViewController" id="gDJ-ve-AZD"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -78,7 +78,7 @@
         <!--Timer-->
         <scene sceneID="hQl-Ek-4oz">
             <objects>
-                <viewController id="Fpl-gr-NWa" userLabel="Timer" customClass="ViewController" customModule="StudyUp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Fpl-gr-NWa" userLabel="Timer" customClass="TimerViewController" customModule="StudyUp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hvb-wq-SkZ"/>
                         <viewControllerLayoutGuide type="bottom" id="2Am-dp-R6y"/>
@@ -97,7 +97,7 @@
                                 <rect key="frame" x="16" y="15" width="34" height="30"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="LEW-jb-pCL"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="showHomepageViewController" id="LEW-jb-pCL"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -119,7 +119,7 @@
         <!--Profile-->
         <scene sceneID="6Va-5I-NnU">
             <objects>
-                <viewController id="Bsq-Hi-RA8" userLabel="Profile" customClass="ViewController" customModule="StudyUp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Bsq-Hi-RA8" userLabel="Profile" customClass="ProfileViewController" customModule="StudyUp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PNm-UD-Q9w"/>
                         <viewControllerLayoutGuide type="bottom" id="4SZ-Ip-wbL"/>
@@ -138,7 +138,7 @@
                                 <rect key="frame" x="16" y="15" width="34" height="30"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="xnh-Rx-Vqe"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="showHomepageViewController" id="xnh-Rx-Vqe"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -160,7 +160,7 @@
         <!--Map-->
         <scene sceneID="dlK-06-sHb">
             <objects>
-                <viewController id="DHH-Zb-Ayi" userLabel="Map" customClass="ViewController" customModule="StudyUp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="DHH-Zb-Ayi" userLabel="Map" customClass="MapViewController" customModule="StudyUp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yXw-G4-xpE"/>
                         <viewControllerLayoutGuide type="bottom" id="SIu-Cg-vPF"/>
@@ -186,19 +186,19 @@
                                 <rect key="frame" x="16" y="15" width="34" height="30"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="YVs-P0-6mU"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="showHomepageViewController" id="YVs-P0-6mU"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="76d-ia-QMk" firstAttribute="leading" secondItem="UQW-Ww-uf2" secondAttribute="leading" id="7Vv-rX-EaB"/>
-                            <constraint firstItem="COb-FI-nXU" firstAttribute="top" secondItem="yXw-G4-xpE" secondAttribute="bottom" id="ACP-lo-GWH"/>
                             <constraint firstItem="I79-ex-95p" firstAttribute="leading" secondItem="UQW-Ww-uf2" secondAttribute="leadingMargin" id="EjO-za-RR5"/>
                             <constraint firstItem="76d-ia-QMk" firstAttribute="top" secondItem="UQW-Ww-uf2" secondAttribute="top" id="IFm-qX-q4p"/>
                             <constraint firstItem="I79-ex-95p" firstAttribute="centerY" secondItem="COb-FI-nXU" secondAttribute="centerY" id="SJi-ru-cfm"/>
-                            <constraint firstItem="SIu-Cg-vPF" firstAttribute="top" secondItem="76d-ia-QMk" secondAttribute="bottom" id="cvX-4f-A8E"/>
+                            <constraint firstItem="COb-FI-nXU" firstAttribute="top" secondItem="yXw-G4-xpE" secondAttribute="bottom" id="TN3-JJ-Bvn"/>
                             <constraint firstAttribute="trailingMargin" secondItem="COb-FI-nXU" secondAttribute="trailing" constant="155" id="dG5-Gd-vzF"/>
+                            <constraint firstItem="SIu-Cg-vPF" firstAttribute="top" secondItem="76d-ia-QMk" secondAttribute="bottom" id="fVb-Hc-I4a"/>
                             <constraint firstItem="I79-ex-95p" firstAttribute="top" secondItem="UQW-Ww-uf2" secondAttribute="topMargin" constant="15" id="jnT-fl-qJe"/>
                             <constraint firstAttribute="trailing" secondItem="76d-ia-QMk" secondAttribute="trailing" id="mmg-5I-Ga0"/>
                             <constraint firstItem="COb-FI-nXU" firstAttribute="leading" secondItem="UQW-Ww-uf2" secondAttribute="leadingMargin" constant="154" id="mpM-QB-hF8"/>
@@ -213,10 +213,10 @@
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="-1475.7121439280361"/>
         </scene>
-        <!--Groups-->
+        <!--Group-->
         <scene sceneID="PeU-71-DsG">
             <objects>
-                <viewController id="4Sq-nm-nD5" userLabel="Groups" customClass="ViewController" customModule="StudyUp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="4Sq-nm-nD5" userLabel="Group" customClass="GroupViewController" customModule="StudyUp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NVy-Gf-c1R"/>
                         <viewControllerLayoutGuide type="bottom" id="1Na-Iu-xvw"/>
@@ -235,7 +235,7 @@
                                 <rect key="frame" x="23" y="15" width="34" height="30"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="6Gj-VH-0jw"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="showHomepageViewController" id="6Gj-VH-0jw"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -256,6 +256,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="YVs-P0-6mU"/>
+        <segue reference="6Gj-VH-0jw"/>
     </inferredMetricsTieBreakers>
 </document>
