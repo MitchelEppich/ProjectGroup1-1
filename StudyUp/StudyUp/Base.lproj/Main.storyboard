@@ -258,31 +258,34 @@
                                     <outletCollection property="gestureRecognizers" destination="xZE-vj-rel" appends="YES" id="eG5-s7-ctl"/>
                                 </connections>
                             </mapView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Map" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="COb-FI-nXU">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I79-ex-95p">
-                                <state key="normal" title="Back"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="showHomepageViewController" id="YVs-P0-6mU"/>
-                                </connections>
-                            </button>
+                            <navigationBar contentMode="scaleToFill" placeholderIntrinsicWidth="375" placeholderIntrinsicHeight="60" translatesAutoresizingMaskIntoConstraints="NO" id="ccs-yb-g9q">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Yeh-nB-Z0A"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="xWz-TX-yrI"/>
+                                </constraints>
+                                <color key="barTintColor" red="0.58431372550000005" green="0.0" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="MAP" id="NH8-sF-ri5">
+                                        <barButtonItem key="leftBarButtonItem" title="Menu" id="cgE-dY-mqN">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="76d-ia-QMk" firstAttribute="leading" secondItem="UQW-Ww-uf2" secondAttribute="leading" id="7Vv-rX-EaB"/>
-                            <constraint firstItem="I79-ex-95p" firstAttribute="leading" secondItem="UQW-Ww-uf2" secondAttribute="leadingMargin" id="EjO-za-RR5"/>
                             <constraint firstItem="76d-ia-QMk" firstAttribute="top" secondItem="UQW-Ww-uf2" secondAttribute="top" id="IFm-qX-q4p"/>
-                            <constraint firstItem="I79-ex-95p" firstAttribute="centerY" secondItem="COb-FI-nXU" secondAttribute="centerY" id="SJi-ru-cfm"/>
-                            <constraint firstItem="COb-FI-nXU" firstAttribute="top" secondItem="yXw-G4-xpE" secondAttribute="bottom" id="TN3-JJ-Bvn"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="COb-FI-nXU" secondAttribute="trailing" constant="155" id="dG5-Gd-vzF"/>
+                            <constraint firstItem="ccs-yb-g9q" firstAttribute="leading" secondItem="UQW-Ww-uf2" secondAttribute="leading" id="O7X-Ax-CJk"/>
+                            <constraint firstAttribute="trailing" secondItem="ccs-yb-g9q" secondAttribute="trailing" id="aho-iY-jY5"/>
                             <constraint firstItem="SIu-Cg-vPF" firstAttribute="top" secondItem="76d-ia-QMk" secondAttribute="bottom" id="fVb-Hc-I4a"/>
-                            <constraint firstItem="I79-ex-95p" firstAttribute="top" secondItem="UQW-Ww-uf2" secondAttribute="topMargin" constant="15" id="jnT-fl-qJe"/>
                             <constraint firstAttribute="trailing" secondItem="76d-ia-QMk" secondAttribute="trailing" id="mmg-5I-Ga0"/>
-                            <constraint firstItem="COb-FI-nXU" firstAttribute="leading" secondItem="UQW-Ww-uf2" secondAttribute="leadingMargin" constant="154" id="mpM-QB-hF8"/>
+                            <constraint firstItem="ccs-yb-g9q" firstAttribute="top" secondItem="UQW-Ww-uf2" secondAttribute="top" id="vAn-B3-qWI"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="xZE-vj-rel" appends="YES" id="2vD-dq-1hC"/>
