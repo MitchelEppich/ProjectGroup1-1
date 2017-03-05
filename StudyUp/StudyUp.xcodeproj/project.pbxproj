@@ -77,7 +77,7 @@
 		650BE4411E689456001CC0D8 /* StudyUpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudyUpUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		650BE4451E689456001CC0D8 /* StudyUpUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyUpUITests.swift; sourceTree = "<group>"; };
 		650BE4471E689456001CC0D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6565DFDC1E6AC9F6002683F3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6565DFDC1E6AC9F6002683F3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6565DFE01E6ACCAD002683F3 /* GeoFire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoFire.h; sourceTree = "<group>"; };
 		6565DFE11E6ACCAD002683F3 /* GFCircleQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFCircleQuery.h; sourceTree = "<group>"; };
 		6565DFE21E6ACCAD002683F3 /* GFQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFQuery.h; sourceTree = "<group>"; };
@@ -216,8 +216,7 @@
 				6565DFE41E6ACCAD002683F3 /* GeoFire-Prefix.pch */,
 				6565DFE51E6ACCAD002683F3 /* Implementation */,
 			);
-			name = GeoFire;
-			path = "../../../geofire-objc/GeoFire";
+			path = GeoFire;
 			sourceTree = "<group>";
 		};
 		6565DFDF1E6ACCAD002683F3 /* API */ = {
