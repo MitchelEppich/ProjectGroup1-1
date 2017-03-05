@@ -1,11 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,35 +20,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Kn-61-KIU">
-                                <rect key="frame" x="165" y="318" width="44" height="30"/>
                                 <state key="normal" title="Profile"/>
                                 <connections>
                                     <segue destination="Bsq-Hi-RA8" kind="show" identifier="showProfileViewController" id="869-wq-WAr"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Xf-rO-Z4H">
-                                <rect key="frame" x="167" y="356" width="40" height="30"/>
                                 <state key="normal" title="Timer"/>
                                 <connections>
                                     <segue destination="Fpl-gr-NWa" kind="show" identifier="showTimerViewController" id="lvZ-Dg-Dhg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ktb-dH-bCq">
-                                <rect key="frame" x="172" y="394" width="30" height="30"/>
                                 <state key="normal" title="Map"/>
                                 <connections>
                                     <segue destination="DHH-Zb-Ayi" kind="show" identifier="showMapViewController" id="CAA-hM-9oO"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Home" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nzq-Np-omo">
-                                <rect key="frame" x="165" y="20" width="46" height="21"/>
+                                <frame key="frameInset" minX="165" minY="20" width="46" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U4L-Ds-ga9">
-                                <rect key="frame" x="162" y="432" width="50" height="30"/>
                                 <state key="normal" title="Groups"/>
                                 <connections>
                                     <segue destination="4Sq-nm-nD5" kind="show" identifier="showGroupViewController" id="gDJ-ve-AZD"/>
@@ -87,30 +80,97 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZW-La-yv1">
-                                <rect key="frame" x="165" y="20" width="44" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Urd-fa-OR4">
-                                <rect key="frame" x="16" y="15" width="34" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Urd-fa-OR4">
+                                <frame key="frameInset" minX="16" minY="42" width="34" height="30"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="showHomepageViewController" id="LEW-jb-pCL"/>
                                 </connections>
                             </button>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TP1-hP-5gs">
+                                <frame key="frameInset" height="45"/>
+                                <color key="barTintColor" red="0.71517097510000005" green="0.0" blue="0.087636805270000007" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="STUDY TIMER" id="4Xw-ww-v33">
+                                        <barButtonItem key="leftBarButtonItem" title="Menu" id="JdS-Nx-Vel">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rCr-Rh-ePr">
+                                <frame key="frameInset" minX="118" minY="247" width="138" height="30"/>
+                                <state key="normal" title="Choose your course"/>
+                            </button>
+                            <datePicker contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="bql-cY-TE6">
+                                <frame key="frameInset" minX="12" minY="83" height="150" maxX="13"/>
+                                <date key="date" timeIntervalSinceReferenceDate="510430562.50211298">
+                                    <!--2017-03-05 18:16:02 +0000-->
+                                </date>
+                            </datePicker>
+                            <pickerView hidden="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xsY-k6-zF5">
+                                <frame key="frameInset" minX="12" minY="283" height="159" maxX="13"/>
+                            </pickerView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VoT-0W-Avc">
+                                <frame key="frameInset" minX="228" minY="285" width="51" height="31"/>
+                                <connections>
+                                    <action selector="smatStudyToggled:" destination="Fpl-gr-NWa" eventType="valueChanged" id="hry-LH-jfq"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Smart Study" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfX-Tv-R86">
+                                <frame key="frameInset" minX="100" minY="290" width="96" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ndD-Bf-Yzg">
+                                <frame key="frameInset" minY="340" width="375" height="102"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Take 10 min breaks" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qj3-Yh-3DA">
+                                        <frame key="frameInset" minY="61" width="375" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Study in 50 min sessions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QfW-Ja-I3L">
+                                        <frame key="frameInset" minY="20" width="375" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="QfW-Ja-I3L" firstAttribute="centerX" secondItem="ndD-Bf-Yzg" secondAttribute="centerX" id="3yK-XL-hrD"/>
+                                    <constraint firstItem="Qj3-Yh-3DA" firstAttribute="top" secondItem="QfW-Ja-I3L" secondAttribute="bottom" constant="20" id="FBP-VS-q9U"/>
+                                    <constraint firstItem="QfW-Ja-I3L" firstAttribute="width" secondItem="ndD-Bf-Yzg" secondAttribute="width" id="Mhe-ZD-2jf"/>
+                                    <constraint firstItem="Qj3-Yh-3DA" firstAttribute="centerX" secondItem="ndD-Bf-Yzg" secondAttribute="centerX" id="POl-bT-opq"/>
+                                    <constraint firstItem="Qj3-Yh-3DA" firstAttribute="width" secondItem="ndD-Bf-Yzg" secondAttribute="width" id="snq-yW-7wf"/>
+                                    <constraint firstItem="QfW-Ja-I3L" firstAttribute="top" secondItem="ndD-Bf-Yzg" secondAttribute="top" constant="20" id="wbD-yf-sJn"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Urd-fa-OR4" firstAttribute="centerY" secondItem="GZW-La-yv1" secondAttribute="centerY" id="8rb-mk-YjK"/>
-                            <constraint firstItem="GZW-La-yv1" firstAttribute="top" secondItem="hvb-wq-SkZ" secondAttribute="bottom" id="TP3-f9-xRw"/>
+                            <constraint firstItem="VoT-0W-Avc" firstAttribute="centerY" secondItem="gfX-Tv-R86" secondAttribute="centerY" id="0ck-eK-QXO"/>
+                            <constraint firstItem="ndD-Bf-Yzg" firstAttribute="top" secondItem="VoT-0W-Avc" secondAttribute="bottom" constant="24" id="LCz-zy-rnW"/>
+                            <constraint firstItem="xsY-k6-zF5" firstAttribute="top" secondItem="rCr-Rh-ePr" secondAttribute="bottom" constant="6" id="NPa-31-Uoh"/>
                             <constraint firstItem="Urd-fa-OR4" firstAttribute="leading" secondItem="6Zu-NK-k2o" secondAttribute="leadingMargin" id="TkR-RI-5wN"/>
-                            <constraint firstItem="GZW-La-yv1" firstAttribute="leading" secondItem="6Zu-NK-k2o" secondAttribute="leadingMargin" constant="149" id="V4f-uK-fNa"/>
+                            <constraint firstItem="VoT-0W-Avc" firstAttribute="top" secondItem="rCr-Rh-ePr" secondAttribute="bottom" constant="8" id="eWQ-hu-B72"/>
                             <constraint firstItem="Urd-fa-OR4" firstAttribute="top" secondItem="6Zu-NK-k2o" secondAttribute="topMargin" constant="15" id="iDG-1V-7Jd"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="GZW-La-yv1" secondAttribute="trailing" constant="150" id="zZb-2k-1CR"/>
+                            <constraint firstItem="bql-cY-TE6" firstAttribute="top" secondItem="TP1-hP-5gs" secondAttribute="bottom" constant="38" id="iT9-g8-ode"/>
+                            <constraint firstItem="rCr-Rh-ePr" firstAttribute="top" secondItem="bql-cY-TE6" secondAttribute="bottom" constant="14" id="xlN-te-Gzr"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="coursePickerButton" destination="rCr-Rh-ePr" id="LfT-Uc-74g"/>
+                        <outlet property="smartStudyToggle" destination="VoT-0W-Avc" id="KgH-Ml-kHr"/>
+                        <outlet property="smartStudyView" destination="ndD-Bf-Yzg" id="XZs-XN-1Jv"/>
+                        <outlet property="timePicker" destination="bql-cY-TE6" id="If0-bI-6f7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CRR-MY-Bdq" sceneMemberID="firstResponder"/>
             </objects>
@@ -129,13 +189,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eg5-fp-pfU">
-                                <rect key="frame" x="163" y="20" width="49" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kIU-fa-Jnl">
-                                <rect key="frame" x="16" y="15" width="34" height="30"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="showHomepageViewController" id="xnh-Rx-Vqe"/>
@@ -170,20 +228,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="76d-ia-QMk">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="xZE-vj-rel" appends="YES" id="eG5-s7-ctl"/>
                                 </connections>
                             </mapView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Map" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="COb-FI-nXU">
-                                <rect key="frame" x="170" y="20" width="34" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I79-ex-95p">
-                                <rect key="frame" x="16" y="15" width="34" height="30"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="showHomepageViewController" id="YVs-P0-6mU"/>
@@ -234,13 +289,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Groups" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y6H-Vl-4od">
-                                <rect key="frame" x="166" y="20" width="56" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gl9-T8-UYe">
-                                <rect key="frame" x="23" y="15" width="34" height="30"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="showHomepageViewController" id="6Gj-VH-0jw"/>
@@ -264,6 +317,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="6Gj-VH-0jw"/>
+        <segue reference="LEW-jb-pCL"/>
     </inferredMetricsTieBreakers>
 </document>
