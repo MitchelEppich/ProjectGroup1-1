@@ -125,6 +125,28 @@
                                     <constraint firstAttribute="height" constant="150" id="tGC-R5-WRG"/>
                                 </constraints>
                             </pickerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tls-P3-gAL">
+                                <subviews>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VoT-0W-Avc">
+                                        <connections>
+                                            <action selector="smatStudyToggled:" destination="Fpl-gr-NWa" eventType="valueChanged" id="hry-LH-jfq"/>
+                                        </connections>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smart Study" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfX-Tv-R86">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="gfX-Tv-R86" firstAttribute="leading" secondItem="Tls-P3-gAL" secondAttribute="leading" constant="75" id="B7M-R0-trf"/>
+                                    <constraint firstItem="gfX-Tv-R86" firstAttribute="centerY" secondItem="Tls-P3-gAL" secondAttribute="centerY" id="Fv0-M1-aZe"/>
+                                    <constraint firstItem="VoT-0W-Avc" firstAttribute="leading" secondItem="gfX-Tv-R86" secondAttribute="trailing" constant="32" id="Oma-29-8YD"/>
+                                    <constraint firstItem="gfX-Tv-R86" firstAttribute="height" secondItem="Tls-P3-gAL" secondAttribute="height" id="Yjf-mZ-JSR"/>
+                                    <constraint firstItem="VoT-0W-Avc" firstAttribute="centerY" secondItem="gfX-Tv-R86" secondAttribute="centerY" id="xot-Xs-tRb"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ndD-Bf-Yzg">
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Take 10 min breaks" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qj3-Yh-3DA">
@@ -149,56 +171,42 @@
                                     <constraint firstItem="QfW-Ja-I3L" firstAttribute="top" secondItem="ndD-Bf-Yzg" secondAttribute="top" constant="20" id="wbD-yf-sJn"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tls-P3-gAL">
-                                <subviews>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VoT-0W-Avc">
-                                        <connections>
-                                            <action selector="smatStudyToggled:" destination="Fpl-gr-NWa" eventType="valueChanged" id="hry-LH-jfq"/>
-                                        </connections>
-                                    </switch>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smart Study" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfX-Tv-R86">
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="gfX-Tv-R86" firstAttribute="leading" secondItem="Tls-P3-gAL" secondAttribute="leading" constant="75" id="B7M-R0-trf"/>
-                                    <constraint firstItem="gfX-Tv-R86" firstAttribute="centerY" secondItem="Tls-P3-gAL" secondAttribute="centerY" id="Fv0-M1-aZe"/>
-                                    <constraint firstItem="VoT-0W-Avc" firstAttribute="leading" secondItem="gfX-Tv-R86" secondAttribute="trailing" constant="32" id="Oma-29-8YD"/>
-                                    <constraint firstItem="gfX-Tv-R86" firstAttribute="height" secondItem="Tls-P3-gAL" secondAttribute="height" id="Yjf-mZ-JSR"/>
-                                    <constraint firstItem="VoT-0W-Avc" firstAttribute="centerY" secondItem="gfX-Tv-R86" secondAttribute="centerY" id="xot-Xs-tRb"/>
-                                </constraints>
-                            </view>
-                            <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q0Q-oN-moc">
-                                <frame key="frameInset" minX="123" minY="456" width="133" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q0Q-oN-moc">
                                 <color key="backgroundColor" red="0.58431372550000005" green="0.0" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="135" id="7sg-cL-pVf"/>
+                                    <constraint firstAttribute="height" constant="35" id="m91-CN-dlE"/>
+                                </constraints>
                                 <state key="normal" title="Take a Break">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6xI-He-Wtk">
-                                <frame key="frameInset" minX="123" minY="456" width="133" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6xI-He-Wtk">
                                 <color key="backgroundColor" red="0.58431372550000005" green="0.0" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="135" id="41n-zQ-3RI"/>
+                                    <constraint firstAttribute="height" constant="35" id="zhA-9F-PYh"/>
+                                </constraints>
                                 <state key="normal" title="Resume Studying">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a6b-3h-9Dl">
-                                <frame key="frameInset" minX="123" minY="510" width="133" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a6b-3h-9Dl">
                                 <color key="backgroundColor" red="0.58431372549019611" green="0.0" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="BYG-Iw-9HN"/>
+                                    <constraint firstAttribute="width" constant="135" id="QkD-hj-xdi"/>
+                                </constraints>
                                 <state key="normal" title="Start Studying!">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dVN-DC-UNF">
-                                <frame key="frameInset" minX="123" minY="510" width="133" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dVN-DC-UNF">
                                 <color key="backgroundColor" red="0.58431372550000005" green="0.0" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="135" id="UpE-6a-y1w"/>
+                                    <constraint firstAttribute="height" constant="35" id="Wm7-gO-VIf"/>
+                                </constraints>
                                 <state key="normal" title="End Session">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -206,16 +214,24 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="dVN-DC-UNF" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="3Y3-GR-T8o"/>
+                            <constraint firstItem="dVN-DC-UNF" firstAttribute="top" secondItem="6xI-He-Wtk" secondAttribute="bottom" constant="24" id="BIf-H1-cfu"/>
                             <constraint firstItem="rCr-Rh-ePr" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="DIj-d5-Oum"/>
                             <constraint firstItem="Urd-fa-OR4" firstAttribute="top" secondItem="TP1-hP-5gs" secondAttribute="bottom" constant="8" id="DnY-VG-Vf1"/>
                             <constraint firstItem="xsY-k6-zF5" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="HYh-X2-ujY"/>
+                            <constraint firstItem="q0Q-oN-moc" firstAttribute="top" secondItem="ndD-Bf-Yzg" secondAttribute="bottom" constant="24" id="Jt9-FI-rVV"/>
+                            <constraint firstItem="a6b-3h-9Dl" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="LOx-wj-7RW"/>
                             <constraint firstItem="xsY-k6-zF5" firstAttribute="top" secondItem="rCr-Rh-ePr" secondAttribute="bottom" constant="6" id="NPa-31-Uoh"/>
                             <constraint firstItem="TP1-hP-5gs" firstAttribute="width" secondItem="6Zu-NK-k2o" secondAttribute="width" id="ON6-cq-gdY"/>
                             <constraint firstItem="bql-cY-TE6" firstAttribute="leading" secondItem="6Zu-NK-k2o" secondAttribute="leading" constant="16" id="QF5-B0-A2V" userLabel="Time Picker.leading = leadingMargin"/>
+                            <constraint firstItem="6xI-He-Wtk" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="QZr-3I-Gpz"/>
                             <constraint firstItem="TP1-hP-5gs" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="R74-DP-Lkv"/>
                             <constraint firstItem="Urd-fa-OR4" firstAttribute="leading" secondItem="6Zu-NK-k2o" secondAttribute="leadingMargin" id="TkR-RI-5wN"/>
                             <constraint firstItem="Tls-P3-gAL" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="VFa-lV-uay"/>
                             <constraint firstItem="xsY-k6-zF5" firstAttribute="width" secondItem="ndD-Bf-Yzg" secondAttribute="width" id="WfF-AK-a0u"/>
+                            <constraint firstItem="6xI-He-Wtk" firstAttribute="top" secondItem="ndD-Bf-Yzg" secondAttribute="bottom" constant="19" id="WpU-PW-0aB" userLabel="Resume Studying.top = Smart Study View.bottom + 24"/>
+                            <constraint firstItem="q0Q-oN-moc" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="Z7E-Jb-uGQ"/>
+                            <constraint firstItem="a6b-3h-9Dl" firstAttribute="top" secondItem="6xI-He-Wtk" secondAttribute="bottom" constant="24" id="ZEl-Yc-Od7"/>
                             <constraint firstItem="ndD-Bf-Yzg" firstAttribute="width" secondItem="bql-cY-TE6" secondAttribute="width" id="aKI-Mi-cps"/>
                             <constraint firstItem="Tls-P3-gAL" firstAttribute="width" secondItem="bql-cY-TE6" secondAttribute="width" id="dE5-0C-DSH" userLabel="View.width = 350"/>
                             <constraint firstItem="ndD-Bf-Yzg" firstAttribute="top" secondItem="Tls-P3-gAL" secondAttribute="bottom" constant="16" id="etX-xh-bUi"/>
