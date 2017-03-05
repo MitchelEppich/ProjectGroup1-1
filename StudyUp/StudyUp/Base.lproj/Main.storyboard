@@ -80,7 +80,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" placeholderIntrinsicWidth="375" placeholderIntrinsicHeight="60" translatesAutoresizingMaskIntoConstraints="NO" id="TP1-hP-5gs">
+                            <navigationBar contentMode="scaleToFill" placeholderIntrinsicWidth="375" placeholderIntrinsicHeight="60" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TP1-hP-5gs">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="JZ9-98-wTV"/>
                                 </constraints>
@@ -90,8 +90,12 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="STUDY TIMER" id="4Xw-ww-v33">
-                                        <barButtonItem key="leftBarButtonItem" title="Menu" id="JdS-Nx-Vel">
-                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <barButtonItem key="leftBarButtonItem" image="home_btn" id="7MO-nv-8nI">
+                                            <inset key="imageInsets" minX="0.0" minY="4" maxX="5" maxY="5"/>
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="07Y-u1-pUF"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -269,8 +273,12 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="MAP" id="NH8-sF-ri5">
-                                        <barButtonItem key="leftBarButtonItem" title="Menu" id="cgE-dY-mqN">
-                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <barButtonItem key="leftBarButtonItem" image="home_btn" id="aop-Be-ciW">
+                                            <inset key="imageInsets" minX="0.0" minY="4" maxX="5" maxY="5"/>
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="4Q4-YY-gyn"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -344,7 +352,10 @@
             <point key="canvasLocation" x="1180" y="-584"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="home_btn" width="24" height="28"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="LEW-jb-pCL"/>
+        <segue reference="4Q4-YY-gyn"/>
     </inferredMetricsTieBreakers>
 </document>
