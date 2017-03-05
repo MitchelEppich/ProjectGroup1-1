@@ -159,7 +159,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         //print("Tapped at lat: \(locationCoordinate.latitude) long: \(locationCoordinate.longitude)")
         
         
-        let group = StudyGroup(id: firebase.geoFireRef.childByAutoId().key, type: StudyGroup.group_type.social, privacy: StudyGroup.group_privacy.open, name: "Mitchel First", location: loc)
+        let group = StudyGroup()
+        group.location = loc
         
         //let rand = 0//arc4random_uniform(0) + 1
         createStudyGroupLocation(group: group)//Int(rand))

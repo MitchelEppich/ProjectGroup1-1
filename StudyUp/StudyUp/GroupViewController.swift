@@ -7,15 +7,57 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
-class GroupViewController: UIViewController {
+class GroupViewController: UITableViewController {
+    
+    var firebase = Firebase()
+    var refHandle : UInt!
+    var groupList = [StudyGroup]()
+    
+    let cellId = "cellId"
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        fetchGroups()
     }
-
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return groupList.count
+    }
+    
+    func tableView(tableView:UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: cellId)
+        
+        // Set cell contents
+        cell.textLabel?.text = groupList[indexPath.row].name
+        
+        return cell
+    }
+    
+    func fetchGroups() {
+        refHandle = firebase.geoFireRef.child("group").observe(.childAdded, with: {
+            (snapshot) in
+            if let dictionary = snapshot.value as? [String : AnyObject] {
+                
+                print(dictionary)
+                
+                let group = StudyGroup()
+                
+                //group.setValuesForKeys(dictionary)
+                self.groupList.append(group)
+                
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+                
+            }
+        })
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
