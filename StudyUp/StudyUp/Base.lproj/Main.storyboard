@@ -136,17 +136,14 @@
                                     <constraint firstItem="QfW-Ja-I3L" firstAttribute="top" secondItem="ndD-Bf-Yzg" secondAttribute="top" constant="20" id="wbD-yf-sJn"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tls-P3-gAL">
-                                <frame key="frameInset" minX="67" minY="283" width="240" height="31"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tls-P3-gAL">
                                 <subviews>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VoT-0W-Avc">
-                                        <frame key="frameInset" minX="160" width="51" height="31"/>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VoT-0W-Avc">
                                         <connections>
                                             <action selector="smatStudyToggled:" destination="Fpl-gr-NWa" eventType="valueChanged" id="hry-LH-jfq"/>
                                         </connections>
                                     </switch>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Smart Study" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfX-Tv-R86">
-                                        <frame key="frameInset" minX="32" width="96" height="31"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smart Study" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfX-Tv-R86">
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -154,7 +151,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="gfX-Tv-R86" firstAttribute="leading" secondItem="Tls-P3-gAL" secondAttribute="leading" constant="32" id="B7M-R0-trf"/>
+                                    <constraint firstItem="gfX-Tv-R86" firstAttribute="leading" secondItem="Tls-P3-gAL" secondAttribute="leading" constant="75" id="B7M-R0-trf"/>
                                     <constraint firstItem="gfX-Tv-R86" firstAttribute="centerY" secondItem="Tls-P3-gAL" secondAttribute="centerY" id="Fv0-M1-aZe"/>
                                     <constraint firstItem="VoT-0W-Avc" firstAttribute="leading" secondItem="gfX-Tv-R86" secondAttribute="trailing" constant="32" id="Oma-29-8YD"/>
                                     <constraint firstItem="gfX-Tv-R86" firstAttribute="height" secondItem="Tls-P3-gAL" secondAttribute="height" id="Yjf-mZ-JSR"/>
@@ -181,7 +178,7 @@
                             <constraint firstItem="Tls-P3-gAL" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="VFa-lV-uay"/>
                             <constraint firstItem="xsY-k6-zF5" firstAttribute="width" secondItem="ndD-Bf-Yzg" secondAttribute="width" id="WfF-AK-a0u"/>
                             <constraint firstItem="ndD-Bf-Yzg" firstAttribute="width" secondItem="bql-cY-TE6" secondAttribute="width" id="aKI-Mi-cps"/>
-                            <constraint firstItem="Tls-P3-gAL" firstAttribute="width" secondItem="bql-cY-TE6" secondAttribute="width" id="dE5-0C-DSH"/>
+                            <constraint firstItem="Tls-P3-gAL" firstAttribute="width" secondItem="bql-cY-TE6" secondAttribute="width" id="dE5-0C-DSH" userLabel="View.width = 350"/>
                             <constraint firstItem="ndD-Bf-Yzg" firstAttribute="top" secondItem="Tls-P3-gAL" secondAttribute="bottom" constant="16" id="etX-xh-bUi"/>
                             <constraint firstItem="Tls-P3-gAL" firstAttribute="top" secondItem="rCr-Rh-ePr" secondAttribute="bottom" constant="8" id="glt-AZ-fLd"/>
                             <constraint firstItem="bql-cY-TE6" firstAttribute="top" secondItem="TP1-hP-5gs" secondAttribute="bottom" constant="38" id="iT9-g8-ode"/>
