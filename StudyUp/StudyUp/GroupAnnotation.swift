@@ -18,15 +18,15 @@ let group = [
 
 class GroupAnnotation: NSObject, MKAnnotation {
     var coordinate = CLLocationCoordinate2D()
-    var groupId: Int
+    var groupType: Int
     var groupTag: String
     var title: String?
     
     
-    init(coordinate: CLLocationCoordinate2D, groupId: Int) {
+    init(coordinate: CLLocationCoordinate2D, groupType: Int) {
         self.coordinate = coordinate
-        self.groupId = groupId
-        self.groupTag = group[groupId - 1].capitalized
+        self.groupType = groupType
+        self.groupTag = group[groupType - 1].capitalized
         self.title = self.groupTag
     }
 }
