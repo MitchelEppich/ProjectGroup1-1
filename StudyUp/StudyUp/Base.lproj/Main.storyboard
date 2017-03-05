@@ -80,16 +80,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Urd-fa-OR4">
-                                <frame key="frameInset" minX="16" minY="42" width="34" height="30"/>
-                                <state key="normal" title="Back"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="showHomepageViewController" id="LEW-jb-pCL"/>
-                                </connections>
-                            </button>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TP1-hP-5gs">
-                                <frame key="frameInset" height="45"/>
-                                <color key="barTintColor" red="0.71517097510000005" green="0.0" blue="0.087636805270000007" alpha="1" colorSpace="calibratedRGB"/>
+                            <navigationBar contentMode="scaleToFill" placeholderIntrinsicWidth="375" placeholderIntrinsicHeight="60" translatesAutoresizingMaskIntoConstraints="NO" id="TP1-hP-5gs">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="JZ9-98-wTV"/>
+                                </constraints>
+                                <color key="barTintColor" red="0.58431372549019611" green="0.0" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
                                 <textAttributes key="titleTextAttributes">
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </textAttributes>
@@ -101,42 +96,30 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rCr-Rh-ePr">
-                                <frame key="frameInset" minX="118" minY="247" width="138" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rCr-Rh-ePr">
                                 <state key="normal" title="Choose your course"/>
                             </button>
-                            <datePicker contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="bql-cY-TE6">
-                                <frame key="frameInset" minX="12" minY="83" height="150" maxX="13"/>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="bql-cY-TE6">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="K36-Lb-2Km"/>
+                                </constraints>
                                 <date key="date" timeIntervalSinceReferenceDate="510430562.50211298">
                                     <!--2017-03-05 18:16:02 +0000-->
                                 </date>
                             </datePicker>
-                            <pickerView hidden="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xsY-k6-zF5">
-                                <frame key="frameInset" minX="12" minY="283" height="159" maxX="13"/>
+                            <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xsY-k6-zF5">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="tGC-R5-WRG"/>
+                                </constraints>
                             </pickerView>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VoT-0W-Avc">
-                                <frame key="frameInset" minX="228" minY="285" width="51" height="31"/>
-                                <connections>
-                                    <action selector="smatStudyToggled:" destination="Fpl-gr-NWa" eventType="valueChanged" id="hry-LH-jfq"/>
-                                </connections>
-                            </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Smart Study" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfX-Tv-R86">
-                                <frame key="frameInset" minX="100" minY="290" width="96" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ndD-Bf-Yzg">
-                                <frame key="frameInset" minY="340" width="375" height="102"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ndD-Bf-Yzg">
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Take 10 min breaks" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qj3-Yh-3DA">
-                                        <frame key="frameInset" minY="61" width="375" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Take 10 min breaks" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qj3-Yh-3DA">
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Study in 50 min sessions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QfW-Ja-I3L">
-                                        <frame key="frameInset" minY="20" width="375" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Study in 50 min sessions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QfW-Ja-I3L">
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -146,22 +129,66 @@
                                 <constraints>
                                     <constraint firstItem="QfW-Ja-I3L" firstAttribute="centerX" secondItem="ndD-Bf-Yzg" secondAttribute="centerX" id="3yK-XL-hrD"/>
                                     <constraint firstItem="Qj3-Yh-3DA" firstAttribute="top" secondItem="QfW-Ja-I3L" secondAttribute="bottom" constant="20" id="FBP-VS-q9U"/>
+                                    <constraint firstAttribute="height" constant="100" id="KD3-23-ed9"/>
                                     <constraint firstItem="QfW-Ja-I3L" firstAttribute="width" secondItem="ndD-Bf-Yzg" secondAttribute="width" id="Mhe-ZD-2jf"/>
                                     <constraint firstItem="Qj3-Yh-3DA" firstAttribute="centerX" secondItem="ndD-Bf-Yzg" secondAttribute="centerX" id="POl-bT-opq"/>
                                     <constraint firstItem="Qj3-Yh-3DA" firstAttribute="width" secondItem="ndD-Bf-Yzg" secondAttribute="width" id="snq-yW-7wf"/>
                                     <constraint firstItem="QfW-Ja-I3L" firstAttribute="top" secondItem="ndD-Bf-Yzg" secondAttribute="top" constant="20" id="wbD-yf-sJn"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tls-P3-gAL">
+                                <frame key="frameInset" minX="67" minY="283" width="240" height="31"/>
+                                <subviews>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VoT-0W-Avc">
+                                        <frame key="frameInset" minX="160" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="smatStudyToggled:" destination="Fpl-gr-NWa" eventType="valueChanged" id="hry-LH-jfq"/>
+                                        </connections>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Smart Study" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfX-Tv-R86">
+                                        <frame key="frameInset" minX="32" width="96" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="gfX-Tv-R86" firstAttribute="leading" secondItem="Tls-P3-gAL" secondAttribute="leading" constant="32" id="B7M-R0-trf"/>
+                                    <constraint firstItem="gfX-Tv-R86" firstAttribute="centerY" secondItem="Tls-P3-gAL" secondAttribute="centerY" id="Fv0-M1-aZe"/>
+                                    <constraint firstItem="VoT-0W-Avc" firstAttribute="leading" secondItem="gfX-Tv-R86" secondAttribute="trailing" constant="32" id="Oma-29-8YD"/>
+                                    <constraint firstItem="gfX-Tv-R86" firstAttribute="height" secondItem="Tls-P3-gAL" secondAttribute="height" id="Yjf-mZ-JSR"/>
+                                    <constraint firstItem="VoT-0W-Avc" firstAttribute="centerY" secondItem="gfX-Tv-R86" secondAttribute="centerY" id="xot-Xs-tRb"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Urd-fa-OR4">
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="showHomepageViewController" id="LEW-jb-pCL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="VoT-0W-Avc" firstAttribute="centerY" secondItem="gfX-Tv-R86" secondAttribute="centerY" id="0ck-eK-QXO"/>
-                            <constraint firstItem="ndD-Bf-Yzg" firstAttribute="top" secondItem="VoT-0W-Avc" secondAttribute="bottom" constant="24" id="LCz-zy-rnW"/>
+                            <constraint firstItem="rCr-Rh-ePr" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="DIj-d5-Oum"/>
+                            <constraint firstItem="Urd-fa-OR4" firstAttribute="top" secondItem="TP1-hP-5gs" secondAttribute="bottom" constant="8" id="DnY-VG-Vf1"/>
+                            <constraint firstItem="xsY-k6-zF5" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="HYh-X2-ujY"/>
                             <constraint firstItem="xsY-k6-zF5" firstAttribute="top" secondItem="rCr-Rh-ePr" secondAttribute="bottom" constant="6" id="NPa-31-Uoh"/>
+                            <constraint firstItem="TP1-hP-5gs" firstAttribute="width" secondItem="6Zu-NK-k2o" secondAttribute="width" id="ON6-cq-gdY"/>
+                            <constraint firstItem="bql-cY-TE6" firstAttribute="leading" secondItem="6Zu-NK-k2o" secondAttribute="leading" constant="16" id="QF5-B0-A2V" userLabel="Time Picker.leading = leadingMargin"/>
+                            <constraint firstItem="TP1-hP-5gs" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="R74-DP-Lkv"/>
                             <constraint firstItem="Urd-fa-OR4" firstAttribute="leading" secondItem="6Zu-NK-k2o" secondAttribute="leadingMargin" id="TkR-RI-5wN"/>
-                            <constraint firstItem="VoT-0W-Avc" firstAttribute="top" secondItem="rCr-Rh-ePr" secondAttribute="bottom" constant="8" id="eWQ-hu-B72"/>
-                            <constraint firstItem="Urd-fa-OR4" firstAttribute="top" secondItem="6Zu-NK-k2o" secondAttribute="topMargin" constant="15" id="iDG-1V-7Jd"/>
+                            <constraint firstItem="Tls-P3-gAL" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="VFa-lV-uay"/>
+                            <constraint firstItem="xsY-k6-zF5" firstAttribute="width" secondItem="ndD-Bf-Yzg" secondAttribute="width" id="WfF-AK-a0u"/>
+                            <constraint firstItem="ndD-Bf-Yzg" firstAttribute="width" secondItem="bql-cY-TE6" secondAttribute="width" id="aKI-Mi-cps"/>
+                            <constraint firstItem="Tls-P3-gAL" firstAttribute="width" secondItem="bql-cY-TE6" secondAttribute="width" id="dE5-0C-DSH"/>
+                            <constraint firstItem="ndD-Bf-Yzg" firstAttribute="top" secondItem="Tls-P3-gAL" secondAttribute="bottom" constant="16" id="etX-xh-bUi"/>
+                            <constraint firstItem="Tls-P3-gAL" firstAttribute="top" secondItem="rCr-Rh-ePr" secondAttribute="bottom" constant="8" id="glt-AZ-fLd"/>
                             <constraint firstItem="bql-cY-TE6" firstAttribute="top" secondItem="TP1-hP-5gs" secondAttribute="bottom" constant="38" id="iT9-g8-ode"/>
+                            <constraint firstItem="Tls-P3-gAL" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="mu2-yP-IYx"/>
+                            <constraint firstItem="ndD-Bf-Yzg" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="qLz-yN-YSM"/>
+                            <constraint firstItem="TP1-hP-5gs" firstAttribute="top" secondItem="6Zu-NK-k2o" secondAttribute="top" id="sNe-9l-SSP"/>
+                            <constraint firstAttribute="trailing" secondItem="bql-cY-TE6" secondAttribute="trailing" constant="16" id="v4v-bs-u2k" userLabel="Time Picker.trailing = trailingMargin"/>
                             <constraint firstItem="rCr-Rh-ePr" firstAttribute="top" secondItem="bql-cY-TE6" secondAttribute="bottom" constant="14" id="xlN-te-Gzr"/>
                         </constraints>
                     </view>
@@ -174,7 +201,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CRR-MY-Bdq" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-913" y="-584"/>
+            <point key="canvasLocation" x="-914.39999999999998" y="-584.25787106446785"/>
         </scene>
         <!--Profile-->
         <scene sceneID="6Va-5I-NnU">
@@ -227,7 +254,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="76d-ia-QMk">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="76d-ia-QMk">
+                                <frame key="frameInset" width="1000" height="1000"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="xZE-vj-rel" appends="YES" id="eG5-s7-ctl"/>
