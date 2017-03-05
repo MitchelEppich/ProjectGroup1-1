@@ -8,12 +8,15 @@
 
 import UIKit
 
-class TimerViewController: UIViewController {
+class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
     let courses = ["MSE 483", "CMPT 276", "CMPT 361", "CMPT 363"]
+    
+    var seconds = 1
+    var timer = Timer()
 
     @IBOutlet weak var timePicker: UIDatePicker!
-    
+     
     @IBOutlet weak var coursePickerButton: UIButton!
     
     @IBOutlet weak var coursePicker: UIPickerView!
@@ -22,9 +25,12 @@ class TimerViewController: UIViewController {
     
     @IBOutlet weak var smartStudyView: UIView!
     
+    @IBOutlet weak var smartStudyToggleView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        coursePicker.dataSource = self
+        coursePicker.delegate = self
         // Do any additional setup after loading the view.
     }
 
@@ -34,9 +40,13 @@ class TimerViewController: UIViewController {
     }
     
     @IBAction func courseButtonPressed(_ sender: AnyObject) {
+        coursePicker.isHidden = false
+        smartStudyToggleView.isHidden = true
+        smartStudyView.isHidden = true
     }
     
-    @IBAction func smatStudyToggled(_ sender: AnyObject) {
+    
+    @IBAction func smartStudyToggled(_ sender: AnyObject) {
     }
     
     func numberOfComponents(in pickerView: UIPickerView)-> Int {
@@ -49,6 +59,13 @@ class TimerViewController: UIViewController {
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent: Int) -> String? {
         return courses[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
+        coursePickerButton.setTitle(courses[row], for: UIControlState.normal)
+        coursePicker.isHidden = true
+        smartStudyView.isHidden = false
+        smartStudyToggleView.isHidden = false
     }
     
     /*

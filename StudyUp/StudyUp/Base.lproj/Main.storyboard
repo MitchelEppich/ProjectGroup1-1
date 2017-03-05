@@ -80,14 +80,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Urd-fa-OR4">
-                                <state key="normal" title="Back"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="showHomepageViewController" id="LEW-jb-pCL"/>
-                                </connections>
-                            </button>
-
                             <navigationBar contentMode="scaleToFill" placeholderIntrinsicWidth="375" placeholderIntrinsicHeight="60" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TP1-hP-5gs">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="JZ9-98-wTV"/>
@@ -108,8 +100,11 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rCr-Rh-ePr">
-                                <state key="normal" title="Choose your course"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Urd-fa-OR4">
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="showHomepageViewController" id="LEW-jb-pCL"/>
+                                </connections>
                             </button>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="bql-cY-TE6">
                                 <constraints>
@@ -118,10 +113,21 @@
                                 <date key="date" timeIntervalSinceReferenceDate="510430562.50211298">
                                     <!--2017-03-05 18:16:02 +0000-->
                                 </date>
+                                <connections>
+                                    <action selector="timePickerAction:" destination="Fpl-gr-NWa" eventType="valueChanged" id="Xbc-mc-1wg"/>
+                                </connections>
                             </datePicker>
-                            <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xsY-k6-zF5">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rCr-Rh-ePr">
+                                <state key="normal" title="Choose your course"/>
+                                <connections>
+                                    <action selector="courseButtonPressed:" destination="Fpl-gr-NWa" eventType="touchUpInside" id="Ze4-Zq-ev3"/>
+                                </connections>
+                            </button>
+                            <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rI4-aQ-CBZ">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="tGC-R5-WRG"/>
+                                    <constraint firstAttribute="height" constant="125" id="5OP-bf-nTB"/>
+                                    <constraint firstAttribute="width" constant="350" id="ZMu-QN-Qqp"/>
                                 </constraints>
                             </pickerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tls-P3-gAL">
@@ -214,27 +220,26 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="dVN-DC-UNF" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="3Y3-GR-T8o"/>
+                            <constraint firstItem="rI4-aQ-CBZ" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="7py-wz-hNu"/>
                             <constraint firstItem="dVN-DC-UNF" firstAttribute="top" secondItem="6xI-He-Wtk" secondAttribute="bottom" constant="24" id="BIf-H1-cfu"/>
                             <constraint firstItem="rCr-Rh-ePr" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="DIj-d5-Oum"/>
                             <constraint firstItem="Urd-fa-OR4" firstAttribute="top" secondItem="TP1-hP-5gs" secondAttribute="bottom" constant="8" id="DnY-VG-Vf1"/>
-                            <constraint firstItem="xsY-k6-zF5" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="HYh-X2-ujY"/>
                             <constraint firstItem="q0Q-oN-moc" firstAttribute="top" secondItem="ndD-Bf-Yzg" secondAttribute="bottom" constant="24" id="Jt9-FI-rVV"/>
                             <constraint firstItem="a6b-3h-9Dl" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="LOx-wj-7RW"/>
-                            <constraint firstItem="xsY-k6-zF5" firstAttribute="top" secondItem="rCr-Rh-ePr" secondAttribute="bottom" constant="6" id="NPa-31-Uoh"/>
                             <constraint firstItem="TP1-hP-5gs" firstAttribute="width" secondItem="6Zu-NK-k2o" secondAttribute="width" id="ON6-cq-gdY"/>
                             <constraint firstItem="bql-cY-TE6" firstAttribute="leading" secondItem="6Zu-NK-k2o" secondAttribute="leading" constant="16" id="QF5-B0-A2V" userLabel="Time Picker.leading = leadingMargin"/>
                             <constraint firstItem="6xI-He-Wtk" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="QZr-3I-Gpz"/>
                             <constraint firstItem="TP1-hP-5gs" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="R74-DP-Lkv"/>
                             <constraint firstItem="Urd-fa-OR4" firstAttribute="leading" secondItem="6Zu-NK-k2o" secondAttribute="leadingMargin" id="TkR-RI-5wN"/>
                             <constraint firstItem="Tls-P3-gAL" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="VFa-lV-uay"/>
-                            <constraint firstItem="xsY-k6-zF5" firstAttribute="width" secondItem="ndD-Bf-Yzg" secondAttribute="width" id="WfF-AK-a0u"/>
                             <constraint firstItem="6xI-He-Wtk" firstAttribute="top" secondItem="ndD-Bf-Yzg" secondAttribute="bottom" constant="19" id="WpU-PW-0aB" userLabel="Resume Studying.top = Smart Study View.bottom + 24"/>
                             <constraint firstItem="q0Q-oN-moc" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="Z7E-Jb-uGQ"/>
                             <constraint firstItem="a6b-3h-9Dl" firstAttribute="top" secondItem="6xI-He-Wtk" secondAttribute="bottom" constant="24" id="ZEl-Yc-Od7"/>
                             <constraint firstItem="ndD-Bf-Yzg" firstAttribute="width" secondItem="bql-cY-TE6" secondAttribute="width" id="aKI-Mi-cps"/>
+                            <constraint firstItem="rI4-aQ-CBZ" firstAttribute="top" secondItem="rCr-Rh-ePr" secondAttribute="bottom" constant="8" id="bTa-pL-lUh"/>
                             <constraint firstItem="Tls-P3-gAL" firstAttribute="width" secondItem="bql-cY-TE6" secondAttribute="width" id="dE5-0C-DSH" userLabel="View.width = 350"/>
                             <constraint firstItem="ndD-Bf-Yzg" firstAttribute="top" secondItem="Tls-P3-gAL" secondAttribute="bottom" constant="16" id="etX-xh-bUi"/>
-                            <constraint firstItem="Tls-P3-gAL" firstAttribute="top" secondItem="rCr-Rh-ePr" secondAttribute="bottom" constant="8" id="glt-AZ-fLd"/>
+                            <constraint firstItem="Tls-P3-gAL" firstAttribute="top" secondItem="rCr-Rh-ePr" secondAttribute="bottom" constant="12" id="glt-AZ-fLd"/>
                             <constraint firstItem="bql-cY-TE6" firstAttribute="top" secondItem="TP1-hP-5gs" secondAttribute="bottom" constant="38" id="iT9-g8-ode"/>
                             <constraint firstItem="Tls-P3-gAL" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="mu2-yP-IYx"/>
                             <constraint firstItem="ndD-Bf-Yzg" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="qLz-yN-YSM"/>
@@ -244,8 +249,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="coursePicker" destination="rI4-aQ-CBZ" id="e5v-mn-yvI"/>
                         <outlet property="coursePickerButton" destination="rCr-Rh-ePr" id="LfT-Uc-74g"/>
                         <outlet property="smartStudyToggle" destination="VoT-0W-Avc" id="KgH-Ml-kHr"/>
+                        <outlet property="smartStudyToggleView" destination="Tls-P3-gAL" id="tQr-2f-9dD"/>
                         <outlet property="smartStudyView" destination="ndD-Bf-Yzg" id="XZs-XN-1Jv"/>
                         <outlet property="timePicker" destination="bql-cY-TE6" id="If0-bI-6f7"/>
                     </connections>
@@ -406,6 +413,6 @@
         <image name="home_btn" width="24" height="28"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4Q4-YY-gyn"/>
+        <segue reference="LEW-jb-pCL"/>
     </inferredMetricsTieBreakers>
 </document>
