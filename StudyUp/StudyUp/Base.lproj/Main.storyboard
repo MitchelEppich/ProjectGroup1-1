@@ -47,7 +47,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U4L-Ds-ga9">
                                 <state key="normal" title="Groups"/>
                                 <connections>
-                                    <segue destination="4Sq-nm-nD5" kind="show" identifier="showGroupViewController" id="gDJ-ve-AZD"/>
+                                    <segue destination="2Mu-Zp-eKC" kind="show" id="d9V-re-p3y"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -68,6 +68,44 @@
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="-584.25787106446785"/>
         </scene>
+        <!--Group-->
+        <scene sceneID="Szl-BZ-tV4">
+            <objects>
+                <tableViewController id="2Mu-Zp-eKC" userLabel="Group" customClass="GroupViewController" customModule="StudyUp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="PRj-6b-C7a">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="hmR-Cu-9GA">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hmR-Cu-9GA" id="SqR-xh-bPP">
+                                    <frame key="frameInset" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="low-FP-OKy">
+                                            <frame key="frameInset" minY="-1" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Button"/>
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="BsD-c0-8xC"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="2Mu-Zp-eKC" id="r4f-Dn-bZQ"/>
+                            <outlet property="delegate" destination="2Mu-Zp-eKC" id="sPa-Q6-SP4"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="puQ-WP-fRN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1214" y="-584"/>
+        </scene>
         <!--Timer-->
         <scene sceneID="hQl-Ek-4oz">
             <objects>
@@ -80,6 +118,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+<<<<<<< HEAD
+=======
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Urd-fa-OR4">
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="showHomepageViewController" id="LEW-jb-pCL"/>
+                                </connections>
+                            </button>
+>>>>>>> origin/beta
                             <navigationBar contentMode="scaleToFill" placeholderIntrinsicWidth="375" placeholderIntrinsicHeight="60" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TP1-hP-5gs">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="JZ9-98-wTV"/>
@@ -388,50 +435,15 @@
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="-1475.7121439280361"/>
         </scene>
-        <!--Group-->
-        <scene sceneID="PeU-71-DsG">
-            <objects>
-                <viewController id="4Sq-nm-nD5" userLabel="Group" customClass="GroupViewController" customModule="StudyUp" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="NVy-Gf-c1R"/>
-                        <viewControllerLayoutGuide type="bottom" id="1Na-Iu-xvw"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="LVq-Zt-dcp">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Groups" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y6H-Vl-4od">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gl9-T8-UYe">
-                                <state key="normal" title="Back"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="showHomepageViewController" id="6Gj-VH-0jw"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="Y6H-Vl-4od" firstAttribute="leading" secondItem="LVq-Zt-dcp" secondAttribute="leadingMargin" constant="150" id="5gB-Sb-jE2"/>
-                            <constraint firstItem="Gl9-T8-UYe" firstAttribute="centerY" secondItem="Y6H-Vl-4od" secondAttribute="centerY" id="JmF-UP-9sB"/>
-                            <constraint firstItem="Gl9-T8-UYe" firstAttribute="top" secondItem="LVq-Zt-dcp" secondAttribute="topMargin" constant="15" id="MDq-Fa-JiW"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Y6H-Vl-4od" secondAttribute="trailing" constant="137" id="YbI-hK-1aW"/>
-                            <constraint firstItem="Y6H-Vl-4od" firstAttribute="top" secondItem="NVy-Gf-c1R" secondAttribute="bottom" id="fN0-Dz-CSA"/>
-                            <constraint firstItem="Gl9-T8-UYe" firstAttribute="leading" secondItem="LVq-Zt-dcp" secondAttribute="leadingMargin" constant="7" id="hmx-fm-BFL"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZLh-ee-ehd" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1180" y="-584"/>
-        </scene>
     </scenes>
     <resources>
         <image name="home_btn" width="24" height="28"/>
     </resources>
     <inferredMetricsTieBreakers>
+<<<<<<< HEAD
         <segue reference="LEW-jb-pCL"/>
+=======
+        <segue reference="BsD-c0-8xC"/>
+>>>>>>> origin/beta
     </inferredMetricsTieBreakers>
 </document>

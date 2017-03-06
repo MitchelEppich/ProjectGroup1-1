@@ -23,12 +23,13 @@ class StudyGroup: NSObject {
     }
     
     var location = CLLocation()
-    var name: String
-    var id : String
-    var type : group_type
-    var privacy : group_privacy
+    var name: String = "Study Group"
+    var id : String = Firebase().geoFireRef.childByAutoId().key
+    var type : group_type = group_type.social
+    var privacy : group_privacy = group_privacy.open
     var members : [Int] = []
     
+    /*
     init(id: String, type: group_type, privacy: group_privacy,  name: String, location: CLLocation) {
         self.location = location
         self.id = id
@@ -36,4 +37,5 @@ class StudyGroup: NSObject {
         self.type = type
         self.privacy = privacy
     }
+ */
 }
