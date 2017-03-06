@@ -19,6 +19,7 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
 
     @IBOutlet weak var timePicker: UIDatePicker!
     @IBOutlet weak var countDownLabel: UILabel!
+    @IBOutlet weak var countDown: UILabel!
      
     @IBOutlet weak var coursePickerButton: UIButton!
     @IBOutlet weak var coursePicker: UIPickerView!
