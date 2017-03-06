@@ -79,6 +79,7 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     
     @IBAction func startButtonPressed(_ sender: AnyObject) {
         if timerRunning == false {
+            timerCount = Int(timePicker.countDownDuration)
             timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
             timerRunning = true
             startButton.isHidden = true
