@@ -15,6 +15,7 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     var timerCount = 60
     var timerRunning = false
     var timer = Timer()
+    var timerEnabled = false
 
     @IBOutlet weak var timePicker: UIDatePicker!
     @IBOutlet weak var countDownLabel: UILabel!
@@ -81,26 +82,37 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
             timerRunning = true
             startButton.isHidden = true
             endButton.isHidden = false
-            breakButton.isHidden = false;
-            
-            
+            breakButton.isHidden = false
+            timePicker.isHidden = true
+            countDownLabel.isHidden = false
+
+            if smartStudyToggle.isOn{
+                breakButton.isHidden = false;
+            }
+            smartStudyToggleView.isHidden = true
         }
     }
     
     @IBAction func breakBtnPressed(_ sender: AnyObject) {
         resumeButton.isHidden = false
         breakButton.isHidden = true
+        timer.invalidate()
     }
     
     @IBAction func resumeBtnPressed(_ sender: AnyObject) {
         breakButton.isHidden = false
         resumeButton.isHidden = true
+        
+        runTimer()
     }
     
+    func runTimer(){
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(TimerViewController.updateCounter)), userInfo: nil, repeats: true)
+    }
     
     func updateCounter() {
         timerCount -= 1
-        countDownLabel.text = "\(timerCount)"
+        countDownLabel.text = timeString(time: TimeInterval(timerCount))
         
         if timerCount == 0 {
             timer.invalidate()
@@ -115,6 +127,18 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         endButton.isHidden = true
         breakButton.isHidden = true
         resumeButton.isHidden = true
+        timePicker.isHidden = false
+        countDownLabel.isHidden = true
+
+    }
+    
+    func timeString(time:TimeInterval) -> String {
+        let hours = Int(time) / 3600
+        let minutes = Int(time) / 60 % 60
+        let seconds = Int(time) % 60
+        
+        return String(format:"%02i:%02i:%02i", hours, minutes, seconds)
+        smartStudyToggleView.isHidden = false
     }
     
     /*
