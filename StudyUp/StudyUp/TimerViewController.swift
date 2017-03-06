@@ -83,7 +83,10 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
             timerRunning = true
             startButton.isHidden = true
             endButton.isHidden = false
-            breakButton.isHidden = false;
+            if smartStudyToggle.isOn{
+                breakButton.isHidden = false;
+            }
+            smartStudyToggleView.isHidden = true
         }
     }
     
@@ -121,6 +124,7 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         endButton.isHidden = true
         breakButton.isHidden = true
         resumeButton.isHidden = true
+        smartStudyToggleView.isHidden = false
     }
     
     /*
