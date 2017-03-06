@@ -69,7 +69,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     func createStudyGroupLocation(group: StudyGroup) {
         
-        let path = firebase.geoFireRef.child("group").child("\(group.privacy)").child(group.id)
+        let path = firebase.geoFireRef.child("group").child("\(group.privacy)").child(group.id!)
         
         path.child("Name").setValue(group.name)
         path.child("Type").setValue("\(group.type)")

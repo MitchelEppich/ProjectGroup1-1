@@ -41,6 +41,8 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Allow application to select a picture from photo gallery</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Do you allow StudyUp to acces your current location?</string>
 </dict>
