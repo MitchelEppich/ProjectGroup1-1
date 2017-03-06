@@ -39,22 +39,30 @@ class GroupViewController: UITableViewController {
     }
     
     func fetchGroups() {
-        refHandle = firebase.geoFireRef.child("group").observe(.childAdded, with: {
-            (snapshot) in
-            if let dictionary = snapshot.value as? [String : AnyObject] {
-                
+        
+        refHandle = firebase.geoFireRef.child("group").child("open").observe(FIRDataEventType.value, with: { (snapshot) in
+            let postDict = snapshot.value as? [String : AnyObject] ?? [:] {
+            
                 print(dictionary)
                 
-                let group = StudyGroup()
                 
-                //group.setValuesForKeys(dictionary)
-                self.groupList.append(group)
-                
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
                 
             }
+            
+//            if let dictionary = snapshot.value as? [String : AnyObject] {
+//
+//                print(dictionary)
+//                
+//                let group = StudyGroup()
+//                
+//                group.setValuesForKeys(dictionary)
+//                self.groupList.append(group)
+//                
+//                DispatchQueue.main.async {
+//                    self.tableView.reloadData()
+//                }
+//                
+//            }
         })
     }
     

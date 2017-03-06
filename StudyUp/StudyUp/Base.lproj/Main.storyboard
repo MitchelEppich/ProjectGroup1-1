@@ -389,8 +389,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="76d-ia-QMk">
-                                <frame key="frameInset" width="1000" height="1000"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="76d-ia-QMk">
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="xZE-vj-rel" appends="YES" id="eG5-s7-ctl"/>
@@ -422,11 +421,15 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="76d-ia-QMk" firstAttribute="leading" secondItem="UQW-Ww-uf2" secondAttribute="leading" id="7Vv-rX-EaB"/>
+                            <constraint firstItem="76d-ia-QMk" firstAttribute="top" secondItem="UQW-Ww-uf2" secondAttribute="top" id="EY6-Gh-blt"/>
                             <constraint firstItem="76d-ia-QMk" firstAttribute="top" secondItem="UQW-Ww-uf2" secondAttribute="top" id="IFm-qX-q4p"/>
+                            <constraint firstAttribute="trailing" secondItem="76d-ia-QMk" secondAttribute="trailing" id="MV6-dv-uy3"/>
                             <constraint firstItem="ccs-yb-g9q" firstAttribute="leading" secondItem="UQW-Ww-uf2" secondAttribute="leading" id="O7X-Ax-CJk"/>
                             <constraint firstAttribute="trailing" secondItem="ccs-yb-g9q" secondAttribute="trailing" id="aho-iY-jY5"/>
                             <constraint firstItem="SIu-Cg-vPF" firstAttribute="top" secondItem="76d-ia-QMk" secondAttribute="bottom" id="fVb-Hc-I4a"/>
+                            <constraint firstItem="76d-ia-QMk" firstAttribute="leading" secondItem="UQW-Ww-uf2" secondAttribute="leading" id="k4g-Um-eRo"/>
                             <constraint firstAttribute="trailing" secondItem="76d-ia-QMk" secondAttribute="trailing" id="mmg-5I-Ga0"/>
+                            <constraint firstItem="SIu-Cg-vPF" firstAttribute="top" secondItem="76d-ia-QMk" secondAttribute="bottom" id="nBe-dA-gYd"/>
                             <constraint firstItem="ccs-yb-g9q" firstAttribute="top" secondItem="UQW-Ww-uf2" secondAttribute="top" id="vAn-B3-qWI"/>
                         </constraints>
                         <connections>
@@ -445,45 +448,6 @@
                 </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="-1475.7121439280361"/>
-        </scene>
-        <!--Group-->
-        <scene sceneID="PeU-71-DsG">
-            <objects>
-                <viewController id="4Sq-nm-nD5" userLabel="Group" customClass="GroupViewController" customModule="StudyUp" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="NVy-Gf-c1R"/>
-                        <viewControllerLayoutGuide type="bottom" id="1Na-Iu-xvw"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="LVq-Zt-dcp">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Groups" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y6H-Vl-4od">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gl9-T8-UYe">
-                                <state key="normal" title="Back"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="showHomepageViewController" id="6Gj-VH-0jw"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="Y6H-Vl-4od" firstAttribute="leading" secondItem="LVq-Zt-dcp" secondAttribute="leadingMargin" constant="150" id="5gB-Sb-jE2"/>
-                            <constraint firstItem="Gl9-T8-UYe" firstAttribute="centerY" secondItem="Y6H-Vl-4od" secondAttribute="centerY" id="JmF-UP-9sB"/>
-                            <constraint firstItem="Gl9-T8-UYe" firstAttribute="top" secondItem="LVq-Zt-dcp" secondAttribute="topMargin" constant="15" id="MDq-Fa-JiW"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Y6H-Vl-4od" secondAttribute="trailing" constant="137" id="YbI-hK-1aW"/>
-                            <constraint firstItem="Y6H-Vl-4od" firstAttribute="top" secondItem="NVy-Gf-c1R" secondAttribute="bottom" id="fN0-Dz-CSA"/>
-                            <constraint firstItem="Gl9-T8-UYe" firstAttribute="leading" secondItem="LVq-Zt-dcp" secondAttribute="leadingMargin" constant="7" id="hmx-fm-BFL"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZLh-ee-ehd" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1180" y="-584"/>
         </scene>
     </scenes>
     <resources>
