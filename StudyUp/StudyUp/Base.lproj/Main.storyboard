@@ -439,10 +439,7 @@
         <image name="home_btn" width="24" height="28"/>
     </resources>
     <inferredMetricsTieBreakers>
-<<<<<<< HEAD
         <segue reference="LEW-jb-pCL"/>
-=======
-        <segue reference="BsD-c0-8xC"/>
->>>>>>> origin/beta
+
     </inferredMetricsTieBreakers>
 </document>
