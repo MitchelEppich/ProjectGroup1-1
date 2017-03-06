@@ -295,7 +295,7 @@
                                     <action selector="endButtonPressed:" destination="Fpl-gr-NWa" eventType="touchUpInside" id="Npy-NC-96u"/>
                                 </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="TIMER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x3l-id-Mvp">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x3l-id-Mvp">
                                 <rect key="frame" x="17" y="98" width="342" height="150"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="45"/>
                             </label>
@@ -406,8 +406,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="76d-ia-QMk">
-                                <rect key="frame" x="0.0" y="667" width="375" height="0.0"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="76d-ia-QMk">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="xZE-vj-rel" appends="YES" id="eG5-s7-ctl"/>
@@ -440,11 +440,15 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="76d-ia-QMk" firstAttribute="leading" secondItem="UQW-Ww-uf2" secondAttribute="leading" id="7Vv-rX-EaB"/>
+                            <constraint firstItem="76d-ia-QMk" firstAttribute="top" secondItem="UQW-Ww-uf2" secondAttribute="top" id="EY6-Gh-blt"/>
                             <constraint firstItem="76d-ia-QMk" firstAttribute="top" secondItem="UQW-Ww-uf2" secondAttribute="top" id="IFm-qX-q4p"/>
+                            <constraint firstAttribute="trailing" secondItem="76d-ia-QMk" secondAttribute="trailing" id="MV6-dv-uy3"/>
                             <constraint firstItem="ccs-yb-g9q" firstAttribute="leading" secondItem="UQW-Ww-uf2" secondAttribute="leading" id="O7X-Ax-CJk"/>
                             <constraint firstAttribute="trailing" secondItem="ccs-yb-g9q" secondAttribute="trailing" id="aho-iY-jY5"/>
                             <constraint firstItem="SIu-Cg-vPF" firstAttribute="top" secondItem="76d-ia-QMk" secondAttribute="bottom" id="fVb-Hc-I4a"/>
+                            <constraint firstItem="76d-ia-QMk" firstAttribute="leading" secondItem="UQW-Ww-uf2" secondAttribute="leading" id="k4g-Um-eRo"/>
                             <constraint firstAttribute="trailing" secondItem="76d-ia-QMk" secondAttribute="trailing" id="mmg-5I-Ga0"/>
+                            <constraint firstItem="SIu-Cg-vPF" firstAttribute="top" secondItem="76d-ia-QMk" secondAttribute="bottom" id="nBe-dA-gYd"/>
                             <constraint firstItem="ccs-yb-g9q" firstAttribute="top" secondItem="UQW-Ww-uf2" secondAttribute="top" id="vAn-B3-qWI"/>
                         </constraints>
                         <connections>
