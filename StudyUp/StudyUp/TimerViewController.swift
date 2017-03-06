@@ -55,9 +55,6 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     }
     
     
-    @IBAction func smartStudyToggled(_ sender: AnyObject) {
-    }
-    
     func numberOfComponents(in pickerView: UIPickerView)-> Int {
         return 1
     }
