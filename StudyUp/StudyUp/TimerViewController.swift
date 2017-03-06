@@ -19,7 +19,6 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
 
     @IBOutlet weak var timePicker: UIDatePicker!
     @IBOutlet weak var countDownLabel: UILabel!
-    @IBOutlet weak var countDown: UILabel!
      
     @IBOutlet weak var coursePickerButton: UIButton!
     @IBOutlet weak var coursePicker: UIPickerView!
@@ -83,17 +82,14 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
             timerRunning = true
             startButton.isHidden = true
             endButton.isHidden = false
-<<<<<<< HEAD
             breakButton.isHidden = false
             timePicker.isHidden = true
             countDownLabel.isHidden = false
-            
-=======
+
             if smartStudyToggle.isOn{
                 breakButton.isHidden = false;
             }
             smartStudyToggleView.isHidden = true
->>>>>>> origin/beta
         }
     }
     
@@ -131,7 +127,6 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         endButton.isHidden = true
         breakButton.isHidden = true
         resumeButton.isHidden = true
-<<<<<<< HEAD
         timePicker.isHidden = false
         countDownLabel.isHidden = true
 
@@ -143,9 +138,7 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         let seconds = Int(time) % 60
         
         return String(format:"%02i:%02i:%02i", hours, minutes, seconds)
-=======
         smartStudyToggleView.isHidden = false
->>>>>>> origin/beta
     }
     
     /*
