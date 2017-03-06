@@ -9,10 +9,39 @@
 import UIKit
 import Firebase
 import FirebaseDatabase
+import MapKit
 
-class GroupViewController: UITableViewController {
+class GroupViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate{
     
-    var firebase = Firebase()
+
+    @IBOutlet var mapView: MKMapView!
+    
+    
+    var map : InteractiveMap!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        map = InteractiveMap(mapView: mapView)
+        
+        map.locationAuthStatus()
+        //map.centerMapOnLocation(location: mapView.userLocation.location!)
+        
+        //Looks for single or multiple taps.
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(GroupViewController.dismissKeyboard))
+        
+        //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
+        //tap.cancelsTouchesInView = false
+        
+        view.addGestureRecognizer(tap)
+    }
+    
+    //Calls this function when the tap is recognized.
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+    /*var firebase = Firebase()
     var refHandle : UInt!
     var groupList = [StudyGroup]()
     
@@ -22,9 +51,9 @@ class GroupViewController: UITableViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        fetchGroups()
+        //fetchGroups()
     }
-    
+  
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return groupList.count
     }
@@ -70,7 +99,7 @@ class GroupViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    */
 
     /*
     // MARK: - Navigation
