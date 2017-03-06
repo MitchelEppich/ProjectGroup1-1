@@ -15,6 +15,7 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     var timerCount = 60
     var timerRunning = false
     var timer = Timer()
+    var timerEnabled = false
 
     @IBOutlet weak var timePicker: UIDatePicker!
     @IBOutlet weak var countDownLabel: UILabel!
@@ -82,21 +83,25 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
             startButton.isHidden = true
             endButton.isHidden = false
             breakButton.isHidden = false;
-            
-            
         }
     }
     
     @IBAction func breakBtnPressed(_ sender: AnyObject) {
         resumeButton.isHidden = false
         breakButton.isHidden = true
+        timer.invalidate()
     }
     
     @IBAction func resumeBtnPressed(_ sender: AnyObject) {
         breakButton.isHidden = false
         resumeButton.isHidden = true
+        
+        runTimer()
     }
     
+    func runTimer(){
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(TimerViewController.updateCounter)), userInfo: nil, repeats: true)
+    }
     
     func updateCounter() {
         timerCount -= 1
