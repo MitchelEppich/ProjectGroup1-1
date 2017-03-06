@@ -16,7 +16,6 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     var timerRunning = false
     var timer = Timer()
 
-    @IBOutlet weak var countingLabel: UILabel!
     @IBOutlet weak var timePicker: UIDatePicker!
     @IBOutlet weak var countDownLabel: UILabel!
      
@@ -28,7 +27,6 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     
     @IBOutlet weak var smartStudyView: UIView!
     
-<<<<<<< Updated upstream
     @IBOutlet weak var smartStudyToggleView: UIView!
     
     @IBOutlet weak var startButton: UIButton!
@@ -43,27 +41,12 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         if timerCount == 0 {
             timerRunning = false
         }
-=======
-    var timer = Timer()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        timer = Timer.scheduledTimer(timeInterval: 1, target:self, selector: #selector(TimerViewController.updateCounter), userInfo: nil, repeats: true)
-
->>>>>>> Stashed changes
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    func updateCounter() {
-        let timeLeft = timePicker.date.timeIntervalSinceNow
-        countingLabel.text = timeLeft.time
-    }
-    
     
     @IBAction func courseButtonPressed(_ sender: AnyObject) {
         coursePicker.isHidden = false
@@ -131,9 +114,4 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     }
     */
 
-}
-extension TimeInterval {
-    var time:String {
-        return String(format:"%02dd %02dh %02dm %02ds", Int((self/86400)), Int((self/3600.0)%24), Int((self/60.0)%60), Int((self)%60))
-    }
 }
