@@ -20,17 +20,17 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     @IBOutlet weak var countDownLabel: UILabel!
      
     @IBOutlet weak var coursePickerButton: UIButton!
-    
     @IBOutlet weak var coursePicker: UIPickerView!
     
     @IBOutlet weak var smartStudyToggle: UISwitch!
+    @IBOutlet weak var smartStudyToggleView: UIView!
     
     @IBOutlet weak var smartStudyView: UIView!
     
-    @IBOutlet weak var smartStudyToggleView: UIView!
+    @IBOutlet weak var breakButton: UIButton!
+    @IBOutlet weak var resumeButton: UIButton!
     
     @IBOutlet weak var startButton: UIButton!
-    
     @IBOutlet weak var endButton: UIButton!
     
     override func viewDidLoad() {
@@ -83,9 +83,22 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
             timerRunning = true
             startButton.isHidden = true
             endButton.isHidden = false
+            breakButton.isHidden = false;
+            
             
         }
     }
+    
+    @IBAction func breakBtnPressed(_ sender: AnyObject) {
+        resumeButton.isHidden = false
+        breakButton.isHidden = true
+    }
+    
+    @IBAction func resumeBtnPressed(_ sender: AnyObject) {
+        breakButton.isHidden = false
+        resumeButton.isHidden = true
+    }
+    
     
     func updateCounter() {
         timerCount -= 1
@@ -102,6 +115,8 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         timerRunning = false
         startButton.isHidden = false
         endButton.isHidden = true
+        breakButton.isHidden = true
+        resumeButton.isHidden = true
     }
     
     /*

@@ -220,6 +220,9 @@
                                 <state key="normal" title="Take a Break">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="breakBtnPressed:" destination="Fpl-gr-NWa" eventType="touchUpInside" id="Oom-3Q-65s"/>
+                                </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6xI-He-Wtk">
                                 <color key="backgroundColor" red="0.58431372550000005" green="0.0" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -230,6 +233,9 @@
                                 <state key="normal" title="Resume Studying">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="resumeBtnPressed:" destination="Fpl-gr-NWa" eventType="touchUpInside" id="aRA-EE-LUj"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a6b-3h-9Dl">
                                 <color key="backgroundColor" red="0.58431372549019611" green="0.0" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
@@ -279,7 +285,7 @@
                             <constraint firstItem="6xI-He-Wtk" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="QZr-3I-Gpz"/>
                             <constraint firstItem="TP1-hP-5gs" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="R74-DP-Lkv"/>
                             <constraint firstItem="Tls-P3-gAL" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="VFa-lV-uay"/>
-                            <constraint firstItem="6xI-He-Wtk" firstAttribute="top" secondItem="ndD-Bf-Yzg" secondAttribute="bottom" constant="19" id="WpU-PW-0aB" userLabel="Resume Studying.top = Smart Study View.bottom + 24"/>
+                            <constraint firstItem="6xI-He-Wtk" firstAttribute="top" secondItem="ndD-Bf-Yzg" secondAttribute="bottom" constant="24" id="WpU-PW-0aB" userLabel="Resume Studying.top = Smart Study View.bottom + 24"/>
                             <constraint firstItem="xsY-k6-zF5" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="WvQ-Ok-8wk"/>
                             <constraint firstItem="x3l-id-Mvp" firstAttribute="top" secondItem="dVN-DC-UNF" secondAttribute="bottom" constant="48" id="YyF-dg-RFi"/>
                             <constraint firstItem="q0Q-oN-moc" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="Z7E-Jb-uGQ"/>
@@ -298,10 +304,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="breakButton" destination="q0Q-oN-moc" id="UZX-d6-QG6"/>
                         <outlet property="countDownLabel" destination="x3l-id-Mvp" id="KIe-S9-d5c"/>
                         <outlet property="coursePicker" destination="rI4-aQ-CBZ" id="e5v-mn-yvI"/>
                         <outlet property="coursePickerButton" destination="rCr-Rh-ePr" id="LfT-Uc-74g"/>
                         <outlet property="endButton" destination="dVN-DC-UNF" id="rUr-Me-zG0"/>
+                        <outlet property="resumeButton" destination="6xI-He-Wtk" id="FfU-rr-9ri"/>
                         <outlet property="smartStudyToggle" destination="VoT-0W-Avc" id="KgH-Ml-kHr"/>
                         <outlet property="smartStudyToggleView" destination="Tls-P3-gAL" id="tQr-2f-9dD"/>
                         <outlet property="smartStudyView" destination="ndD-Bf-Yzg" id="XZs-XN-1Jv"/>
