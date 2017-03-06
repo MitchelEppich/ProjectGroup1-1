@@ -56,6 +56,14 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         smartStudyView.isHidden = true
     }
     
+    @IBAction func smartStudyToggled(_ sender: AnyObject) {
+        if smartStudyToggle.isOn{
+            smartStudyView.isHidden = false
+        }
+        else {
+            smartStudyView.isHidden = true
+        }
+    }
     
     func numberOfComponents(in pickerView: UIPickerView)-> Int {
         return 1
@@ -87,6 +95,7 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
                 breakButton.isHidden = false;
             }
             smartStudyToggleView.isHidden = true
+            coursePickerButton.isHidden = true
         }
     }
     
@@ -125,6 +134,7 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         breakButton.isHidden = true
         resumeButton.isHidden = true
         smartStudyToggleView.isHidden = false
+        coursePickerButton.isHidden = false
     }
     
     /*
