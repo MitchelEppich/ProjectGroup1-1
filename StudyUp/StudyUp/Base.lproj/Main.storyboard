@@ -523,7 +523,7 @@
         <!--Map-->
         <scene sceneID="dlK-06-sHb">
             <objects>
-                <viewController id="DHH-Zb-Ayi" userLabel="Map" customClass="MapViewController" customModule="StudyUp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapViewController" id="DHH-Zb-Ayi" userLabel="Map" customClass="MapViewController" customModule="StudyUp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yXw-G4-xpE"/>
                         <viewControllerLayoutGuide type="bottom" id="SIu-Cg-vPF"/>
@@ -663,7 +663,7 @@
         <!--Group View Controller-->
         <scene sceneID="O43-rI-oOh">
             <objects>
-                <viewController id="in9-Ob-oAC" customClass="GroupViewController" customModule="StudyUp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GroupViewController" id="in9-Ob-oAC" customClass="GroupViewController" customModule="StudyUp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Zq7-9q-kPe"/>
                         <viewControllerLayoutGuide type="bottom" id="WsD-1R-6N2"/>
@@ -715,8 +715,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Invite Only" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lOv-Uk-yye">
-                                <rect key="frame" x="220" y="321" width="81" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hidden" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lOv-Uk-yye">
+                                <rect key="frame" x="220" y="321" width="55" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -740,20 +740,31 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="KWZ-n7-YtX">
-                                <rect key="frame" x="16" y="418" width="343" height="161"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </mapView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W2e-E9-TCM">
                                 <rect key="frame" x="141" y="617" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Create Group"/>
+                                <connections>
+                                    <action selector="createGroup:" destination="in9-Ob-oAC" eventType="touchUpInside" id="HB5-sf-irH"/>
+                                    <segue destination="DHH-Zb-Ayi" kind="show" id="8kh-6S-Lb6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vy3-iK-OQN">
+                                <rect key="frame" x="115" y="437" width="128" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Choose Location..."/>
+                                <connections>
+                                    <action selector="selectLocation:" destination="in9-Ob-oAC" eventType="touchUpInside" id="nqM-yR-Z06"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="mapView" destination="KWZ-n7-YtX" id="w5V-Te-4R6"/>
+                        <outlet property="adminProtToggle" destination="Egy-ML-JmT" id="7Va-96-bCa"/>
+                        <outlet property="groupNameTF" destination="MIi-Hu-Wdg" id="q6I-nr-Dto"/>
+                        <outlet property="groupTypePicker" destination="W6f-Qi-xwg" id="NRk-Nt-1JL"/>
+                        <outlet property="hiddenToggle" destination="8Ti-zM-AIi" id="y6y-c0-3tK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5x9-UH-49X" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -765,6 +776,7 @@
         <image name="home_btn" width="24" height="28"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="3ig-Di-zbT"/>
+        <segue reference="4Q4-YY-gyn"/>
+        <segue reference="8kh-6S-Lb6"/>
     </inferredMetricsTieBreakers>
 </document>

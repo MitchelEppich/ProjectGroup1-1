@@ -8,7 +8,7 @@
 
 import UIKit
 import MapKit
-//import FirebaseDatabase
+import FirebaseDatabase
 
 class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
@@ -16,6 +16,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     let locationManager = CLLocationManager()
     var mapHasCenteredOnce = false
+    
+    var locationSelectionPortal = false
     
     var firebase = Firebase()
     
@@ -95,7 +97,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
         if let annotationView = annotationView, let anno = annotation as? GroupAnnotation {
             annotationView.canShowCallout = true
-            annotationView.image = UIImage(named: "\(anno.groupType)")
+            annotationView.image = UIImage(named: anno.groupTag)
             let btn = UIButton()
             btn.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
             btn.setImage(UIImage(named: "map"), for: .normal)
@@ -111,16 +113,29 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     }
     
     func showGroupOnMap(location : CLLocation) {
+        if locationSelectionPortal { return }
+        
+        var group : StudyGroup
+        
+        _ = firebase.geoFireRef.child("group").child("open").observe(FIRDataEventType.value, with: { (snapshot) in
+            let postDict = snapshot.value as? [String : AnyObject] ?? [:]
+            
+            print(postDict)
+            
+            
+        })
+        
+        /*
         let circleQuery = firebase.geoFire.query(at: location, withRadius: 100)
         
         _ = circleQuery?.observe(GFEventType.keyEntered, with: {
             (key, location) in
             
             if let location = location {
-                let anno = GroupAnnotation(coordinate: location.coordinate, groupType: 1)
+                let anno = GroupAnnotation(coordinate: location.coordinate, groupType: 2)
                 self.mapView.addAnnotation(anno)
             }
-        })
+        })*/
     }
     
     func mapView(_ mapView: MKMapView, regionWillChangeAnimated animated: Bool) {
@@ -156,14 +171,31 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         let touchLocation = sender.location(in: mapView)
         let locationCoordinate = mapView.convert(touchLocation, toCoordinateFrom: mapView)
         let loc = CLLocation(latitude: locationCoordinate.latitude, longitude: locationCoordinate.longitude)
+        
+        if locationSelectionPortal {
+            
+            
+            //self.show(destination, sender: self)
+            
+            let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+            let vc = mainStoryboard.instantiateViewController(withIdentifier: "GroupViewController") as! GroupViewController
+            
+            vc.groupLocation = loc
+            
+            self.present(vc, animated: true, completion: nil)
+
+        } else {
+            
+        }
+        
         //print("Tapped at lat: \(locationCoordinate.latitude) long: \(locationCoordinate.longitude)")
         
         
-        let group = StudyGroup()
-        group.location = loc
+        //let group = StudyGroup()
+        //group.location = loc
         
         //let rand = 0//arc4random_uniform(0) + 1
-        createStudyGroupLocation(group: group)//Int(rand))
+        //createStudyGroupLocation(group: group)//Int(rand))
     }
 
     /*

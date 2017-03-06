@@ -7,14 +7,22 @@
 //
 
 import Foundation
+import UIKit
 
 class StudyGroup: NSObject {
-    enum group_type {
+    enum group_type: String {
         case silent
         case social
         case hangout
         case cramming
     }
+    
+    let pickerDataArray = [
+        group_type.silent.rawValue,
+        group_type.cramming.rawValue,
+        group_type.hangout.rawValue,
+        group_type.social.rawValue
+    ]
     
     enum group_privacy {
         case closed

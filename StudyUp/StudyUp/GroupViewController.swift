@@ -11,21 +11,38 @@ import Firebase
 import FirebaseDatabase
 import MapKit
 
-class GroupViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate{
+class GroupViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
     
-
-    @IBOutlet var mapView: MKMapView!
+    var groupLocation : CLLocation?
+    var groupName : String?
+    var groupType = StudyGroup.group_type.social.rawValue
+    var groupPrivacy : StudyGroup.group_privacy?
+    var groupId = Firebase().geoFireRef.childByAutoId().key
+    
+    var firebase = Firebase()
     
     
-    var map : InteractiveMap!
+    @IBOutlet var groupNameTF: UITextField!
+    @IBOutlet var groupTypePicker: UIPickerView!
+    @IBOutlet var hiddenToggle: UISwitch!
+    @IBOutlet var adminProtToggle: UISwitch!
+    
+    
+    @IBAction func selectLocation(_ sender: Any) {
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let vc = mainStoryboard.instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
+        
+        vc.locationSelectionPortal = true
+        
+        self.present(vc, animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        groupTypePicker.delegate = self
         
-        map = InteractiveMap(mapView: mapView)
-        
-        map.locationAuthStatus()
-        //map.centerMapOnLocation(location: mapView.userLocation.location!)
+        print(groupLocation ?? "NO LOCATION")
         
         //Looks for single or multiple taps.
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(GroupViewController.dismissKeyboard))
@@ -36,70 +53,43 @@ class GroupViewController: UIViewController, MKMapViewDelegate, CLLocationManage
         view.addGestureRecognizer(tap)
     }
     
+    @IBAction func createGroup(_ sender: Any) {
+        
+        groupName = groupNameTF.text
+        groupPrivacy = hiddenToggle.isOn && adminProtToggle.isOn ? StudyGroup.group_privacy.closed : adminProtToggle.isOn ? StudyGroup.group_privacy.locked : StudyGroup.group_privacy.open
+        
+        let path = firebase.geoFireRef.child("group").child("\(groupPrivacy!)").child(groupId)
+        
+        path.child("Name").setValue(groupName!)
+        path.child("Type").setValue("\(groupType)")
+        firebase.geoFire.setLocation(groupLocation!, forKey: groupId)
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        groupType = StudyGroup().pickerDataArray[row]
+        return groupType
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return StudyGroup().pickerDataArray.count
+    }
+    
     //Calls this function when the tap is recognized.
     func dismissKeyboard() {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
     }
-    /*var firebase = Firebase()
-    var refHandle : UInt!
-    var groupList = [StudyGroup]()
     
-    let cellId = "cellId"
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        //fetchGroups()
-    }
-  
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return groupList.count
-    }
     
-    func tableView(tableView:UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: cellId)
-        
-        // Set cell contents
-        cell.textLabel?.text = groupList[indexPath.row].name
-        
-        return cell
-    }
     
-    func fetchGroups() {
-        
-        refHandle = firebase.geoFireRef.child("group").child("open").observe(FIRDataEventType.value, with: { (snapshot) in
-            if let dictionary = snapshot.value as? [String : AnyObject] {
-            
-                print(dictionary)
-                
-                
-                
-            }
-            
-//            if let dictionary = snapshot.value as? [String : AnyObject] {
-//
-//                print(dictionary)
-//                
-//                let group = StudyGroup()
-//                
-//                group.setValuesForKeys(dictionary)
-//                self.groupList.append(group)
-//                
-//                DispatchQueue.main.async {
-//                    self.tableView.reloadData()
-//                }
-//                
-//            }
-        })
-    }
-    
-    override func didReceiveMemoryWarning() {
+        override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    */
 
     /*
     // MARK: - Navigation

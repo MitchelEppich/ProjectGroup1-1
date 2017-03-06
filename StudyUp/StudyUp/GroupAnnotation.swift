@@ -9,24 +9,17 @@
 import Foundation
 import MapKit
 
-let group = [
-    "social"//,
-    //"silent",
-    //"hangout",
-    //"cramming"
-]
-
 class GroupAnnotation: NSObject, MKAnnotation {
     var coordinate = CLLocationCoordinate2D()
-    var groupType: Int
+    var groupType: String
     var groupTag: String
     var title: String?
     
     
-    init(coordinate: CLLocationCoordinate2D, groupType: Int) {
-        self.coordinate = coordinate
-        self.groupType = groupType
-        self.groupTag = group[groupType - 1].capitalized
+    init(group : StudyGroup) {
+        self.coordinate = group.location.coordinate
+        self.groupType = (group.type?.rawValue)!
+        self.groupTag = group.name!
         self.title = self.groupTag
     }
 }
