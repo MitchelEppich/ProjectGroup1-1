@@ -12,10 +12,12 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     
     let courses = ["MSE 483", "CMPT 276", "CMPT 361", "CMPT 363"]
     
-    var seconds = 1
+    var timerCount = 60
+    var timerRunning = false
     var timer = Timer()
 
     @IBOutlet weak var timePicker: UIDatePicker!
+    @IBOutlet weak var countDownLabel: UILabel!
      
     @IBOutlet weak var coursePickerButton: UIButton!
     
@@ -27,10 +29,18 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     
     @IBOutlet weak var smartStudyToggleView: UIView!
     
+    @IBOutlet weak var startButton: UIButton!
+    
+    @IBOutlet weak var endButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         coursePicker.dataSource = self
         coursePicker.delegate = self
+        timePicker.countDownDuration = 60.0
+        if timerCount == 0 {
+            timerRunning = false
+        }
         // Do any additional setup after loading the view.
     }
 
@@ -66,6 +76,33 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         coursePicker.isHidden = true
         smartStudyView.isHidden = false
         smartStudyToggleView.isHidden = false
+    }
+    
+    @IBAction func startButtonPressed(_ sender: AnyObject) {
+        if timerRunning == false {
+            timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
+            timerRunning = true
+            startButton.isHidden = true
+            endButton.isHidden = false
+            
+        }
+    }
+    
+    func updateCounter() {
+        timerCount -= 1
+        countDownLabel.text = "\(timerCount)"
+        
+        if timerCount == 0 {
+            timer.invalidate()
+            timerRunning = false
+        }
+    }
+    
+    @IBAction func endButtonPressed(_ sender: AnyObject) {
+        timer.invalidate()
+        timerRunning = false
+        startButton.isHidden = false
+        endButton.isHidden = true
     }
     
     /*
