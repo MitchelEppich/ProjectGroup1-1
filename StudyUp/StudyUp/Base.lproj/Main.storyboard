@@ -577,22 +577,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Groups" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y6H-Vl-4od">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="klY-hk-2lS">
-                                <items>
-                                    <navigationItem title="Title" id="8ca-BV-usC">
-                                        <barButtonItem key="leftBarButtonItem" image="home_btn" id="eGg-54-sSZ">
-                                            <connections>
-                                                <segue destination="BYZ-38-t0r" kind="show" id="3ig-Di-zbT"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4AJ-qo-2Bq">
                                 <state key="normal" title="Create Study Group"/>
                                 <connections>
@@ -602,21 +586,34 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPv-Vx-XLs">
                                 <state key="normal" title="Join Study Group"/>
                             </button>
+                            <navigationBar contentMode="scaleToFill" placeholderIntrinsicWidth="375" placeholderIntrinsicHeight="60" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l57-09-hzt">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="z79-FU-Nx2"/>
+                                </constraints>
+                                <color key="barTintColor" red="0.58431372550000005" green="0.0" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="STUDY GROUPS" id="1s1-k9-RkG">
+                                        <barButtonItem key="leftBarButtonItem" image="home_btn" id="f6c-6G-lif">
+                                            <inset key="imageInsets" minX="0.0" minY="4" maxX="5" maxY="5"/>
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Y6H-Vl-4od" firstAttribute="leading" secondItem="LVq-Zt-dcp" secondAttribute="leadingMargin" constant="150" id="5gB-Sb-jE2"/>
+                            <constraint firstItem="l57-09-hzt" firstAttribute="centerX" secondItem="LVq-Zt-dcp" secondAttribute="centerX" id="5Ws-N3-IRX"/>
                             <constraint firstItem="dPv-Vx-XLs" firstAttribute="leading" secondItem="LVq-Zt-dcp" secondAttribute="leadingMargin" constant="112" id="6nh-kP-PD7"/>
                             <constraint firstItem="1Na-Iu-xvw" firstAttribute="top" secondItem="dPv-Vx-XLs" secondAttribute="bottom" constant="280" id="DCA-QQ-pgV"/>
+                            <constraint firstItem="4AJ-qo-2Bq" firstAttribute="top" secondItem="l57-09-hzt" secondAttribute="bottom" constant="238" id="ITc-hB-rJr"/>
                             <constraint firstItem="4AJ-qo-2Bq" firstAttribute="leading" secondItem="LVq-Zt-dcp" secondAttribute="leadingMargin" constant="103" id="Jee-Ms-9GP"/>
-                            <constraint firstItem="klY-hk-2lS" firstAttribute="top" secondItem="LVq-Zt-dcp" secondAttribute="top" constant="-4" id="MAy-kv-1bW"/>
-                            <constraint firstItem="4AJ-qo-2Bq" firstAttribute="top" secondItem="Y6H-Vl-4od" secondAttribute="bottom" constant="257.5" id="P9q-bP-jPJ"/>
-                            <constraint firstItem="klY-hk-2lS" firstAttribute="leading" secondItem="LVq-Zt-dcp" secondAttribute="leading" id="Wtv-Yi-6CV"/>
+                            <constraint firstItem="l57-09-hzt" firstAttribute="top" secondItem="LVq-Zt-dcp" secondAttribute="top" id="LcK-43-MPg"/>
+                            <constraint firstItem="l57-09-hzt" firstAttribute="width" secondItem="LVq-Zt-dcp" secondAttribute="width" id="TtJ-SD-lZq"/>
                             <constraint firstItem="dPv-Vx-XLs" firstAttribute="top" secondItem="4AJ-qo-2Bq" secondAttribute="bottom" constant="29" id="XMN-yE-yyV"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Y6H-Vl-4od" secondAttribute="trailing" constant="137" id="YbI-hK-1aW"/>
-                            <constraint firstItem="4AJ-qo-2Bq" firstAttribute="top" secondItem="klY-hk-2lS" secondAttribute="bottom" constant="258" id="cA8-om-DQz"/>
-                            <constraint firstAttribute="trailing" secondItem="klY-hk-2lS" secondAttribute="trailing" id="fKL-IC-T00"/>
-                            <constraint firstItem="Y6H-Vl-4od" firstAttribute="top" secondItem="NVy-Gf-c1R" secondAttribute="bottom" id="fN0-Dz-CSA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4AJ-qo-2Bq" secondAttribute="trailing" constant="104" id="hAi-ht-2nu"/>
                             <constraint firstItem="dPv-Vx-XLs" firstAttribute="top" secondItem="4AJ-qo-2Bq" secondAttribute="bottom" constant="29" id="pgi-LW-dTb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dPv-Vx-XLs" secondAttribute="trailing" constant="112" id="vyN-b3-kEb"/>
