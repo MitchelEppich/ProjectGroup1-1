@@ -141,6 +141,9 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         resumeButton.isHidden = true
         timePicker.isHidden = false
         countDownLabel.isHidden = true
+        smartStudyToggleView.isHidden = false
+        coursePickerButton.isHidden = false
+
     }
     
     func timeString(time:TimeInterval) -> String {
@@ -151,7 +154,6 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         let minutes = Int(time) / 60 % 60
         let seconds = Int(time) % 60
         return String(format:"%02i:%02i:%02i", hours, minutes, seconds)
-
     }
     
     /*
