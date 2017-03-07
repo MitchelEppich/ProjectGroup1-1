@@ -12,7 +12,7 @@ import UIKit
 
 class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
-    let courses = ["MSE 483", "CMPT 276", "CMPT 361", "CMPT 363"]
+    let courses = SFU_Course_db().course
     
     var timerCount = 60
     var timerRunning = false
