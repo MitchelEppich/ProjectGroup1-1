@@ -49,6 +49,9 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func timePickerAction(_ sender: UIDatePicker) {
+        timerCount = Int(timePicker.countDownDuration)
+    }
     @IBAction func courseButtonPressed(_ sender: AnyObject) {
         coursePicker.isHidden = false
         smartStudyToggleView.isHidden = true
@@ -83,36 +86,24 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         smartStudyToggleView.isHidden = false
     }
     
-    @IBAction func startButtonPressed(_ sender: AnyObject) {
+    @IBAction func startButtonPressed(_ sender: UIButton) {
         if timerRunning == false {
             timerCount = Int(timePicker.countDownDuration)
-            timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
             timerRunning = true
             startButton.isHidden = true
             endButton.isHidden = false
             breakButton.isHidden = false
             timePicker.isHidden = true
             countDownLabel.isHidden = false
-
+            
             if smartStudyToggle.isOn{
                 breakButton.isHidden = false;
             }
             smartStudyToggleView.isHidden = true
             coursePickerButton.isHidden = true
+            
+            runTimer()
         }
-    }
-    
-    @IBAction func breakBtnPressed(_ sender: AnyObject) {
-        resumeButton.isHidden = false
-        breakButton.isHidden = true
-        timer.invalidate()
-    }
-    
-    @IBAction func resumeBtnPressed(_ sender: AnyObject) {
-        breakButton.isHidden = false
-        resumeButton.isHidden = true
-        
-        runTimer()
     }
     
     func runTimer(){
@@ -129,7 +120,19 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         }
     }
     
-    @IBAction func endButtonPressed(_ sender: AnyObject) {
+    @IBAction func breakBtnPressed(_ sender: UIButton) {
+        resumeButton.isHidden = false
+        breakButton.isHidden = true
+        timer.invalidate()
+    }
+    
+    @IBAction func resumeBtnPressed(_ sender: UIButton) {
+        breakButton.isHidden = false
+        resumeButton.isHidden = true
+        runTimer()
+    }
+    
+    @IBAction func endButtonPressed(_ sender: UIButton) {
         timer.invalidate()
         timerRunning = false
         startButton.isHidden = false
@@ -138,17 +141,17 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         resumeButton.isHidden = true
         timePicker.isHidden = false
         countDownLabel.isHidden = true
-
     }
     
     func timeString(time:TimeInterval) -> String {
+        smartStudyToggleView.isHidden = false
+        coursePickerButton.isHidden = false
+        
         let hours = Int(time) / 3600
         let minutes = Int(time) / 60 % 60
         let seconds = Int(time) % 60
-        
         return String(format:"%02i:%02i:%02i", hours, minutes, seconds)
-        smartStudyToggleView.isHidden = false
-        coursePickerButton.isHidden = false
+
     }
     
     /*
