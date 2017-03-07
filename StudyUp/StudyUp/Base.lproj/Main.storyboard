@@ -172,8 +172,7 @@
                             <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rI4-aQ-CBZ">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </pickerView>
-                            <pickerView hidden="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xsY-k6-zF5">
-                                <frame key="frameInset" minX="10" minY="298" width="350" height="125"/>
+                            <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xsY-k6-zF5">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="125" id="5OP-bf-nTB"/>
                                     <constraint firstAttribute="width" constant="350" id="ZMu-QN-Qqp"/>
@@ -360,6 +359,9 @@
                                         <barButtonItem key="leftBarButtonItem" image="home_btn" id="k16-YR-hbw">
                                             <inset key="imageInsets" minX="0.0" minY="4" maxX="5" maxY="5"/>
                                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="Ven-xe-Zj4"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -511,7 +513,7 @@
                                     <outletCollection property="gestureRecognizers" destination="xZE-vj-rel" appends="YES" id="eG5-s7-ctl"/>
                                 </connections>
                             </mapView>
-                            <navigationBar contentMode="scaleToFill" placeholderIntrinsicWidth="375" placeholderIntrinsicHeight="60" translatesAutoresizingMaskIntoConstraints="NO" id="ccs-yb-g9q">
+                            <navigationBar contentMode="scaleToFill" placeholderIntrinsicWidth="375" placeholderIntrinsicHeight="60" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccs-yb-g9q">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Yeh-nB-Z0A"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="xWz-TX-yrI"/>
@@ -599,6 +601,9 @@
                                         <barButtonItem key="leftBarButtonItem" image="home_btn" id="f6c-6G-lif">
                                             <inset key="imageInsets" minX="0.0" minY="4" maxX="5" maxY="5"/>
                                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="TcS-pH-Amh"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -649,6 +654,9 @@
                                         <barButtonItem key="leftBarButtonItem" image="home_btn" id="vg1-Kk-zHo">
                                             <inset key="imageInsets" minX="0.0" minY="4" maxX="5" maxY="5"/>
                                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="IGP-P3-Wa6"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -770,7 +778,7 @@
         <image name="home_btn" width="24" height="28"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="07Y-u1-pUF"/>
+        <segue reference="Ven-xe-Zj4"/>
         <segue reference="8kh-6S-Lb6"/>
     </inferredMetricsTieBreakers>
 </document>
