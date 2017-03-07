@@ -62,7 +62,10 @@ class GroupViewController: UIViewController, MKMapViewDelegate, CLLocationManage
         
         path.child("Name").setValue(groupName!)
         path.child("Type").setValue("\(groupType)")
-        firebase.geoFire.setLocation(groupLocation!, forKey: groupId)
+        
+        let gf : GeoFire = GeoFire(firebaseRef: path)
+        
+        gf.setLocation(groupLocation!, forKey: "Location")
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {

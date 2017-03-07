@@ -31,10 +31,10 @@ class StudyGroup: NSObject {
     }
     
     var location = CLLocation()
-    var name: String?
-    var id : String?
-    var type : group_type?
-    var privacy : group_privacy?
+    var name: String = "Default"
+    var id : String = "Default"
+    var type : String = "Default"
+    var privacy : String = "Default"
     var members : [Int]?
     
     /*

@@ -71,7 +71,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     func createStudyGroupLocation(group: StudyGroup) {
         
-        let path = firebase.geoFireRef.child("group").child("\(group.privacy)").child(group.id!)
+        let path = firebase.geoFireRef.child("group").child("\(group.privacy)").child(group.id)
         
         path.child("Name").setValue(group.name)
         path.child("Type").setValue("\(group.type)")
@@ -97,7 +97,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
         if let annotationView = annotationView, let anno = annotation as? GroupAnnotation {
             annotationView.canShowCallout = true
-            annotationView.image = UIImage(named: anno.groupTag)
+            annotationView.image = UIImage(named: "1")
             let btn = UIButton()
             btn.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
             btn.setImage(UIImage(named: "map"), for: .normal)
@@ -115,14 +115,49 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     func showGroupOnMap(location : CLLocation) {
         if locationSelectionPortal { return }
         
-        var group : StudyGroup
-        
         _ = firebase.geoFireRef.child("group").child("open").observe(FIRDataEventType.value, with: { (snapshot) in
-            let postDict = snapshot.value as? [String : AnyObject] ?? [:]
+            if let dictionary = snapshot.value as? [String: AnyObject] {
+                let group = StudyGroup()
+                
+                
+                for (key, element) in dictionary {
+                    group.id = key as String
+                    group.name = element["Name"] as! String
+                    group.type = element["Type"] as! String
+                    
+                    var location = element["Location"] as? [String: AnyObject]
+                    let arr : NSMutableArray = location?["l"] as! NSMutableArray
+                    
+                    print(location!)
+                    
+                    let lat = arr[0]
+                    let lon = arr[1]
+                    
+                    
+                    group.location = CLLocation(latitude: lat as! CLLocationDegrees, longitude: lon as! CLLocationDegrees)
+                    
+                    let anno = GroupAnnotation(group: group)
+                    self.mapView.addAnnotation(anno)
+                    
+                    print(group)
+                }
+
+            }
             
-            print(postDict)
+            
+            /*let group = StudyGroup()
+            
+            //group.id = postDict?["id"] as? String
+            print(postDict?["Name"] as? String)
+            group.name = postDict?["Name"] as? String
+            group.type = (postDict?["Type"] as? String).map { StudyGroup.group_type(rawValue: $0) }!
+            group.location = postDict?["Location"] as! CLLocation
             
             
+            print(postDict!)
+            print(group.location)
+            
+            */
         })
         
         /*
