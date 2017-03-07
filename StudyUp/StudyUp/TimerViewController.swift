@@ -5,6 +5,8 @@
 //  Created by Mitchel Eppich on 2017-03-04.
 //  Copyright © 2017 SFU Health++. All rights reserved.
 //
+//  Contributions from: Owen Kwok, Leone Tory
+//
 
 import UIKit
 
@@ -49,6 +51,7 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         // Dispose of any resources that can be recreated.
     }
     
+    // Sends value from UIDatePicker
     @IBAction func timePickerAction(_ sender: UIDatePicker) {
         timerCount = Int(timePicker.countDownDuration)
     }
@@ -58,6 +61,7 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         smartStudyView.isHidden = true
     }
     
+    // Toggles smartStudy, currently has no function
     @IBAction func smartStudyToggled(_ sender: AnyObject) {
         if smartStudyToggle.isOn{
             smartStudyView.isHidden = false
@@ -79,6 +83,8 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         return courses[row]
     }
     
+    // Displays courses to select
+    // Currently hard coded course selection
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
         coursePickerButton.setTitle(courses[row], for: UIControlState.normal)
         coursePicker.isHidden = true
@@ -86,6 +92,8 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         smartStudyToggleView.isHidden = false
     }
     
+    // Main functionality of timer
+    // Uses timerCount to display the timer value and initializes timer
     @IBAction func startButtonPressed(_ sender: UIButton) {
         if timerRunning == false {
             timerCount = Int(timePicker.countDownDuration)
@@ -132,6 +140,7 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         runTimer()
     }
     
+    // Ends timer and displays the standard timer UI
     @IBAction func endButtonPressed(_ sender: UIButton) {
         timer.invalidate()
         timerRunning = false
@@ -146,6 +155,7 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
 
     }
     
+    // Method to format time into HH:MM:SS
     func timeString(time:TimeInterval) -> String {
         smartStudyToggleView.isHidden = false
         coursePickerButton.isHidden = false
