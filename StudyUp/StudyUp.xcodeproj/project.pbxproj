@@ -1,0 +1,952 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		476249CF779CF6C21E00C87D /* Pods_StudyUpUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA92F567B6262D2296C9DEF6 /* Pods_StudyUpUITests.framework */; };
+		650BE4231E689456001CC0D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650BE4221E689456001CC0D8 /* AppDelegate.swift */; };
+		650BE4251E689456001CC0D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650BE4241E689456001CC0D8 /* ViewController.swift */; };
+		650BE4281E689456001CC0D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 650BE4261E689456001CC0D8 /* Main.storyboard */; };
+		650BE42B1E689456001CC0D8 /* StudyUp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 650BE4291E689456001CC0D8 /* StudyUp.xcdatamodeld */; };
+		650BE42D1E689456001CC0D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 650BE42C1E689456001CC0D8 /* Assets.xcassets */; };
+		650BE4301E689456001CC0D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 650BE42E1E689456001CC0D8 /* LaunchScreen.storyboard */; };
+		650BE43B1E689456001CC0D8 /* StudyUpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650BE43A1E689456001CC0D8 /* StudyUpTests.swift */; };
+		650BE4461E689456001CC0D8 /* StudyUpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650BE4451E689456001CC0D8 /* StudyUpUITests.swift */; };
+		6565DFDD1E6AC9F6002683F3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6565DFDC1E6AC9F6002683F3 /* GoogleService-Info.plist */; };
+		6565DFF01E6ACCAD002683F3 /* GeoFire.m in Sources */ = {isa = PBXBuildFile; fileRef = 6565DFE71E6ACCAD002683F3 /* GeoFire.m */; };
+		6565DFF11E6ACCAD002683F3 /* GeoFire.m in Sources */ = {isa = PBXBuildFile; fileRef = 6565DFE71E6ACCAD002683F3 /* GeoFire.m */; };
+		6565DFF21E6ACCAD002683F3 /* GeoFire.m in Sources */ = {isa = PBXBuildFile; fileRef = 6565DFE71E6ACCAD002683F3 /* GeoFire.m */; };
+		6565DFF31E6ACCAD002683F3 /* GFBase32Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6565DFE91E6ACCAD002683F3 /* GFBase32Utils.m */; };
+		6565DFF41E6ACCAD002683F3 /* GFBase32Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6565DFE91E6ACCAD002683F3 /* GFBase32Utils.m */; };
+		6565DFF51E6ACCAD002683F3 /* GFBase32Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6565DFE91E6ACCAD002683F3 /* GFBase32Utils.m */; };
+		6565DFF61E6ACCAD002683F3 /* GFGeoHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 6565DFEB1E6ACCAD002683F3 /* GFGeoHash.m */; };
+		6565DFF71E6ACCAD002683F3 /* GFGeoHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 6565DFEB1E6ACCAD002683F3 /* GFGeoHash.m */; };
+		6565DFF81E6ACCAD002683F3 /* GFGeoHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 6565DFEB1E6ACCAD002683F3 /* GFGeoHash.m */; };
+		6565DFF91E6ACCAD002683F3 /* GFGeoHashQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 6565DFED1E6ACCAD002683F3 /* GFGeoHashQuery.m */; };
+		6565DFFA1E6ACCAD002683F3 /* GFGeoHashQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 6565DFED1E6ACCAD002683F3 /* GFGeoHashQuery.m */; };
+		6565DFFB1E6ACCAD002683F3 /* GFGeoHashQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 6565DFED1E6ACCAD002683F3 /* GFGeoHashQuery.m */; };
+		6565DFFC1E6ACCAD002683F3 /* GFQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 6565DFEF1E6ACCAD002683F3 /* GFQuery.m */; };
+		6565DFFD1E6ACCAD002683F3 /* GFQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 6565DFEF1E6ACCAD002683F3 /* GFQuery.m */; };
+		6565DFFE1E6ACCAD002683F3 /* GFQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 6565DFEF1E6ACCAD002683F3 /* GFQuery.m */; };
+		657E7FFC1E6F317800A06716 /* SFU_Course_DB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657E7FFB1E6F317800A06716 /* SFU_Course_DB.swift */; };
+		65BFBA1B1E6B317C001630B6 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BFBA1A1E6B317C001630B6 /* MapViewController.swift */; };
+		65BFBA231E6B34C9001630B6 /* HomepageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BFBA221E6B34C9001630B6 /* HomepageViewController.swift */; };
+		65BFBA291E6B34F4001630B6 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BFBA281E6B34F4001630B6 /* TimerViewController.swift */; };
+		65BFBA2C1E6B3519001630B6 /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BFBA2B1E6B3519001630B6 /* GroupViewController.swift */; };
+		65BFBA2E1E6B3540001630B6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BFBA2D1E6B3540001630B6 /* ProfileViewController.swift */; };
+		65BFBA331E6B3A10001630B6 /* GroupAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BFBA321E6B3A10001630B6 /* GroupAnnotation.swift */; };
+		65BFBA351E6C0248001630B6 /* StudyGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BFBA341E6C0248001630B6 /* StudyGroup.swift */; };
+		65BFBA371E6C1B06001630B6 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BFBA361E6C1B06001630B6 /* Firebase.swift */; };
+		691C656FA00332FBA7B0B816 /* Pods_StudyUp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88E71FC76EAE36612D426B2B /* Pods_StudyUp.framework */; };
+		9BD9C0D66C67511496DFF0FF /* Pods_StudyUpTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF0394917A9A3E46A56DD542 /* Pods_StudyUpTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		650BE4371E689456001CC0D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 650BE4171E689456001CC0D8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 650BE41E1E689456001CC0D8;
+			remoteInfo = StudyUp;
+		};
+		650BE4421E689456001CC0D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 650BE4171E689456001CC0D8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 650BE41E1E689456001CC0D8;
+			remoteInfo = StudyUp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		38F8493B351F439C30BABC32 /* Pods-StudyUpTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudyUpTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StudyUpTests/Pods-StudyUpTests.debug.xcconfig"; sourceTree = "<group>"; };
+		650BE41F1E689456001CC0D8 /* StudyUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		650BE4221E689456001CC0D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		650BE4241E689456001CC0D8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		650BE4271E689456001CC0D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		650BE42A1E689456001CC0D8 /* StudyUp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StudyUp.xcdatamodel; sourceTree = "<group>"; };
+		650BE42C1E689456001CC0D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		650BE42F1E689456001CC0D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		650BE4311E689456001CC0D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		650BE4361E689456001CC0D8 /* StudyUpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudyUpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		650BE43A1E689456001CC0D8 /* StudyUpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyUpTests.swift; sourceTree = "<group>"; };
+		650BE43C1E689456001CC0D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		650BE4411E689456001CC0D8 /* StudyUpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudyUpUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		650BE4451E689456001CC0D8 /* StudyUpUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyUpUITests.swift; sourceTree = "<group>"; };
+		650BE4471E689456001CC0D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6565DFDC1E6AC9F6002683F3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6565DFE01E6ACCAD002683F3 /* GeoFire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoFire.h; sourceTree = "<group>"; };
+		6565DFE11E6ACCAD002683F3 /* GFCircleQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFCircleQuery.h; sourceTree = "<group>"; };
+		6565DFE21E6ACCAD002683F3 /* GFQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFQuery.h; sourceTree = "<group>"; };
+		6565DFE31E6ACCAD002683F3 /* GFRegionQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFRegionQuery.h; sourceTree = "<group>"; };
+		6565DFE41E6ACCAD002683F3 /* GeoFire-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GeoFire-Prefix.pch"; sourceTree = "<group>"; };
+		6565DFE61E6ACCAD002683F3 /* GeoFire+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GeoFire+Private.h"; sourceTree = "<group>"; };
+		6565DFE71E6ACCAD002683F3 /* GeoFire.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoFire.m; sourceTree = "<group>"; };
+		6565DFE81E6ACCAD002683F3 /* GFBase32Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFBase32Utils.h; sourceTree = "<group>"; };
+		6565DFE91E6ACCAD002683F3 /* GFBase32Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFBase32Utils.m; sourceTree = "<group>"; };
+		6565DFEA1E6ACCAD002683F3 /* GFGeoHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFGeoHash.h; sourceTree = "<group>"; };
+		6565DFEB1E6ACCAD002683F3 /* GFGeoHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFGeoHash.m; sourceTree = "<group>"; };
+		6565DFEC1E6ACCAD002683F3 /* GFGeoHashQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFGeoHashQuery.h; sourceTree = "<group>"; };
+		6565DFED1E6ACCAD002683F3 /* GFGeoHashQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFGeoHashQuery.m; sourceTree = "<group>"; };
+		6565DFEE1E6ACCAD002683F3 /* GFQuery+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GFQuery+Private.h"; sourceTree = "<group>"; };
+		6565DFEF1E6ACCAD002683F3 /* GFQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFQuery.m; sourceTree = "<group>"; };
+		657E7FFB1E6F317800A06716 /* SFU_Course_DB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFU_Course_DB.swift; sourceTree = "<group>"; };
+		65BFBA1A1E6B317C001630B6 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = StudyUp/MapViewController.swift; sourceTree = SOURCE_ROOT; };
+		65BFBA221E6B34C9001630B6 /* HomepageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomepageViewController.swift; sourceTree = "<group>"; };
+		65BFBA281E6B34F4001630B6 /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		65BFBA2B1E6B3519001630B6 /* GroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
+		65BFBA2D1E6B3540001630B6 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		65BFBA321E6B3A10001630B6 /* GroupAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupAnnotation.swift; sourceTree = "<group>"; };
+		65BFBA341E6C0248001630B6 /* StudyGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudyGroup.swift; sourceTree = "<group>"; };
+		65BFBA361E6C1B06001630B6 /* Firebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
+		65D668C91E6ACDE2006EDB67 /* StudyUp-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "StudyUp-Bridging-Header.h"; sourceTree = "<group>"; };
+		782B187E28AE9FC01588D6E4 /* Pods-StudyUp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudyUp.release.xcconfig"; path = "Pods/Target Support Files/Pods-StudyUp/Pods-StudyUp.release.xcconfig"; sourceTree = "<group>"; };
+		78E168E2A489C373A6AD60F1 /* Pods-StudyUp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudyUp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StudyUp/Pods-StudyUp.debug.xcconfig"; sourceTree = "<group>"; };
+		88E71FC76EAE36612D426B2B /* Pods_StudyUp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StudyUp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9407585F39A432CA4112BAA2 /* Pods-StudyUpUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudyUpUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StudyUpUITests/Pods-StudyUpUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CF0394917A9A3E46A56DD542 /* Pods_StudyUpTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StudyUpTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA92F567B6262D2296C9DEF6 /* Pods_StudyUpUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StudyUpUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E01D18CC7A4C655243808EBC /* Pods-StudyUpTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudyUpTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-StudyUpTests/Pods-StudyUpTests.release.xcconfig"; sourceTree = "<group>"; };
+		FAB7930E110CFDF516FA5A47 /* Pods-StudyUpUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudyUpUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-StudyUpUITests/Pods-StudyUpUITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		650BE41C1E689456001CC0D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				691C656FA00332FBA7B0B816 /* Pods_StudyUp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		650BE4331E689456001CC0D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BD9C0D66C67511496DFF0FF /* Pods_StudyUpTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		650BE43E1E689456001CC0D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				476249CF779CF6C21E00C87D /* Pods_StudyUpUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		329B02EF649C3203DEC658DA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				78E168E2A489C373A6AD60F1 /* Pods-StudyUp.debug.xcconfig */,
+				782B187E28AE9FC01588D6E4 /* Pods-StudyUp.release.xcconfig */,
+				38F8493B351F439C30BABC32 /* Pods-StudyUpTests.debug.xcconfig */,
+				E01D18CC7A4C655243808EBC /* Pods-StudyUpTests.release.xcconfig */,
+				9407585F39A432CA4112BAA2 /* Pods-StudyUpUITests.debug.xcconfig */,
+				FAB7930E110CFDF516FA5A47 /* Pods-StudyUpUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		650BE4161E689456001CC0D8 = {
+			isa = PBXGroup;
+			children = (
+				650BE4211E689456001CC0D8 /* StudyUp */,
+				650BE4391E689456001CC0D8 /* StudyUpTests */,
+				650BE4441E689456001CC0D8 /* StudyUpUITests */,
+				650BE4201E689456001CC0D8 /* Products */,
+				329B02EF649C3203DEC658DA /* Pods */,
+				B173937C6657A1DA02B12236 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		650BE4201E689456001CC0D8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				650BE41F1E689456001CC0D8 /* StudyUp.app */,
+				650BE4361E689456001CC0D8 /* StudyUpTests.xctest */,
+				650BE4411E689456001CC0D8 /* StudyUpUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		650BE4211E689456001CC0D8 /* StudyUp */ = {
+			isa = PBXGroup;
+			children = (
+				65BFBA311E6B39F8001630B6 /* Model */,
+				65BFBA301E6B3748001630B6 /* Resources */,
+				65BFBA2F1E6B3731001630B6 /* Delegates */,
+				65BFBA1C1E6B32AA001630B6 /* ViewControllers */,
+				650BE4261E689456001CC0D8 /* Main.storyboard */,
+				6565DFDE1E6ACCAD002683F3 /* GeoFire */,
+				650BE42C1E689456001CC0D8 /* Assets.xcassets */,
+				650BE42E1E689456001CC0D8 /* LaunchScreen.storyboard */,
+				650BE4291E689456001CC0D8 /* StudyUp.xcdatamodeld */,
+			);
+			path = StudyUp;
+			sourceTree = "<group>";
+		};
+		650BE4391E689456001CC0D8 /* StudyUpTests */ = {
+			isa = PBXGroup;
+			children = (
+				650BE43A1E689456001CC0D8 /* StudyUpTests.swift */,
+				650BE43C1E689456001CC0D8 /* Info.plist */,
+			);
+			path = StudyUpTests;
+			sourceTree = "<group>";
+		};
+		650BE4441E689456001CC0D8 /* StudyUpUITests */ = {
+			isa = PBXGroup;
+			children = (
+				650BE4451E689456001CC0D8 /* StudyUpUITests.swift */,
+				650BE4471E689456001CC0D8 /* Info.plist */,
+			);
+			path = StudyUpUITests;
+			sourceTree = "<group>";
+		};
+		6565DFDE1E6ACCAD002683F3 /* GeoFire */ = {
+			isa = PBXGroup;
+			children = (
+				6565DFDF1E6ACCAD002683F3 /* API */,
+				6565DFE41E6ACCAD002683F3 /* GeoFire-Prefix.pch */,
+				6565DFE51E6ACCAD002683F3 /* Implementation */,
+			);
+			path = GeoFire;
+			sourceTree = "<group>";
+		};
+		6565DFDF1E6ACCAD002683F3 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				6565DFE01E6ACCAD002683F3 /* GeoFire.h */,
+				6565DFE11E6ACCAD002683F3 /* GFCircleQuery.h */,
+				6565DFE21E6ACCAD002683F3 /* GFQuery.h */,
+				6565DFE31E6ACCAD002683F3 /* GFRegionQuery.h */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		6565DFE51E6ACCAD002683F3 /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				6565DFE61E6ACCAD002683F3 /* GeoFire+Private.h */,
+				6565DFE71E6ACCAD002683F3 /* GeoFire.m */,
+				6565DFE81E6ACCAD002683F3 /* GFBase32Utils.h */,
+				6565DFE91E6ACCAD002683F3 /* GFBase32Utils.m */,
+				6565DFEA1E6ACCAD002683F3 /* GFGeoHash.h */,
+				6565DFEB1E6ACCAD002683F3 /* GFGeoHash.m */,
+				6565DFEC1E6ACCAD002683F3 /* GFGeoHashQuery.h */,
+				6565DFED1E6ACCAD002683F3 /* GFGeoHashQuery.m */,
+				6565DFEE1E6ACCAD002683F3 /* GFQuery+Private.h */,
+				6565DFEF1E6ACCAD002683F3 /* GFQuery.m */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		65BFBA1C1E6B32AA001630B6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				650BE4241E689456001CC0D8 /* ViewController.swift */,
+				65BFBA211E6B32D7001630B6 /* Timer */,
+				65BFBA201E6B32D2001630B6 /* Profile */,
+				65BFBA1F1E6B32CB001630B6 /* Group */,
+				65BFBA1E1E6B32C1001630B6 /* Homepage */,
+				65BFBA1D1E6B32B9001630B6 /* Map */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		65BFBA1D1E6B32B9001630B6 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				65BFBA1A1E6B317C001630B6 /* MapViewController.swift */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
+		65BFBA1E1E6B32C1001630B6 /* Homepage */ = {
+			isa = PBXGroup;
+			children = (
+				65BFBA221E6B34C9001630B6 /* HomepageViewController.swift */,
+			);
+			name = Homepage;
+			sourceTree = "<group>";
+		};
+		65BFBA1F1E6B32CB001630B6 /* Group */ = {
+			isa = PBXGroup;
+			children = (
+				65BFBA2B1E6B3519001630B6 /* GroupViewController.swift */,
+			);
+			name = Group;
+			sourceTree = "<group>";
+		};
+		65BFBA201E6B32D2001630B6 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				65BFBA2D1E6B3540001630B6 /* ProfileViewController.swift */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		65BFBA211E6B32D7001630B6 /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				65BFBA281E6B34F4001630B6 /* TimerViewController.swift */,
+			);
+			name = Timer;
+			sourceTree = "<group>";
+		};
+		65BFBA2F1E6B3731001630B6 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				650BE4221E689456001CC0D8 /* AppDelegate.swift */,
+			);
+			name = Delegates;
+			sourceTree = "<group>";
+		};
+		65BFBA301E6B3748001630B6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6565DFDC1E6AC9F6002683F3 /* GoogleService-Info.plist */,
+				65D668C91E6ACDE2006EDB67 /* StudyUp-Bridging-Header.h */,
+				650BE4311E689456001CC0D8 /* Info.plist */,
+				65BFBA361E6C1B06001630B6 /* Firebase.swift */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		65BFBA311E6B39F8001630B6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				65BFBA321E6B3A10001630B6 /* GroupAnnotation.swift */,
+				65BFBA341E6C0248001630B6 /* StudyGroup.swift */,
+				657E7FFB1E6F317800A06716 /* SFU_Course_DB.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		B173937C6657A1DA02B12236 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				88E71FC76EAE36612D426B2B /* Pods_StudyUp.framework */,
+				CF0394917A9A3E46A56DD542 /* Pods_StudyUpTests.framework */,
+				DA92F567B6262D2296C9DEF6 /* Pods_StudyUpUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		650BE41E1E689456001CC0D8 /* StudyUp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 650BE44A1E689456001CC0D8 /* Build configuration list for PBXNativeTarget "StudyUp" */;
+			buildPhases = (
+				ACCEAA75B71169832ECF4F38 /* [CP] Check Pods Manifest.lock */,
+				650BE41B1E689456001CC0D8 /* Sources */,
+				650BE41C1E689456001CC0D8 /* Frameworks */,
+				650BE41D1E689456001CC0D8 /* Resources */,
+				392A078EDC8BAB6824234AA3 /* [CP] Embed Pods Frameworks */,
+				8EAEF2DA0FC6CC644BED2089 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StudyUp;
+			productName = StudyUp;
+			productReference = 650BE41F1E689456001CC0D8 /* StudyUp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		650BE4351E689456001CC0D8 /* StudyUpTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 650BE44D1E689456001CC0D8 /* Build configuration list for PBXNativeTarget "StudyUpTests" */;
+			buildPhases = (
+				DBC23715EE61016E27845C5C /* [CP] Check Pods Manifest.lock */,
+				650BE4321E689456001CC0D8 /* Sources */,
+				650BE4331E689456001CC0D8 /* Frameworks */,
+				650BE4341E689456001CC0D8 /* Resources */,
+				2292A939BA337E0F0250F6B6 /* [CP] Embed Pods Frameworks */,
+				ABFA92F66419E87E29E79A42 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				650BE4381E689456001CC0D8 /* PBXTargetDependency */,
+			);
+			name = StudyUpTests;
+			productName = StudyUpTests;
+			productReference = 650BE4361E689456001CC0D8 /* StudyUpTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		650BE4401E689456001CC0D8 /* StudyUpUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 650BE4501E689456001CC0D8 /* Build configuration list for PBXNativeTarget "StudyUpUITests" */;
+			buildPhases = (
+				15AF07EC6737080A51DC7590 /* [CP] Check Pods Manifest.lock */,
+				650BE43D1E689456001CC0D8 /* Sources */,
+				650BE43E1E689456001CC0D8 /* Frameworks */,
+				650BE43F1E689456001CC0D8 /* Resources */,
+				3AD46EC25CB9AB8951242631 /* [CP] Embed Pods Frameworks */,
+				6DE3DE440F22F07D8E8752F2 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				650BE4431E689456001CC0D8 /* PBXTargetDependency */,
+			);
+			name = StudyUpUITests;
+			productName = StudyUpUITests;
+			productReference = 650BE4411E689456001CC0D8 /* StudyUpUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		650BE4171E689456001CC0D8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "SFU Health++";
+				TargetAttributes = {
+					650BE41E1E689456001CC0D8 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 8687349LQB;
+						ProvisioningStyle = Automatic;
+					};
+					650BE4351E689456001CC0D8 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 8687349LQB;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 650BE41E1E689456001CC0D8;
+					};
+					650BE4401E689456001CC0D8 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 8687349LQB;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 650BE41E1E689456001CC0D8;
+					};
+				};
+			};
+			buildConfigurationList = 650BE41A1E689456001CC0D8 /* Build configuration list for PBXProject "StudyUp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 650BE4161E689456001CC0D8;
+			productRefGroup = 650BE4201E689456001CC0D8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				650BE41E1E689456001CC0D8 /* StudyUp */,
+				650BE4351E689456001CC0D8 /* StudyUpTests */,
+				650BE4401E689456001CC0D8 /* StudyUpUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		650BE41D1E689456001CC0D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				650BE4301E689456001CC0D8 /* LaunchScreen.storyboard in Resources */,
+				6565DFDD1E6AC9F6002683F3 /* GoogleService-Info.plist in Resources */,
+				650BE42D1E689456001CC0D8 /* Assets.xcassets in Resources */,
+				650BE4281E689456001CC0D8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		650BE4341E689456001CC0D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		650BE43F1E689456001CC0D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		15AF07EC6737080A51DC7590 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2292A939BA337E0F0250F6B6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StudyUpTests/Pods-StudyUpTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		392A078EDC8BAB6824234AA3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StudyUp/Pods-StudyUp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3AD46EC25CB9AB8951242631 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StudyUpUITests/Pods-StudyUpUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6DE3DE440F22F07D8E8752F2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StudyUpUITests/Pods-StudyUpUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8EAEF2DA0FC6CC644BED2089 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StudyUp/Pods-StudyUp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ABFA92F66419E87E29E79A42 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StudyUpTests/Pods-StudyUpTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ACCEAA75B71169832ECF4F38 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DBC23715EE61016E27845C5C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		650BE41B1E689456001CC0D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65BFBA351E6C0248001630B6 /* StudyGroup.swift in Sources */,
+				650BE42B1E689456001CC0D8 /* StudyUp.xcdatamodeld in Sources */,
+				6565DFF31E6ACCAD002683F3 /* GFBase32Utils.m in Sources */,
+				6565DFF91E6ACCAD002683F3 /* GFGeoHashQuery.m in Sources */,
+				6565DFF01E6ACCAD002683F3 /* GeoFire.m in Sources */,
+				65BFBA231E6B34C9001630B6 /* HomepageViewController.swift in Sources */,
+				65BFBA1B1E6B317C001630B6 /* MapViewController.swift in Sources */,
+				650BE4251E689456001CC0D8 /* ViewController.swift in Sources */,
+				6565DFF61E6ACCAD002683F3 /* GFGeoHash.m in Sources */,
+				657E7FFC1E6F317800A06716 /* SFU_Course_DB.swift in Sources */,
+				650BE4231E689456001CC0D8 /* AppDelegate.swift in Sources */,
+				65BFBA371E6C1B06001630B6 /* Firebase.swift in Sources */,
+				65BFBA291E6B34F4001630B6 /* TimerViewController.swift in Sources */,
+				65BFBA331E6B3A10001630B6 /* GroupAnnotation.swift in Sources */,
+				65BFBA2E1E6B3540001630B6 /* ProfileViewController.swift in Sources */,
+				65BFBA2C1E6B3519001630B6 /* GroupViewController.swift in Sources */,
+				6565DFFC1E6ACCAD002683F3 /* GFQuery.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		650BE4321E689456001CC0D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				650BE43B1E689456001CC0D8 /* StudyUpTests.swift in Sources */,
+				6565DFF11E6ACCAD002683F3 /* GeoFire.m in Sources */,
+				6565DFF71E6ACCAD002683F3 /* GFGeoHash.m in Sources */,
+				6565DFFD1E6ACCAD002683F3 /* GFQuery.m in Sources */,
+				6565DFFA1E6ACCAD002683F3 /* GFGeoHashQuery.m in Sources */,
+				6565DFF41E6ACCAD002683F3 /* GFBase32Utils.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		650BE43D1E689456001CC0D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				650BE4461E689456001CC0D8 /* StudyUpUITests.swift in Sources */,
+				6565DFF21E6ACCAD002683F3 /* GeoFire.m in Sources */,
+				6565DFF81E6ACCAD002683F3 /* GFGeoHash.m in Sources */,
+				6565DFFE1E6ACCAD002683F3 /* GFQuery.m in Sources */,
+				6565DFFB1E6ACCAD002683F3 /* GFGeoHashQuery.m in Sources */,
+				6565DFF51E6ACCAD002683F3 /* GFBase32Utils.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		650BE4381E689456001CC0D8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 650BE41E1E689456001CC0D8 /* StudyUp */;
+			targetProxy = 650BE4371E689456001CC0D8 /* PBXContainerItemProxy */;
+		};
+		650BE4431E689456001CC0D8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 650BE41E1E689456001CC0D8 /* StudyUp */;
+			targetProxy = 650BE4421E689456001CC0D8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		650BE4261E689456001CC0D8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				650BE4271E689456001CC0D8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		650BE42E1E689456001CC0D8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				650BE42F1E689456001CC0D8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		650BE4481E689456001CC0D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		650BE4491E689456001CC0D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		650BE44B1E689456001CC0D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78E168E2A489C373A6AD60F1 /* Pods-StudyUp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8687349LQB;
+				INFOPLIST_FILE = StudyUp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sfuhealthplusplus.StudyUp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "StudyUp/StudyUp-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		650BE44C1E689456001CC0D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 782B187E28AE9FC01588D6E4 /* Pods-StudyUp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8687349LQB;
+				INFOPLIST_FILE = StudyUp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sfuhealthplusplus.StudyUp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "StudyUp/StudyUp-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		650BE44E1E689456001CC0D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38F8493B351F439C30BABC32 /* Pods-StudyUpTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 8687349LQB;
+				INFOPLIST_FILE = StudyUpTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sfuhealthplusplus.StudyUpTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StudyUp.app/StudyUp";
+			};
+			name = Debug;
+		};
+		650BE44F1E689456001CC0D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E01D18CC7A4C655243808EBC /* Pods-StudyUpTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 8687349LQB;
+				INFOPLIST_FILE = StudyUpTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sfuhealthplusplus.StudyUpTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StudyUp.app/StudyUp";
+			};
+			name = Release;
+		};
+		650BE4511E689456001CC0D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9407585F39A432CA4112BAA2 /* Pods-StudyUpUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 8687349LQB;
+				INFOPLIST_FILE = StudyUpUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sfuhealthplusplus.StudyUpUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = StudyUp;
+			};
+			name = Debug;
+		};
+		650BE4521E689456001CC0D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FAB7930E110CFDF516FA5A47 /* Pods-StudyUpUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 8687349LQB;
+				INFOPLIST_FILE = StudyUpUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sfuhealthplusplus.StudyUpUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = StudyUp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		650BE41A1E689456001CC0D8 /* Build configuration list for PBXProject "StudyUp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				650BE4481E689456001CC0D8 /* Debug */,
+				650BE4491E689456001CC0D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		650BE44A1E689456001CC0D8 /* Build configuration list for PBXNativeTarget "StudyUp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				650BE44B1E689456001CC0D8 /* Debug */,
+				650BE44C1E689456001CC0D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		650BE44D1E689456001CC0D8 /* Build configuration list for PBXNativeTarget "StudyUpTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				650BE44E1E689456001CC0D8 /* Debug */,
+				650BE44F1E689456001CC0D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		650BE4501E689456001CC0D8 /* Build configuration list for PBXNativeTarget "StudyUpUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				650BE4511E689456001CC0D8 /* Debug */,
+				650BE4521E689456001CC0D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		650BE4291E689456001CC0D8 /* StudyUp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				650BE42A1E689456001CC0D8 /* StudyUp.xcdatamodel */,
+			);
+			currentVersion = 650BE42A1E689456001CC0D8 /* StudyUp.xcdatamodel */;
+			path = StudyUp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 650BE4171E689456001CC0D8 /* Project object */;
+}
