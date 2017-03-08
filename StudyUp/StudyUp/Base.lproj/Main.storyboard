@@ -574,7 +574,7 @@
                                     <segue destination="in9-Ob-oAC" kind="show" id="Jxo-1f-ZwY"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPv-Vx-XLs">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPv-Vx-XLs">
                                 <rect key="frame" x="128" y="357" width="119" height="30"/>
                                 <state key="normal" title="Join Study Group"/>
                             </button>
@@ -784,7 +784,7 @@
         <image name="home_btn" width="24" height="28"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ven-xe-Zj4"/>
+        <segue reference="TcS-pH-Amh"/>
         <segue reference="8kh-6S-Lb6"/>
     </inferredMetricsTieBreakers>
 </document>

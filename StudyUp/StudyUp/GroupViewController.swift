@@ -11,7 +11,7 @@ import Firebase
 import FirebaseDatabase
 import MapKit
 
-class GroupViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
+class GroupViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UIPickerViewDataSource, UIPickerViewDelegate, GetLocation {
     
     var groupLocation : CLLocation?
     var groupName : String?
@@ -34,7 +34,12 @@ class GroupViewController: UIViewController, MKMapViewDelegate, CLLocationManage
         
         vc.locationSelectionPortal = true
         
+        vc.delegate = self
         self.present(vc, animated: true, completion: nil)
+    }
+    
+    func sendLocationToPrevVC(location:AnyObject!) {
+        groupLocation = location as! CLLocation?
     }
     
     override func viewDidLoad() {
@@ -55,6 +60,7 @@ class GroupViewController: UIViewController, MKMapViewDelegate, CLLocationManage
     
     @IBAction func createGroup(_ sender: Any) {
         
+        print("IN")
         groupName = groupNameTF.text
         groupPrivacy = hiddenToggle.isOn && adminProtToggle.isOn ? StudyGroup.group_privacy.closed : adminProtToggle.isOn ? StudyGroup.group_privacy.locked : StudyGroup.group_privacy.open
         
@@ -66,6 +72,7 @@ class GroupViewController: UIViewController, MKMapViewDelegate, CLLocationManage
         let gf : GeoFire = GeoFire(firebaseRef: path)
         
         gf.setLocation(groupLocation!, forKey: "Location")
+        print("OUT")
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {

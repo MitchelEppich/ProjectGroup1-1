@@ -10,9 +10,17 @@ import UIKit
 import MapKit
 import FirebaseDatabase
 
+protocol GetLocation {
+    func sendLocationToPrevVC(location:AnyObject!)
+}
+
 class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
+    var delegate:GetLocation?
+    
     @IBOutlet weak var mapView: MKMapView!
+    
+    var selectedLocation: CLLocation?
     
     let locationManager = CLLocationManager()
     var mapHasCenteredOnce = false
@@ -95,7 +103,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             annotationView = av
         }
     
-        if let annotationView = annotationView, let anno = annotation as? GroupAnnotation {
+        if let annotationView = annotationView, let _ = annotation as? GroupAnnotation {
             annotationView.canShowCallout = true
             annotationView.image = UIImage(named: "1")
             let btn = UIButton()
@@ -122,17 +130,26 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
                 
                 for (key, element) in dictionary {
                     group.id = key as String
+                    print("ITS HAPPENING")
+                    print(group.id)
+                    
                     group.name = element["Name"] as! String
-                    group.type = element["Type"] as! String
+                    
+                    print(group.name)
+                    group.type = "silent"//element["Type"] as! String
+                    print(group.type)
                     
                     var location = element["Location"] as? [String: AnyObject]
+                    if location == nil { continue }
+                    print(location ?? "NO LOCATION")
                     let arr : NSMutableArray = location?["l"] as! NSMutableArray
-                    
-                    print(location!)
+                    print(arr)
                     
                     let lat = arr[0]
                     let lon = arr[1]
                     
+                    print(lat)
+                    print(lon)
                     
                     group.location = CLLocation(latitude: lat as! CLLocationDegrees, longitude: lon as! CLLocationDegrees)
                     
@@ -205,19 +222,16 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         if sender.state != UIGestureRecognizerState.began { return }
         let touchLocation = sender.location(in: mapView)
         let locationCoordinate = mapView.convert(touchLocation, toCoordinateFrom: mapView)
-        let loc = CLLocation(latitude: locationCoordinate.latitude, longitude: locationCoordinate.longitude)
+        selectedLocation = CLLocation(latitude: locationCoordinate.latitude, longitude: locationCoordinate.longitude)
         
         if locationSelectionPortal {
             
             
             //self.show(destination, sender: self)
             
-            let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-            let vc = mainStoryboard.instantiateViewController(withIdentifier: "GroupViewController") as! GroupViewController
+            print(selectedLocation ?? "No Location")
             
-            vc.groupLocation = loc
-            
-            self.present(vc, animated: true, completion: nil)
+            self.dismiss(animated: false, completion: nil)
 
         } else {
             
@@ -231,6 +245,13 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
         //let rand = 0//arc4random_uniform(0) + 1
         //createStudyGroupLocation(group: group)//Int(rand))
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        if self.isBeingDismissed {
+            self.delegate?.sendLocationToPrevVC(location: selectedLocation)
+        }
     }
 
     /*
