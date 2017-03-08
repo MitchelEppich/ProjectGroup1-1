@@ -72,6 +72,7 @@ class ProfileViewController: UIViewController,UINavigationControllerDelegate, UI
             profileFaculty.isEditable = false
             profileImageEdit.isHidden = true
             editEnable = false
+            profileEdit.setTitle("Edit", for: UIControlState.normal)
             
         } else {
             // allows user to:
@@ -82,6 +83,7 @@ class ProfileViewController: UIViewController,UINavigationControllerDelegate, UI
             // edit profile picture
             profileImageEdit.isHidden = false
             editEnable = true
+            profileEdit.setTitle("Done", for: UIControlState.normal)
         }
         
     }

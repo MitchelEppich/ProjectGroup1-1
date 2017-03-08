@@ -29,17 +29,11 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     var firebase = Firebase()
     
-    //var geoFire : GeoFire!
-    //var geoFireRef : FIRDatabaseReference!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         mapView?.delegate = self
         mapView?.userTrackingMode = MKUserTrackingMode.follow
-        
-        //geoFireRef = FIRDatabase.database().reference()
-        //geoFire = GeoFire(firebaseRef: geoFireRef)
         
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -160,34 +154,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
                 }
 
             }
-            
-            
-            /*let group = StudyGroup()
-            
-            //group.id = postDict?["id"] as? String
-            print(postDict?["Name"] as? String)
-            group.name = postDict?["Name"] as? String
-            group.type = (postDict?["Type"] as? String).map { StudyGroup.group_type(rawValue: $0) }!
-            group.location = postDict?["Location"] as! CLLocation
-            
-            
-            print(postDict!)
-            print(group.location)
-            
-            */
         })
-        
-        /*
-        let circleQuery = firebase.geoFire.query(at: location, withRadius: 100)
-        
-        _ = circleQuery?.observe(GFEventType.keyEntered, with: {
-            (key, location) in
-            
-            if let location = location {
-                let anno = GroupAnnotation(coordinate: location.coordinate, groupType: 2)
-                self.mapView.addAnnotation(anno)
-            }
-        })*/
     }
     
     func mapView(_ mapView: MKMapView, regionWillChangeAnimated animated: Bool) {
@@ -218,16 +185,12 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     }
 
     @IBAction func setGroupStudyLocation(_ sender: UILongPressGestureRecognizer) {
-        //print("tapped")
         if sender.state != UIGestureRecognizerState.began { return }
         let touchLocation = sender.location(in: mapView)
         let locationCoordinate = mapView.convert(touchLocation, toCoordinateFrom: mapView)
         selectedLocation = CLLocation(latitude: locationCoordinate.latitude, longitude: locationCoordinate.longitude)
         
         if locationSelectionPortal {
-            
-            
-            //self.show(destination, sender: self)
             
             print(selectedLocation ?? "No Location")
             
@@ -236,15 +199,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         } else {
             
         }
-        
-        //print("Tapped at lat: \(locationCoordinate.latitude) long: \(locationCoordinate.longitude)")
-        
-        
-        //let group = StudyGroup()
-        //group.location = loc
-        
-        //let rand = 0//arc4random_uniform(0) + 1
-        //createStudyGroupLocation(group: group)//Int(rand))
     }
     
     override func viewWillDisappear(_ animated: Bool) {

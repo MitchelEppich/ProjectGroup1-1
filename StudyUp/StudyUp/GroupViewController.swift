@@ -60,7 +60,6 @@ class GroupViewController: UIViewController, MKMapViewDelegate, CLLocationManage
     
     @IBAction func createGroup(_ sender: Any) {
         
-        print("IN")
         groupName = groupNameTF.text
         groupPrivacy = hiddenToggle.isOn && adminProtToggle.isOn ? StudyGroup.group_privacy.closed : adminProtToggle.isOn ? StudyGroup.group_privacy.locked : StudyGroup.group_privacy.open
         
@@ -72,7 +71,6 @@ class GroupViewController: UIViewController, MKMapViewDelegate, CLLocationManage
         let gf : GeoFire = GeoFire(firebaseRef: path)
         
         gf.setLocation(groupLocation!, forKey: "Location")
-        print("OUT")
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
