@@ -10,12 +10,15 @@ import UIKit
 import MapKit
 import FirebaseDatabase
 
+
+// Protocol to allow for data transfer to a parent view
 protocol GetLocation {
     func sendLocationToPrevVC(location:AnyObject!)
 }
 
 class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
+    // Delegate for the protocol
     var delegate:GetLocation?
     
     @IBOutlet weak var mapView: MKMapView!
@@ -29,6 +32,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     var firebase = Firebase()
     
+    // Prepares the map view for tracking the users location dynamically
+    // as well as setting the map delegate to self to retreive data
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,10 +43,13 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         // Do any additional setup after loading the view, typically from a nib.
     }
     
+    // Check if the app is allowed to use the users location
     override func viewDidAppear(_ animated: Bool) {
         locationAuthStatus()
     }
     
+    // If the user has allowed location services to our app then we will focus on
+    // the user location else request authorization
     func locationAuthStatus() {
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
             mapView?.showsUserLocation = true
@@ -50,18 +58,20 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         }
     }
     
+    // Requests authorization for location services from the user.
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         if status == CLAuthorizationStatus.authorizedWhenInUse {
             mapView?.showsUserLocation = true
         }
     }
-    
+    // Center map location at a inputed location
     func centerMapOnLocation(location: CLLocation) {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, 2000, 2000)
         
         mapView?.setRegion(coordinateRegion, animated: true)
     }
     
+    // Update the map, in this case update the focus on the user if the app has not already
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
         if let loc = userLocation.location {
             if !mapHasCenteredOnce {
@@ -71,15 +81,9 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         }
     }
     
-    func createStudyGroupLocation(group: StudyGroup) {
-        
-        let path = firebase.geoFireRef.child("group").child("\(group.privacy)").child(group.id)
-        
-        path.child("Name").setValue(group.name)
-        path.child("Type").setValue("\(group.type)")
-        firebase.geoFire.setLocation(group.location, forKey: group.id)
-    }
-    
+    // Simply creates independent annotations on the map unless there is a reuasable annotation of the
+    // Same style in that case this function will reuse that instead of creating a new one, as well this 
+    // creates the annotations for the user and every other element on our map, ie. groups
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
     
         let annoIdentifier = "Group"
@@ -114,6 +118,10 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         // Dispose of any resources that can be recreated.
     }
     
+    
+    // Access's the groups database sub section in our Firebase Database and retrieves(observes) all values in that location
+    // inputing them into a single dictionary which is then parsed through and broken down into StudyGroups using all the data
+    // Saved on the Database and then finally creating and adding a group annotation to the map
     func showGroupOnMap(location : CLLocation) {
         if locationSelectionPortal { return }
         
@@ -124,45 +132,37 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
                 
                 for (key, element) in dictionary {
                     group.id = key as String
-                    print("ITS HAPPENING")
-                    print(group.id)
                     
                     group.name = element["Name"] as! String
-                    
-                    print(group.name)
                     group.type = "silent"//element["Type"] as! String
-                    print(group.type)
                     
                     var location = element["Location"] as? [String: AnyObject]
-                    if location == nil { continue }
-                    print(location ?? "NO LOCATION")
+                    if location == nil { continue } // Stop in cause there is an error and location is nil
                     let arr : NSMutableArray = location?["l"] as! NSMutableArray
-                    print(arr)
                     
                     let lat = arr[0]
                     let lon = arr[1]
-                    
-                    print(lat)
-                    print(lon)
                     
                     group.location = CLLocation(latitude: lat as! CLLocationDegrees, longitude: lon as! CLLocationDegrees)
                     
                     let anno = GroupAnnotation(group: group)
                     self.mapView.addAnnotation(anno)
-                    
-                    print(group)
+
                 }
 
             }
         })
     }
     
+    // Shows the groups with in the view of the map at the users specific location on the entire map
     func mapView(_ mapView: MKMapView, regionWillChangeAnimated animated: Bool) {
         let loc = CLLocation (latitude: mapView.centerCoordinate.latitude, longitude: mapView.centerCoordinate.longitude)
         
         showGroupOnMap(location: loc)
     }
     
+    // Displays and allows for the annotations to have placemarkers once pressed, this allows for simple information to be displayed overhead the 
+    // requested group
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         if let anno = view.annotation as? GroupAnnotation {
             
@@ -184,6 +184,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         }
     }
 
+    // When the user holds on a specific locations on the map that location will be saved and 
+    // Used in other areas of the app after dismissing this modal presented view.
     @IBAction func setGroupStudyLocation(_ sender: UILongPressGestureRecognizer) {
         if sender.state != UIGestureRecognizerState.began { return }
         let touchLocation = sender.location(in: mapView)
@@ -192,15 +194,13 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
         if locationSelectionPortal {
             
-            print(selectedLocation ?? "No Location")
-            
             self.dismiss(animated: false, completion: nil)
 
-        } else {
-            
         }
     }
     
+    // If the view is being used for collecting a specific location it will be dismissed once
+    // a location is selected and this function will send data to the parent view.
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         if self.isBeingDismissed {

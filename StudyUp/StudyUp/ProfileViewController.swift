@@ -114,7 +114,7 @@ class ProfileViewController: UIViewController,UINavigationControllerDelegate, UI
         
     }
     // set selected image as profile picture
-    func imagePickerController(_ picker: UIImagePickerController!, didFinishPickingMediaWithInfo info: [String : Any]){
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]){
         let selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
         
         profileImage.image = selectedImage

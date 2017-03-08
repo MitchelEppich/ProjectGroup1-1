@@ -27,7 +27,12 @@ class GroupViewController: UIViewController, MKMapViewDelegate, CLLocationManage
     @IBOutlet var hiddenToggle: UISwitch!
     @IBOutlet var adminProtToggle: UISwitch!
     
-    
+    /*
+     This action when clicked will redirect the user to a presented
+     map view of the MapViewController allowing user to select a location
+     on it and setting itself as a delegate to the MapViewController
+     protocol delegate
+     */
     @IBAction func selectLocation(_ sender: Any) {
         let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         let vc = mainStoryboard.instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
@@ -38,10 +43,15 @@ class GroupViewController: UIViewController, MKMapViewDelegate, CLLocationManage
         self.present(vc, animated: true, completion: nil)
     }
     
+    /*
+     Conforms with the MapViewController protocol which allows this view and 
+     the MapViewController to pass data when this view presents the map
+    */
     func sendLocationToPrevVC(location:AnyObject!) {
         groupLocation = location as! CLLocation?
     }
     
+    // Sets up the view as well as allows users to tap screen to dismiss the keyboard
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -58,6 +68,8 @@ class GroupViewController: UIViewController, MKMapViewDelegate, CLLocationManage
         view.addGestureRecognizer(tap)
     }
     
+    // Retrieves all information from the input feilds in the view and passes them into FIREBASE
+    // The selected database which stores them as json's online for further retrieval and manipulation
     @IBAction func createGroup(_ sender: Any) {
         
         groupName = groupNameTF.text
@@ -73,15 +85,18 @@ class GroupViewController: UIViewController, MKMapViewDelegate, CLLocationManage
         gf.setLocation(groupLocation!, forKey: "Location")
     }
     
+    // Populates the picker view with the data in our StudyGroup model Object
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         groupType = StudyGroup().pickerDataArray[row]
         return groupType
     }
     
+    // Returns the number of picker components
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
+    // Returns the number of cells in the picker
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return StudyGroup().pickerDataArray.count
     }
