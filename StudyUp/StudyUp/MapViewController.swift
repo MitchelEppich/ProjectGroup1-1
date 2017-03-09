@@ -16,7 +16,7 @@ protocol GetLocation {
     func sendLocationToPrevVC(location:AnyObject!)
 }
 
-class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, StudyGroupDelegate {
     
     // Delegate for the protocol
     var delegate:GetLocation?
@@ -24,6 +24,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     @IBOutlet weak var mapView: MKMapView!
     
     var selectedLocation: CLLocation?
+    
+    var group_list : NSArray = []
     
     let locationManager = CLLocationManager()
     var mapHasCenteredOnce = false
@@ -125,17 +127,54 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     func showGroupOnMap(location : CLLocation) {
         if locationSelectionPortal { return }
         
-        let sg = StudyGroup()
+        let firebase = Firebase()
         
-        print(sg.retrieveAllStudyGroups().count)
+        //let groups : NSMutableArray = []
         
-        let group_list : NSArray = sg.retrieveAllStudyGroups().copy() as! NSArray
+        _ = firebase.geoFireRef.child("groups/open/general").observe(FIRDataEventType.value, with: { (snapshot) in
+            if let dictionary = snapshot.value as? [String: AnyObject] {
+                
+                let group = StudyGroup()
+                
+                for (key, element) in dictionary {
+                    print(element)
+                    group.id = key as String
+                    
+                    group.name = element["name"] as! String
+                    group.type = element["type"] as! String
+                    
+                    var location = element["location"] as? [String: AnyObject]
+                    if location == nil { continue } // Stop in cause there is an error and location is nil
+                    let arr : NSMutableArray = location?["l"] as! NSMutableArray
+                    
+                    let lat = arr[0]
+                    let lon = arr[1]
+                    
+                    group.location = CLLocation(latitude: lat as! CLLocationDegrees, longitude: lon as! CLLocationDegrees)
+                    
+                    //groups.add(group)
+                    
+                    self.mapView.addAnnotation(MapAnnotation(group: group))
+                }
+                
+            }
+        })
         
-        print(group_list.count)
+//        let sg = StudyGroup()
+//        
+//        sg.retrieveAllStudyGroups(mapView : mapView)
         
-        for group in (group_list as NSArray as! [StudyGroup]) {
-            self.mapView.addAnnotation(group.createAnnotation())
-        }
+        //sg.delegate = self
+        
+        //sg.retrieveAllStudyGroups()
+        //print(group_list.count)
+        //for group in (group_list as NSArray as! [StudyGroup]) {
+        //    self.mapView.addAnnotation(group.createAnnotation())
+        //}
+    }
+    
+    func retreiveStudyGroups(group_list: AnyObject) {
+        self.group_list = (group_list as! NSArray)
     }
     
     // Shows the groups with in the view of the map at the users specific location on the entire map
@@ -148,7 +187,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     // Displays and allows for the annotations to have placemarkers once pressed, this allows for simple information to be displayed overhead the 
     // requested group
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-        if let anno = view.annotation as? GroupAnnotation {
+        if let anno = view.annotation as? MapAnnotation {
             
             var place: MKPlacemark!
             if #available(iOS 10.0, *) {

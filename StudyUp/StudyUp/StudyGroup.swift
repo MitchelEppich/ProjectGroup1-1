@@ -11,7 +11,13 @@ import UIKit
 import Firebase
 import MapKit
 
+protocol StudyGroupDelegate {
+    func retreiveStudyGroups(group_list : AnyObject)
+}
+
 class StudyGroup: NSObject {
+    
+    var delegate : StudyGroupDelegate?
     
     enum group_type : String {
         case silent
@@ -45,19 +51,29 @@ class StudyGroup: NSObject {
     var title : String?
     
     var PATH : String!
-    
-    override init() {
+
+    init(group : StudyGroup? = nil) {
         PATH = "groups"
+        
+        if group != nil {
+            self.location = (group?.location)!
+            self.name = (group?.name)!
+            self.id = (group?.id)!
+            self.course = group?.course
+            self.type = (group?.type)!
+            self.privacy = (group?.privacy)!
+        }
     }
     
-    func retrieveAllStudyGroups() -> NSMutableArray {
+    func retrieveAllStudyGroups(mapView : MKMapView) {
         
         let firebase = Firebase()
         
-        let groups : NSMutableArray = []
+        //let groups : NSMutableArray = []
         
         _ = firebase.geoFireRef.child("\(PATH!)/open/general").observe(FIRDataEventType.value, with: { (snapshot) in
             if let dictionary = snapshot.value as? [String: AnyObject] {
+                
                 let group = StudyGroup()
                 
                 for (key, element) in dictionary {
@@ -74,15 +90,17 @@ class StudyGroup: NSObject {
                     let lon = arr[1]
                     
                     group.location = CLLocation(latitude: lat as! CLLocationDegrees, longitude: lon as! CLLocationDegrees)
+
+                    //groups.add(group)
                     
-                    groups.add(group)
-                    
+                    mapView.addAnnotation(MapAnnotation(group: group))
                 }
                 
             }
         })
-        
-        return groups
+
+        //print(groups.count)
+        //self.delegate?.retreiveStudyGroups(group_list: groups)
     }
     
     func retreiveStudyGroup() -> StudyGroup {
@@ -104,9 +122,24 @@ class StudyGroup: NSObject {
         
         gf.setLocation(self.location, forKey: "location")    }
     
-    func createAnnotation() -> MKAnnotation {
-        coordinate = self.location.coordinate
-        title = self.name
-        return self as! MKAnnotation
+//    func createAnnotation(group : StudyGroup) -> MKAnnotation {
+//        coordinate = self.location.coordinate
+//        title = self.name
+//        return self as! MKAnnotation
+//    }
+}
+
+class MapAnnotation : NSObject, MKAnnotation {
+    var coordinate = CLLocationCoordinate2D()
+    var groupType: String = "Default"
+    var groupTag: String = "Default"
+    var title: String?
+    
+    
+    init(group : StudyGroup) {
+        self.coordinate = group.location.coordinate
+        self.groupType = group.type
+        self.groupTag = group.name
+        self.title = self.groupTag
     }
 }

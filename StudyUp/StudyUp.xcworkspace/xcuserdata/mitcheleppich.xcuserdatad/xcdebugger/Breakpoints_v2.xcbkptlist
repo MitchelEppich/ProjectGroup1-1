@@ -17,6 +17,83 @@
             endingLineNumber = "17"
             landmarkName = "GetLocation"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "StudyUp.MapViewController.__deallocating_deinit"
+                  moduleName = "StudyUp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mitcheleppich/Desktop/ProjectGroup1/StudyUp/StudyUp/MapViewController.swift"
+                  timestampString = "510780434.799865"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "StudyUp.MapViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; StudyUp.MapViewController"
+                  moduleName = "StudyUp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mitcheleppich/Desktop/ProjectGroup1/StudyUp/StudyUp/MapViewController.swift"
+                  timestampString = "510780434.80306"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "StudyUp.MapViewController.__allocating_init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; StudyUp.MapViewController"
+                  moduleName = "StudyUp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mitcheleppich/Desktop/ProjectGroup1/StudyUp/StudyUp/MapViewController.swift"
+                  timestampString = "510780434.806208"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "StudyUp.MapViewController.__allocating_init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;StudyUp.MapViewController&gt;"
+                  moduleName = "StudyUp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mitcheleppich/Desktop/ProjectGroup1/StudyUp/StudyUp/MapViewController.swift"
+                  timestampString = "510780434.809629"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "StudyUp.MapViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;StudyUp.MapViewController&gt;"
+                  moduleName = "StudyUp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mitcheleppich/Desktop/ProjectGroup1/StudyUp/StudyUp/MapViewController.swift"
+                  timestampString = "510780434.81262"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "64">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -26,11 +103,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StudyUp/MapViewController.swift"
-            timestampString = "510658209.740072"
+            timestampString = "510780434.711929"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
             landmarkName = "mapView(_:viewFor:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,11 +119,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StudyUp/MapViewController.swift"
-            timestampString = "510741274.496202"
+            timestampString = "510783692.435558"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "171"
-            endingLineNumber = "171"
+            startingLineNumber = "210"
+            endingLineNumber = "210"
             landmarkName = "MapViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -58,11 +135,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StudyUp/StudyGroup.swift"
-            timestampString = "510739607.839522"
+            timestampString = "510780434.711929"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
             landmarkName = "group_type"
             landmarkType = "13">
          </BreakpointContent>
@@ -170,11 +247,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StudyUp/MapViewController.swift"
-            timestampString = "510658209.740072"
+            timestampString = "510780434.711929"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "123"
-            endingLineNumber = "123"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
             landmarkName = "MapViewController"
             landmarkType = "3">
             <Locations>
@@ -218,11 +295,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StudyUp/MapViewController.swift"
-            timestampString = "510658209.740072"
+            timestampString = "510780434.711929"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "122"
-            endingLineNumber = "122"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
             landmarkName = "MapViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -234,11 +311,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StudyUp/MapViewController.swift"
-            timestampString = "510658209.740072"
+            timestampString = "510780434.711929"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
             landmarkName = "showGroupOnMap(location:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -250,13 +327,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StudyUp/MapViewController.swift"
-            timestampString = "510741274.496202"
+            timestampString = "510783692.435558"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139"
-            landmarkName = "showGroupOnMap(location:)"
-            landmarkType = "7">
+            startingLineNumber = "175"
+            endingLineNumber = "175"
+            landmarkName = "MapViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -314,11 +391,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StudyUp/MapViewController.swift"
-            timestampString = "510741274.496202"
+            timestampString = "510783692.435558"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
+            startingLineNumber = "180"
+            endingLineNumber = "180"
             landmarkName = "MapViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -362,12 +439,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StudyUp/StudyGroup.swift"
-            timestampString = "510739607.839522"
+            timestampString = "510783254.131627"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
-            landmarkName = "retrieveAllStudyGroups()"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "retrieveAllStudyGroups(mapView:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -378,11 +455,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StudyUp/MapViewController.swift"
-            timestampString = "510741274.496202"
+            timestampString = "510783692.435558"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "136"
-            endingLineNumber = "136"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
             landmarkName = "showGroupOnMap(location:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -394,12 +471,44 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StudyUp/StudyGroup.swift"
-            timestampString = "510741308.018023"
+            timestampString = "510783254.131627"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
-            landmarkName = "retrieveAllStudyGroups()"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "retrieveAllStudyGroups(mapView:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StudyUp/StudyGroup.swift"
+            timestampString = "510781690.666979"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "init(group:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StudyUp/StudyGroup.swift"
+            timestampString = "510783448.05266"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "retrieveAllStudyGroups(mapView:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
