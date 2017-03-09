@@ -13,11 +13,7 @@ import MapKit
 
 class GroupViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UIPickerViewDataSource, UIPickerViewDelegate, GetLocation {
     
-    var groupLocation : CLLocation?
-    var groupName : String?
-    var groupType = StudyGroup.group_type.social.rawValue
-    var groupPrivacy : StudyGroup.group_privacy?
-    var groupId = Firebase().geoFireRef.childByAutoId().key
+    var group : StudyGroup = StudyGroup()
     
     var firebase = Firebase()
     
@@ -48,7 +44,7 @@ class GroupViewController: UIViewController, MKMapViewDelegate, CLLocationManage
      the MapViewController to pass data when this view presents the map
     */
     func sendLocationToPrevVC(location:AnyObject!) {
-        groupLocation = location as! CLLocation?
+        self.group.location = (location as! CLLocation?)!
     }
     
     // Sets up the view as well as allows users to tap screen to dismiss the keyboard
@@ -57,13 +53,8 @@ class GroupViewController: UIViewController, MKMapViewDelegate, CLLocationManage
 
         groupTypePicker.delegate = self
         
-        print(groupLocation ?? "NO LOCATION")
-        
         //Looks for single or multiple taps.
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(GroupViewController.dismissKeyboard))
-        
-        //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
-        //tap.cancelsTouchesInView = false
         
         view.addGestureRecognizer(tap)
     }
@@ -72,23 +63,19 @@ class GroupViewController: UIViewController, MKMapViewDelegate, CLLocationManage
     // The selected database which stores them as json's online for further retrieval and manipulation
     @IBAction func createGroup(_ sender: Any) {
         
-        groupName = groupNameTF.text
-        groupPrivacy = hiddenToggle.isOn && adminProtToggle.isOn ? StudyGroup.group_privacy.closed : adminProtToggle.isOn ? StudyGroup.group_privacy.locked : StudyGroup.group_privacy.open
+        self.group.name = groupNameTF.text!
+        let privacy = hiddenToggle.isOn && adminProtToggle.isOn ? StudyGroup.group_privacy.closed : adminProtToggle.isOn ? StudyGroup.group_privacy.locked : StudyGroup.group_privacy.open
+        self.group.privacy = privacy.rawValue
         
-        let path = firebase.geoFireRef.child("group").child("\(groupPrivacy!)").child(groupId)
         
-        path.child("Name").setValue(groupName!)
-        path.child("Type").setValue("\(groupType)")
         
-        let gf : GeoFire = GeoFire(firebaseRef: path)
-        
-        gf.setLocation(groupLocation!, forKey: "Location")
+        self.group.archiveStudyGroup()
     }
     
     // Populates the picker view with the data in our StudyGroup model Object
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        groupType = StudyGroup().pickerDataArray[row]
-        return groupType
+        group.type = StudyGroup().pickerDataArray[row]
+        return group.type
     }
     
     // Returns the number of picker components

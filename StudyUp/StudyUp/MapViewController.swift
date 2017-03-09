@@ -101,7 +101,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             annotationView = av
         }
     
-        if let annotationView = annotationView, let _ = annotation as? GroupAnnotation {
+        if let annotationView = annotationView, let _ = annotation as? StudyGroup {
             annotationView.canShowCallout = true
             annotationView.image = UIImage(named: "1")
             let btn = UIButton()
@@ -125,33 +125,17 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     func showGroupOnMap(location : CLLocation) {
         if locationSelectionPortal { return }
         
-        _ = firebase.geoFireRef.child("group").child("open").observe(FIRDataEventType.value, with: { (snapshot) in
-            if let dictionary = snapshot.value as? [String: AnyObject] {
-                let group = StudyGroup()
-                
-                
-                for (key, element) in dictionary {
-                    group.id = key as String
-                    
-                    group.name = element["Name"] as! String
-                    group.type = "silent"//element["Type"] as! String
-                    
-                    var location = element["Location"] as? [String: AnyObject]
-                    if location == nil { continue } // Stop in cause there is an error and location is nil
-                    let arr : NSMutableArray = location?["l"] as! NSMutableArray
-                    
-                    let lat = arr[0]
-                    let lon = arr[1]
-                    
-                    group.location = CLLocation(latitude: lat as! CLLocationDegrees, longitude: lon as! CLLocationDegrees)
-                    
-                    let anno = GroupAnnotation(group: group)
-                    self.mapView.addAnnotation(anno)
-
-                }
-
-            }
-        })
+        let sg = StudyGroup()
+        
+        print(sg.retrieveAllStudyGroups().count)
+        
+        let group_list : NSArray = sg.retrieveAllStudyGroups().copy() as! NSArray
+        
+        print(group_list.count)
+        
+        for group in (group_list as NSArray as! [StudyGroup]) {
+            self.mapView.addAnnotation(group.createAnnotation())
+        }
     }
     
     // Shows the groups with in the view of the map at the users specific location on the entire map
