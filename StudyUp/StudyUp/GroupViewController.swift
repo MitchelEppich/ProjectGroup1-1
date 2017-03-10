@@ -22,6 +22,7 @@ class GroupViewController: UIViewController, MKMapViewDelegate, CLLocationManage
     @IBOutlet var groupTypePicker: UIPickerView!
     @IBOutlet var hiddenToggle: UISwitch!
     @IBOutlet var adminProtToggle: UISwitch!
+    @IBOutlet var createGroupBtn: UIButton!
     
     /*
      This action when clicked will redirect the user to a presented
@@ -75,6 +76,13 @@ class GroupViewController: UIViewController, MKMapViewDelegate, CLLocationManage
     // Populates the picker view with the data in our StudyGroup model Object
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         group.type = StudyGroup().pickerDataArray[row]
+        if group.type == StudyGroup.group_type.none.rawValue {
+            createGroupBtn.isEnabled = false
+            createGroupBtn.alpha = 0.5
+        } else {
+            createGroupBtn.isEnabled = true
+            createGroupBtn.alpha = 1
+        }
         return group.type
     }
     

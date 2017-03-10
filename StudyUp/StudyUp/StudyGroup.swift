@@ -20,6 +20,7 @@ class StudyGroup: NSObject {
     var delegate : StudyGroupDelegate?
     
     enum group_type : String {
+        case none
         case silent
         case social
         case hangout
@@ -27,6 +28,7 @@ class StudyGroup: NSObject {
     }
     
     let pickerDataArray = [
+        group_type.none.rawValue,
         group_type.silent.rawValue,
         group_type.cramming.rawValue,
         group_type.hangout.rawValue,
@@ -110,8 +112,8 @@ class StudyGroup: NSObject {
     func archiveStudyGroup() {
         
         let firebase = Firebase()
-        
-        if self.course == nil { self.course = "general" }
+        self.course = "general"
+        //if self.course == nil { self.course = "general" }
         
         let path = firebase.geoFireRef.child("\(PATH!)/\(self.privacy)/\(self.course!)/\(self.id)")
         

@@ -722,7 +722,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Create Group">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="createGroup:" destination="in9-Ob-oAC" eventType="touchUpInside" id="HB5-sf-irH"/>
@@ -770,6 +770,7 @@
                     </view>
                     <connections>
                         <outlet property="adminProtToggle" destination="Egy-ML-JmT" id="7Va-96-bCa"/>
+                        <outlet property="createGroupBtn" destination="W2e-E9-TCM" id="E7q-mH-81g"/>
                         <outlet property="groupNameTF" destination="MIi-Hu-Wdg" id="q6I-nr-Dto"/>
                         <outlet property="groupTypePicker" destination="W6f-Qi-xwg" id="NRk-Nt-1JL"/>
                         <outlet property="hiddenToggle" destination="8Ti-zM-AIi" id="y6y-c0-3tK"/>
@@ -784,7 +785,7 @@
         <image name="home_btn" width="24" height="28"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="TcS-pH-Amh"/>
+        <segue reference="IGP-P3-Wa6"/>
         <segue reference="8kh-6S-Lb6"/>
     </inferredMetricsTieBreakers>
 </document>

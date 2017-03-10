@@ -103,7 +103,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             annotationView = av
         }
     
-        if let annotationView = annotationView, let _ = annotation as? StudyGroup {
+        if let annotationView = annotationView, let _ = annotation as? MapAnnotation {
             annotationView.canShowCallout = true
             annotationView.image = UIImage(named: "1")
             let btn = UIButton()
@@ -139,22 +139,26 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
                 for (key, element) in dictionary {
                     print(element)
                     group.id = key as String
-                    
-                    group.name = element["name"] as! String
-                    group.type = element["type"] as! String
-                    
+                    print(group.id)
+                    group.name = (element["name"] as? String)!
+                    group.type = (element["type"] as? String)!
+                    print(group.name)
+                    print(group.type)
                     var location = element["location"] as? [String: AnyObject]
-                    if location == nil { continue } // Stop in cause there is an error and location is nil
+                    print(location ?? "Not asfsdfd")
+                    //if location == nil { continue } // Stop in cause there is an error and location is nil
                     let arr : NSMutableArray = location?["l"] as! NSMutableArray
                     
                     let lat = arr[0]
                     let lon = arr[1]
-                    
+                    print(lat)
+                    print(lon)
                     group.location = CLLocation(latitude: lat as! CLLocationDegrees, longitude: lon as! CLLocationDegrees)
-                    
+                    print(group.location)
                     //groups.add(group)
                     
-                    self.mapView.addAnnotation(MapAnnotation(group: group))
+                    let anno = MapAnnotation(group: group)
+                    self.mapView.addAnnotation(anno)
                 }
                 
             }
