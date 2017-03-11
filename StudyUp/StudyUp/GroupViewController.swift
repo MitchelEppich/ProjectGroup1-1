@@ -11,7 +11,7 @@ import Firebase
 import FirebaseDatabase
 import MapKit
 
-class GroupViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UIPickerViewDataSource, UIPickerViewDelegate, GetLocation {
+class GroupViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UIPickerViewDataSource, UIPickerViewDelegate, MapViewDelegate {
     
     var group : StudyGroup = StudyGroup()
     

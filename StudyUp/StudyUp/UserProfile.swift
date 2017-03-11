@@ -9,7 +9,11 @@
 import Foundation
 import Firebase
 
+protocol UserProfileDelegate {}
+
 class UserProfile : NSObject {
+    
+    var delegate : UserProfileDelegate?
     
     var username : String!
     var email : String!

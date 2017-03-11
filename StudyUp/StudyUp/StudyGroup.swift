@@ -11,9 +11,7 @@ import UIKit
 import Firebase
 import MapKit
 
-protocol StudyGroupDelegate {
-    func retreiveStudyGroups(group_list : AnyObject)
-}
+protocol StudyGroupDelegate {}
 
 class StudyGroup: NSObject {
     
@@ -73,34 +71,38 @@ class StudyGroup: NSObject {
         
         //let groups : NSMutableArray = []
         
-        _ = firebase.geoFireRef.child("\(PATH!)/open/general").observe(FIRDataEventType.value, with: { (snapshot) in
+        _ = firebase.geoFireRef.child("groups/open/general").observe(FIRDataEventType.value, with: { (snapshot) in
             if let dictionary = snapshot.value as? [String: AnyObject] {
                 
                 let group = StudyGroup()
                 
                 for (key, element) in dictionary {
+                    print(element)
                     group.id = key as String
-                    
-                    group.name = element["name"] as! String
-                    group.type = element["type"] as! String
-                    
+                    print(group.id)
+                    group.name = (element["name"] as? String)!
+                    group.type = (element["type"] as? String)!
+                    print(group.name)
+                    print(group.type)
                     var location = element["location"] as? [String: AnyObject]
-                    if location == nil { continue } // Stop in cause there is an error and location is nil
+                    print(location ?? "Not asfsdfd")
+                    //if location == nil { continue } // Stop in cause there is an error and location is nil
                     let arr : NSMutableArray = location?["l"] as! NSMutableArray
                     
                     let lat = arr[0]
                     let lon = arr[1]
-                    
+                    print(lat)
+                    print(lon)
                     group.location = CLLocation(latitude: lat as! CLLocationDegrees, longitude: lon as! CLLocationDegrees)
-
+                    print(group.location)
                     //groups.add(group)
                     
-                    mapView.addAnnotation(MapAnnotation(group: group))
+                    let anno = MapAnnotation(group: group)
+                    mapView.addAnnotation(anno)
                 }
                 
             }
         })
-
         //print(groups.count)
         //self.delegate?.retreiveStudyGroups(group_list: groups)
     }

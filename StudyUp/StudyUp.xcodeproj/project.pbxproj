@@ -35,6 +35,7 @@
 		657E7FFC1E6F317800A06716 /* SFU_Course_DB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657E7FFB1E6F317800A06716 /* SFU_Course_DB.swift */; };
 		657E80001E7122F500A06716 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657E7FFF1E7122F500A06716 /* UserProfile.swift */; };
 		657E80021E71230100A06716 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657E80011E71230100A06716 /* Course.swift */; };
+		657E80061E73982A00A06716 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657E80051E73982A00A06716 /* SignupViewController.swift */; };
 		65BFBA1B1E6B317C001630B6 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BFBA1A1E6B317C001630B6 /* MapViewController.swift */; };
 		65BFBA231E6B34C9001630B6 /* HomepageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BFBA221E6B34C9001630B6 /* HomepageViewController.swift */; };
 		65BFBA291E6B34F4001630B6 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BFBA281E6B34F4001630B6 /* TimerViewController.swift */; };
@@ -98,6 +99,7 @@
 		657E7FFB1E6F317800A06716 /* SFU_Course_DB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFU_Course_DB.swift; sourceTree = "<group>"; };
 		657E7FFF1E7122F500A06716 /* UserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		657E80011E71230100A06716 /* Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		657E80051E73982A00A06716 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		65BFBA1A1E6B317C001630B6 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = StudyUp/MapViewController.swift; sourceTree = SOURCE_ROOT; };
 		65BFBA221E6B34C9001630B6 /* HomepageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomepageViewController.swift; sourceTree = "<group>"; };
 		65BFBA281E6B34F4001630B6 /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
@@ -292,6 +294,7 @@
 			isa = PBXGroup;
 			children = (
 				65BFBA2D1E6B3540001630B6 /* ProfileViewController.swift */,
+				657E80051E73982A00A06716 /* SignupViewController.swift */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -637,6 +640,7 @@
 				65BFBA231E6B34C9001630B6 /* HomepageViewController.swift in Sources */,
 				65BFBA1B1E6B317C001630B6 /* MapViewController.swift in Sources */,
 				657E80021E71230100A06716 /* Course.swift in Sources */,
+				657E80061E73982A00A06716 /* SignupViewController.swift in Sources */,
 				650BE4251E689456001CC0D8 /* ViewController.swift in Sources */,
 				657E80001E7122F500A06716 /* UserProfile.swift in Sources */,
 				6565DFF61E6ACCAD002683F3 /* GFGeoHash.m in Sources */,

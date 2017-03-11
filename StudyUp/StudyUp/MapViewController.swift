@@ -12,14 +12,14 @@ import FirebaseDatabase
 
 
 // Protocol to allow for data transfer to a parent view
-protocol GetLocation {
+protocol MapViewDelegate {
     func sendLocationToPrevVC(location:AnyObject!)
 }
 
 class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, StudyGroupDelegate {
     
     // Delegate for the protocol
-    var delegate:GetLocation?
+    var delegate:MapViewDelegate?
     
     @IBOutlet weak var mapView: MKMapView!
     
@@ -127,54 +127,11 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     func showGroupOnMap(location : CLLocation) {
         if locationSelectionPortal { return }
         
-        let firebase = Firebase()
+        let sg = StudyGroup()
         
-        //let groups : NSMutableArray = []
+        sg.delegate = self
         
-        _ = firebase.geoFireRef.child("groups/open/general").observe(FIRDataEventType.value, with: { (snapshot) in
-            if let dictionary = snapshot.value as? [String: AnyObject] {
-                
-                let group = StudyGroup()
-                
-                for (key, element) in dictionary {
-                    print(element)
-                    group.id = key as String
-                    print(group.id)
-                    group.name = (element["name"] as? String)!
-                    group.type = (element["type"] as? String)!
-                    print(group.name)
-                    print(group.type)
-                    var location = element["location"] as? [String: AnyObject]
-                    print(location ?? "Not asfsdfd")
-                    //if location == nil { continue } // Stop in cause there is an error and location is nil
-                    let arr : NSMutableArray = location?["l"] as! NSMutableArray
-                    
-                    let lat = arr[0]
-                    let lon = arr[1]
-                    print(lat)
-                    print(lon)
-                    group.location = CLLocation(latitude: lat as! CLLocationDegrees, longitude: lon as! CLLocationDegrees)
-                    print(group.location)
-                    //groups.add(group)
-                    
-                    let anno = MapAnnotation(group: group)
-                    self.mapView.addAnnotation(anno)
-                }
-                
-            }
-        })
-        
-//        let sg = StudyGroup()
-//        
-//        sg.retrieveAllStudyGroups(mapView : mapView)
-        
-        //sg.delegate = self
-        
-        //sg.retrieveAllStudyGroups()
-        //print(group_list.count)
-        //for group in (group_list as NSArray as! [StudyGroup]) {
-        //    self.mapView.addAnnotation(group.createAnnotation())
-        //}
+        sg.retrieveAllStudyGroups(mapView: self.mapView)
     }
     
     func retreiveStudyGroups(group_list: AnyObject) {
