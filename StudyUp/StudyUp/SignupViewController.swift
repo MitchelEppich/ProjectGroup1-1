@@ -7,45 +7,27 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class SignupViewController: UIViewController, UserProfileDelegate {
-
     
-    @IBOutlet var emailField: UITextField!
-    @IBOutlet var nameField: UITextField!
     
-    @IBAction func checkInput(_ sender: Any) {
-        let text = emailField.text
-        if !(text?.contains("@sfu.ca"))! {
-            emailField.backgroundColor = UIColor.red
-        } else {
-            emailField.backgroundColor = UIColor.white
-        }
-    }
+    @IBOutlet var signName: UITextField!
+    @IBOutlet var signEmail: UITextField!
+    @IBOutlet var signPassword: UITextField!
+    @IBOutlet var signPasswordValid: UITextField!
     
-    @IBAction func signUp(_ sender: Any) {
-        let profile = UserProfile()
-        
-        profile.delegate = self
-        
-        profile.email = emailField.text
-        profile.username = nameField.text
+    @IBOutlet var loginEmail: UITextField!
+    @IBOutlet var loginPassword: UITextField!
     
-        profile.archiveProfile()
-        
-        // Request verification
-        
-    }
+    @IBOutlet var loginBtn: UIButton!
+    @IBOutlet var signBtn: UIButton!
     
-    //Calls this function when the tap is recognized.
-    func dismissKeyboard() {
-        //Causes the view (or one of its embedded text fields) to resign the first responder status.
-        view.endEditing(true)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        //Looks for single or multiple taps.
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(GroupViewController.dismissKeyboard))
         
         view.addGestureRecognizer(tap)
@@ -53,20 +35,59 @@ class SignupViewController: UIViewController, UserProfileDelegate {
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    //Calls this function when the tap is recognized.
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+    
+    @IBAction func loginSwitcher(_ sender: Any) {
+        signName.isHidden = !signName.isHidden
+        signEmail.isHidden = !signEmail.isHidden
+        signPassword.isHidden = !signPassword.isHidden
+        signPasswordValid.isHidden = !signPasswordValid.isHidden
+        signBtn.isHidden = !signBtn.isHidden
+        
+        loginEmail.isHidden = !loginEmail.isHidden
+        loginPassword.isHidden = !loginPassword.isHidden
+        loginBtn.isHidden = !loginBtn.isHidden
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func login(_ sender: Any) {
     }
-    */
 
+    @IBAction func signup(_ sender: Any) {
+        guard let email = signEmail.text, let password = signPassword.text, let passwordVerify = signPasswordValid.text, let name = signName.text else {
+            print("Form is not valid")
+            return
+        }
+        
+        if password != passwordVerify {
+            print("Passwords do not match")
+            return
+        }
+        
+        FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user: FIRUser?, error) in
+            if error != nil {
+                print(error ?? "Error")
+                return
+            }
+            
+            guard let uid = user?.uid else {return}
+            
+            // user made
+            let firebase = Firebase()
+            let usersRef = firebase.geoFireRef.child("users/\(uid)")
+            let values = ["name": name, "email": email]
+            usersRef.updateChildValues(values, withCompletionBlock : { (err, ref) in
+                if err != nil {
+                    print(err ?? "Error")
+                    return
+                }
+                
+                print("Saved user into Firebase DB")
+            })
+        })
+    }
 }
