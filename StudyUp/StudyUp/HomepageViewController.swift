@@ -7,15 +7,43 @@
 //
 
 import UIKit
+import FirebaseAuth
 
-class HomepageViewController: UIViewController {
+class HomepageViewController: UIViewController, UserProfileDelegate {
 
+    @IBOutlet var profileBtn: UIButton!
+    @IBOutlet var timerBtn: UIButton!
+    @IBOutlet var mapBtn: UIButton!
+    @IBOutlet var groupBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        _ = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { timer in
+            if (FIRAuth.auth()?.currentUser?.isEmailVerified)! {
+                self.mapBtn.isEnabled = true
+                self.groupBtn.isEnabled = true
+                timer.invalidate()
+            }
+        })
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        print("bloop")
+        //print(FIRAuth.auth()?.currentUser?.uid ?? "No User")
+        if FIRAuth.auth()?.currentUser?.uid == nil {
+            print("fuck")
+            UserProfile().logout()
+            let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+            let vc = mainStoryboard.instantiateViewController(withIdentifier: "SignupViewController") as! SignupViewController
+            
+            self.present(vc, animated: true, completion: nil)
+            //let user = UserProfile()
+            //user.delegate = self
+            //user.logout()
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

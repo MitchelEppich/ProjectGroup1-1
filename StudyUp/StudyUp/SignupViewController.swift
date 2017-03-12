@@ -26,7 +26,7 @@ class SignupViewController: UIViewController, UserProfileDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print("here")
         //Looks for single or multiple taps.
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(GroupViewController.dismissKeyboard))
         
@@ -55,6 +55,20 @@ class SignupViewController: UIViewController, UserProfileDelegate {
     
 
     @IBAction func login(_ sender: Any) {
+        guard let email = loginEmail.text, let password = loginPassword.text
+            else {
+                print("Form is not valid")
+                return
+        }
+        
+        FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
+            if error != nil {
+                print(error ?? "Error")
+                return
+            }
+            
+            self.dismiss(animated: true, completion: nil)
+        })
     }
 
     @IBAction func signup(_ sender: Any) {
@@ -88,6 +102,15 @@ class SignupViewController: UIViewController, UserProfileDelegate {
                 
                 print("Saved user into Firebase DB")
             })
+    
+            FIRAuth.auth()?.currentUser?.sendEmailVerification(completion: { (e) in
+                if e != nil {
+                    print(e)
+                    return
+                }
+            })
         })
+        
+        self.dismiss(animated: true, completion: nil)
     }
 }

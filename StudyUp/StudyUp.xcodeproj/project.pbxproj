@@ -261,7 +261,6 @@
 				65BFBA201E6B32D2001630B6 /* Profile */,
 				65BFBA1F1E6B32CB001630B6 /* Group */,
 				65BFBA1E1E6B32C1001630B6 /* Homepage */,
-				65BFBA1D1E6B32B9001630B6 /* Map */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -278,6 +277,7 @@
 			isa = PBXGroup;
 			children = (
 				65BFBA221E6B34C9001630B6 /* HomepageViewController.swift */,
+				65BFBA1D1E6B32B9001630B6 /* Map */,
 			);
 			name = Homepage;
 			sourceTree = "<group>";

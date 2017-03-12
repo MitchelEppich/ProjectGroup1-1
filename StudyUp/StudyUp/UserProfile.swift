@@ -29,6 +29,14 @@ class UserProfile : NSObject {
         PATH = "profile/\(deviceID!)"
     }
     
+    func logout () {
+        do {
+            try FIRAuth.auth()?.signOut()
+        } catch let logoutError {
+            print(logoutError)
+        }
+    }
+    
     func retreiveProfile () {
         
         let firebase = Firebase()
