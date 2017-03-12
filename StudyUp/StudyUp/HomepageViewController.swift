@@ -29,15 +29,13 @@ class HomepageViewController: UIViewController, UserProfileDelegate {
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        print("bloop")
         //print(FIRAuth.auth()?.currentUser?.uid ?? "No User")
         if FIRAuth.auth()?.currentUser?.uid == nil {
-            print("fuck")
             UserProfile().logout()
             let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
             let vc = mainStoryboard.instantiateViewController(withIdentifier: "SignupViewController") as! SignupViewController
             
-            self.present(vc, animated: true, completion: nil)
+            self.show(vc, sender: self)
             //let user = UserProfile()
             //user.delegate = self
             //user.logout()

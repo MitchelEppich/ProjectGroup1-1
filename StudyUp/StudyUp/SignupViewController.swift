@@ -17,6 +17,9 @@ class SignupViewController: UIViewController, UserProfileDelegate {
     @IBOutlet var signPassword: UITextField!
     @IBOutlet var signPasswordValid: UITextField!
     
+    @IBOutlet var signLabel: UILabel!
+    @IBOutlet var loginLabel: UILabel!
+    
     @IBOutlet var loginEmail: UITextField!
     @IBOutlet var loginPassword: UITextField!
     
@@ -26,7 +29,6 @@ class SignupViewController: UIViewController, UserProfileDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("here")
         //Looks for single or multiple taps.
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(GroupViewController.dismissKeyboard))
         
@@ -47,19 +49,23 @@ class SignupViewController: UIViewController, UserProfileDelegate {
         signPassword.isHidden = !signPassword.isHidden
         signPasswordValid.isHidden = !signPasswordValid.isHidden
         signBtn.isHidden = !signBtn.isHidden
+        signLabel.isHidden = !signLabel.isHidden
         
         loginEmail.isHidden = !loginEmail.isHidden
         loginPassword.isHidden = !loginPassword.isHidden
         loginBtn.isHidden = !loginBtn.isHidden
+        loginLabel.isHidden = !loginLabel.isHidden
     }
     
 
     @IBAction func login(_ sender: Any) {
-        guard let email = loginEmail.text, let password = loginPassword.text
+        guard var email = loginEmail.text, let password = loginPassword.text
             else {
                 print("Form is not valid")
                 return
         }
+        
+        email.append("@sfu.ca")
         
         FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
             if error != nil {
@@ -72,7 +78,7 @@ class SignupViewController: UIViewController, UserProfileDelegate {
     }
 
     @IBAction func signup(_ sender: Any) {
-        guard let email = signEmail.text, let password = signPassword.text, let passwordVerify = signPasswordValid.text, let name = signName.text else {
+        guard var email = signEmail.text, let password = signPassword.text, let passwordVerify = signPasswordValid.text, let name = signName.text else {
             print("Form is not valid")
             return
         }
@@ -81,6 +87,8 @@ class SignupViewController: UIViewController, UserProfileDelegate {
             print("Passwords do not match")
             return
         }
+        
+        email.append("@sfu.ca")
         
         FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user: FIRUser?, error) in
             if error != nil {
@@ -105,12 +113,16 @@ class SignupViewController: UIViewController, UserProfileDelegate {
     
             FIRAuth.auth()?.currentUser?.sendEmailVerification(completion: { (e) in
                 if e != nil {
-                    print(e)
+                    print(e ?? "NO ERROR")
                     return
                 }
             })
         })
         
-        self.dismiss(animated: true, completion: nil)
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let vc = mainStoryboard.instantiateViewController(withIdentifier: "VerifyViewController") as! VerifyViewController
+        
+        self.show(vc, sender: self)
     }
+    
 }

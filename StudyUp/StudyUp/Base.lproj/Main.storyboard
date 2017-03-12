@@ -329,10 +329,10 @@
             </objects>
             <point key="canvasLocation" x="-914.39999999999998" y="-584.25787106446785"/>
         </scene>
-        <!--View Controller-->
+        <!--Verify View Controller-->
         <scene sceneID="kz9-m7-zBL">
             <objects>
-                <viewController id="fic-vS-oYP" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VerifyViewController" id="fic-vS-oYP" customClass="VerifyViewController" customModule="StudyUp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AyY-Ip-bMn"/>
                         <viewControllerLayoutGuide type="bottom" id="rJA-ZG-h1S"/>
@@ -402,15 +402,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jqz-vw-W1D">
-                                <rect key="frame" x="16" y="145" width="343" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="SFU Computing ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jqz-vw-W1D">
+                                <rect key="frame" x="16" y="145" width="273" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
-                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NZt-0D-WGy">
-                                <rect key="frame" x="16" y="183" width="343" height="30"/>
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="SFU Computing ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NZt-0D-WGy">
+                                <rect key="frame" x="16" y="183" width="273" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -443,7 +443,6 @@
                                 <state key="normal" title="Sign-up"/>
                                 <connections>
                                     <action selector="signup:" destination="BVI-5M-fqR" eventType="touchUpInside" id="08j-2f-e3a"/>
-                                    <segue destination="fic-vS-oYP" kind="show" id="Fbe-gv-MIl"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kjk-sO-lB3">
@@ -454,15 +453,31 @@
                                     <action selector="login:" destination="BVI-5M-fqR" eventType="touchUpInside" id="Ld6-Cx-XTs"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="@sfu.ca" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XVO-Bu-YNi" userLabel="Login Lbl">
+                                <rect key="frame" x="297" y="150" width="62" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="@sfu.ca" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vj3-WW-Qj6" userLabel="Sign Lbl">
+                                <rect key="frame" x="297" y="186" width="62" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="loginBtn" destination="kjk-sO-lB3" id="gg9-YF-Ms8"/>
                         <outlet property="loginEmail" destination="jqz-vw-W1D" id="Kf7-GP-rHC"/>
+                        <outlet property="loginLabel" destination="XVO-Bu-YNi" id="2IX-Ok-eMq"/>
                         <outlet property="loginPassword" destination="qeo-of-syT" id="8fJ-bY-1Ox"/>
                         <outlet property="signBtn" destination="3lO-Dc-HBf" id="lff-3V-Z14"/>
                         <outlet property="signEmail" destination="NZt-0D-WGy" id="N67-vZ-MLT"/>
+                        <outlet property="signLabel" destination="Vj3-WW-Qj6" id="98x-cO-drz"/>
                         <outlet property="signName" destination="HK7-nR-VVd" id="ADS-Rf-YAT"/>
                         <outlet property="signPassword" destination="IDq-gL-gNE" id="OXd-vj-mp0"/>
                         <outlet property="signPasswordValid" destination="g9c-ng-L42" id="dtS-ST-gLR"/>

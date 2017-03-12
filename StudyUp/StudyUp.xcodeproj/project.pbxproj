@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		476249CF779CF6C21E00C87D /* Pods_StudyUpUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA92F567B6262D2296C9DEF6 /* Pods_StudyUpUITests.framework */; };
+		6505DC561E75C81F0063EB58 /* VerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6505DC551E75C81F0063EB58 /* VerifyViewController.swift */; };
 		650BE4231E689456001CC0D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650BE4221E689456001CC0D8 /* AppDelegate.swift */; };
 		650BE4251E689456001CC0D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650BE4241E689456001CC0D8 /* ViewController.swift */; };
 		650BE4281E689456001CC0D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 650BE4261E689456001CC0D8 /* Main.storyboard */; };
@@ -66,6 +67,7 @@
 
 /* Begin PBXFileReference section */
 		38F8493B351F439C30BABC32 /* Pods-StudyUpTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudyUpTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StudyUpTests/Pods-StudyUpTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6505DC551E75C81F0063EB58 /* VerifyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyViewController.swift; sourceTree = "<group>"; };
 		650BE41F1E689456001CC0D8 /* StudyUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		650BE4221E689456001CC0D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		650BE4241E689456001CC0D8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -261,6 +263,7 @@
 				65BFBA201E6B32D2001630B6 /* Profile */,
 				65BFBA1F1E6B32CB001630B6 /* Group */,
 				65BFBA1E1E6B32C1001630B6 /* Homepage */,
+				65BFBA1D1E6B32B9001630B6 /* Map */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -277,7 +280,6 @@
 			isa = PBXGroup;
 			children = (
 				65BFBA221E6B34C9001630B6 /* HomepageViewController.swift */,
-				65BFBA1D1E6B32B9001630B6 /* Map */,
 			);
 			name = Homepage;
 			sourceTree = "<group>";
@@ -295,6 +297,7 @@
 			children = (
 				65BFBA2D1E6B3540001630B6 /* ProfileViewController.swift */,
 				657E80051E73982A00A06716 /* SignupViewController.swift */,
+				6505DC551E75C81F0063EB58 /* VerifyViewController.swift */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -645,6 +648,7 @@
 				657E80001E7122F500A06716 /* UserProfile.swift in Sources */,
 				6565DFF61E6ACCAD002683F3 /* GFGeoHash.m in Sources */,
 				657E7FFC1E6F317800A06716 /* SFU_Course_DB.swift in Sources */,
+				6505DC561E75C81F0063EB58 /* VerifyViewController.swift in Sources */,
 				650BE4231E689456001CC0D8 /* AppDelegate.swift in Sources */,
 				65BFBA371E6C1B06001630B6 /* Firebase.swift in Sources */,
 				65BFBA291E6B34F4001630B6 /* TimerViewController.swift in Sources */,
