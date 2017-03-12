@@ -329,6 +329,49 @@
             </objects>
             <point key="canvasLocation" x="-914.39999999999998" y="-584.25787106446785"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="kz9-m7-zBL">
+            <objects>
+                <viewController id="fic-vS-oYP" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AyY-Ip-bMn"/>
+                        <viewControllerLayoutGuide type="bottom" id="rJA-ZG-h1S"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ykw-wM-0na">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Next Steps..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NXY-a1-VjG">
+                                <rect key="frame" x="138" y="65" width="98" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Auq-ea-3Jx">
+                                <rect key="frame" x="67" y="269" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Verify your email by clicking on the link in the email you will revieve shortly to get full access to all the features this app has to offer.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="niH-Ko-mob">
+                                <rect key="frame" x="156" y="497" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Continue"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="Ovx-J1-0S7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g8T-Fj-ilG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-914.39999999999998" y="-1306.5967016491754"/>
+        </scene>
         <!--Profile SignUp-->
         <scene sceneID="t8K-TZ-nLu">
             <objects>
@@ -400,6 +443,7 @@
                                 <state key="normal" title="Sign-up"/>
                                 <connections>
                                     <action selector="signup:" destination="BVI-5M-fqR" eventType="touchUpInside" id="08j-2f-e3a"/>
+                                    <segue destination="fic-vS-oYP" kind="show" id="Fbe-gv-MIl"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kjk-sO-lB3">
@@ -895,7 +939,7 @@
         <image name="home_btn" width="24" height="28"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ven-xe-Zj4"/>
+        <segue reference="Ovx-J1-0S7"/>
         <segue reference="CAA-hM-9oO"/>
     </inferredMetricsTieBreakers>
 </document>
