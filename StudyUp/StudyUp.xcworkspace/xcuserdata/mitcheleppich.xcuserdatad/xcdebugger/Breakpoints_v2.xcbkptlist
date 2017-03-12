@@ -407,11 +407,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StudyUp/ProfileViewController.swift"
-            timestampString = "510658561.716407"
+            timestampString = "511042459.1162"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "117"
-            endingLineNumber = "117"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
             landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -423,11 +423,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StudyUp/ProfileViewController.swift"
-            timestampString = "510658572.179266"
+            timestampString = "511042459.1162"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "116"
-            endingLineNumber = "116"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
             landmarkName = "ProfileViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -493,6 +493,38 @@
             startingLineNumber = "22"
             endingLineNumber = "22"
             landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StudyUp/ProfileViewController.swift"
+            timestampString = "511041096.071985"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "loadUserInformation()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StudyUp/ProfileViewController.swift"
+            timestampString = "511041070.051041"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "loadUserInformation()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

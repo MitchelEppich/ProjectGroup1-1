@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import Firebase
 
-class ProfileViewController: UIViewController,UINavigationControllerDelegate, UIImagePickerControllerDelegate{
+class ProfileViewController: UIViewController,UINavigationControllerDelegate, UIImagePickerControllerDelegate, UserProfileDelegate {
+    
+    var user : UserProfile = UserProfile()
     
     var editEnable = false
     
@@ -52,6 +55,7 @@ class ProfileViewController: UIViewController,UINavigationControllerDelegate, UI
         profileFaculty.isEditable = false
         profileImageEdit.isHidden = true
         
+        loadUserInformation()
         
     }
     
@@ -61,7 +65,24 @@ class ProfileViewController: UIViewController,UINavigationControllerDelegate, UI
     }
     
     
+    func loadUserInformation() {
+        
+        FIRDatabase.database().reference().child("users/\((FIRAuth.auth()?.currentUser?.uid)!)").observeSingleEvent(of: .value, with: { (snapshot) in
+            if let user = snapshot.value as? [String: AnyObject] {
+                self.user.name = user["name"] as? String
+                self.user.bio = user["bio"] as? String
+                self.user.email = user["email"] as? String
+            }
+            self.setUserInformation()
+        })
+        
+    }
     
+    func setUserInformation () {
+        self.profileBio.text = self.user.bio
+        self.profileName.text = self.user.name
+        self.profileFaculty.text = self.user.email
+    }
     
     // click on edit to enable editing on image, bio, and faculty
     @IBAction func editProfile(_ sender: AnyObject) {
@@ -73,6 +94,10 @@ class ProfileViewController: UIViewController,UINavigationControllerDelegate, UI
             profileImageEdit.isHidden = true
             editEnable = false
             profileEdit.setTitle("Edit", for: UIControlState.normal)
+            
+            self.user.bio = self.profileBio.text
+            
+            user.update()
             
         } else {
             // allows user to:
@@ -86,18 +111,6 @@ class ProfileViewController: UIViewController,UINavigationControllerDelegate, UI
             profileEdit.setTitle("Done", for: UIControlState.normal)
         }
         
-    }
-    
-    // when user clicked on done after editing
-    @IBAction func editDone(_ sender: AnyObject) {
-        
-        // disables editing
-        profileDone.isHidden = true
-        profileBio.isEditable = false
-        profileFaculty.isEditable = false
-        profileImageEdit.isHidden = true
-        
-        profileEdit.isHidden = false
     }
     
     
