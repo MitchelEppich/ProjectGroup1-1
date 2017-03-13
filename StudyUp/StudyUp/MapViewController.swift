@@ -115,6 +115,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         return annotationView
     }
     
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -148,23 +150,34 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     // Displays and allows for the annotations to have placemarkers once pressed, this allows for simple information to be displayed overhead the 
     // requested group
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-        if let anno = view.annotation as? MapAnnotation {
+//        if let anno = view.annotation as? MapAnnotation {
+//            
+//            var place: MKPlacemark!
+//            if #available(iOS 10.0, *) {
+//                place = MKPlacemark(coordinate: anno.coordinate)
+//            } else {
+//                place = MKPlacemark(coordinate: anno.coordinate, addressDictionary: nil)
+//            }
+//            
+//            let destination = MKMapItem(placemark: place)
+//            destination.name = "Study Group"
+//            let regionDistance: CLLocationDistance = 1000
+//            let regionSpan = MKCoordinateRegionMakeWithDistance(anno.coordinate, regionDistance, regionDistance)
+//            
+//            let options = [MKLaunchOptionsMapCenterKey : NSValue (mkCoordinate : regionSpan.center), MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span), MKLaunchOptionsDirectionsModeKey:MKLaunchOptionsDirectionsModeWalking] as [String : Any]
+//            
+//            MKMapItem.openMaps(with: [destination], launchOptions: options)
+//        }
+        
+        if control == view.rightCalloutAccessoryView {
+            let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+            let vc = mainStoryboard.instantiateViewController(withIdentifier: "GroupPopoverViewController") as! GroupPopoverViewController
             
-            var place: MKPlacemark!
-            if #available(iOS 10.0, *) {
-                place = MKPlacemark(coordinate: anno.coordinate)
-            } else {
-                place = MKPlacemark(coordinate: anno.coordinate, addressDictionary: nil)
-            }
+            vc.view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
             
-            let destination = MKMapItem(placemark: place)
-            destination.name = "Study Group"
-            let regionDistance: CLLocationDistance = 1000
-            let regionSpan = MKCoordinateRegionMakeWithDistance(anno.coordinate, regionDistance, regionDistance)
+            vc.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
             
-            let options = [MKLaunchOptionsMapCenterKey : NSValue (mkCoordinate : regionSpan.center), MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span), MKLaunchOptionsDirectionsModeKey:MKLaunchOptionsDirectionsModeWalking] as [String : Any]
-            
-            MKMapItem.openMaps(with: [destination], launchOptions: options)
+            self.present(vc, animated: true, completion: nil)
         }
     }
 
