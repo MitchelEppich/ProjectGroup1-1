@@ -20,19 +20,30 @@ class HomepageViewController: UIViewController, UserProfileDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        if FIRAuth.auth()?.currentUser?.uid != nil {
-            _ = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { timer in
-                if (FIRAuth.auth()?.currentUser?.isEmailVerified)! {
-                    self.mapBtn.isEnabled = true
-                    self.groupBtn.isEnabled = true
-                    timer.invalidate()
-                }
-            })
-        }
+//            _ = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { timer in
+//                if FIRAuth.auth()?.currentUser?.uid == nil { return }
+//                
+//                if (FIRAuth.auth()?.currentUser?.isEmailVerified)! {
+//                    self.mapBtn.isEnabled = true
+//                    self.groupBtn.isEnabled = true
+//                    timer.invalidate()
+//                }
+//            })
     }
 
     override func viewDidAppear(_ animated: Bool) {
         //print(FIRAuth.auth()?.currentUser?.uid ?? "No User")
+        
+        _ = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { timer in
+            if FIRAuth.auth()?.currentUser?.uid == nil { return }
+            
+            if (FIRAuth.auth()?.currentUser?.isEmailVerified)! {
+                self.mapBtn.isEnabled = true
+                self.groupBtn.isEnabled = true
+                timer.invalidate()
+            }
+        })
+        
         if FIRAuth.auth()?.currentUser?.uid == nil {
             UserProfile().logout()
             let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
@@ -50,6 +61,9 @@ class HomepageViewController: UIViewController, UserProfileDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func logoutUser(_ sender: Any) {
+        UserProfile().logout()
+    }
 
     /*
     // MARK: - Navigation

@@ -62,13 +62,12 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="STUDY UP!" id="aBc-wx-Zu5">
-                                        <barButtonItem key="leftBarButtonItem" image="home_btn" id="Xjd-zy-4kt">
+                                        <barButtonItem key="leftBarButtonItem" title="Logout" id="Xjd-zy-4kt">
                                             <inset key="imageInsets" minX="0.0" minY="4" maxX="5" maxY="5"/>
                                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
-                                                <segue destination="BVI-5M-fqR" kind="popoverPresentation" popoverAnchorBarButtonItem="Xjd-zy-4kt" id="arN-Hn-nQT">
-                                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                                </segue>
+                                                <action selector="logoutUser:" destination="BYZ-38-t0r" id="f8q-tr-Xdg"/>
+                                                <segue destination="BVI-5M-fqR" kind="show" id="bza-eJ-B46"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
