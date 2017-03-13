@@ -28,7 +28,7 @@ class UserProfile : NSObject {
     var PATH : String!
     
     override init() {
-        PATH = "users/\((FIRAuth.auth()?.currentUser?.uid)!)"
+        PATH = "users/\((FIRAuth.auth()?.currentUser?.uid))"
     }
     
     func logout () {

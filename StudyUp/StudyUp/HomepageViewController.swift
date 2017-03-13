@@ -19,13 +19,16 @@ class HomepageViewController: UIViewController, UserProfileDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        _ = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { timer in
-            if (FIRAuth.auth()?.currentUser?.isEmailVerified)! {
-                self.mapBtn.isEnabled = true
-                self.groupBtn.isEnabled = true
-                timer.invalidate()
-            }
-        })
+        
+        if FIRAuth.auth()?.currentUser?.uid != nil {
+            _ = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { timer in
+                if (FIRAuth.auth()?.currentUser?.isEmailVerified)! {
+                    self.mapBtn.isEnabled = true
+                    self.groupBtn.isEnabled = true
+                    timer.invalidate()
+                }
+            })
+        }
     }
 
     override func viewDidAppear(_ animated: Bool) {
