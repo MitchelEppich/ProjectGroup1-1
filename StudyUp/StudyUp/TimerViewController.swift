@@ -66,8 +66,6 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     }
     
     // Toggles smartStudy
-    // Small timer = total study time
-    // Large timer = session length
     @IBAction func smartStudyToggled(_ sender: AnyObject) {
         if smartStudyToggle.isOn{
             smartStudyView.isHidden = false
@@ -103,22 +101,25 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     // Main functionality of timer
     // Uses timerCount to display the timer value and initializes timer
     @IBAction func startButtonPressed(_ sender: UIButton) {
-        /*if smartStudyToggle.isOn{
-            breakButton.isHidden = false
-        }*/
         smartStudyToggleView.isHidden = false
         smartStudyToggle.isHidden = false
         coursePickerButton.isHidden = true
         
+        // Prevents multiple timers running
         if timerRunning == false {
             timerCount = Int(timePicker.countDownDuration)
             timerRunning = true
+            
+            // Timer function buttons
             startButton.isHidden = true
             endButton.isHidden = false
             breakButton.isHidden = false
+            
+            // Hide/show UI elements
             timePicker.isHidden = true
             countDownLabel.isHidden = false
             coursePickerButton.isHidden = true
+            smartStudyToggle.isUserInteractionEnabled = false
 
             if smartStudyToggle.isOn{
                 totalTimeLabel.isHidden = false
@@ -149,7 +150,8 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
                 totalTimeLabel.text = timeString(time: TimeInterval(timerCount))
             }
         }
-        // Only one counter
+            
+        // Smart Study OFF
         else{
             countDownLabel.text = timeString(time: TimeInterval(timerCount))
         }
@@ -180,18 +182,24 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     @IBAction func endButtonPressed(_ sender: UIButton) {
         timer.invalidate()
         timerRunning = false
+        
+        // Timer buttons
         startButton.isHidden = false
         endButton.isHidden = true
         breakButton.isHidden = true
         resumeButton.isHidden = true
+        
+        // Timer UI labels
         timePicker.isHidden = false
         countDownLabel.isHidden = true
         totalTimeLabel.isHidden = true
         totalTextLabel.isHidden = true
+        
+        // Button UI
         smartStudyToggleView.isHidden = false
         smartStudyToggle.isHidden = false
         coursePickerButton.isHidden = false
-
+        smartStudyToggle.isUserInteractionEnabled = true
     }
     
     // Method to format time into HH:MM:SS
