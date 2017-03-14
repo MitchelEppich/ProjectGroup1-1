@@ -10,11 +10,13 @@ import UIKit
 
 class GroupPopoverViewController: UIViewController {
 
-    @IBOutlet var nameLbl: UILabel!
-    @IBOutlet var typeLbl: UILabel!
-    @IBOutlet var idLbl: UILabel!
-    @IBOutlet var privacyLbl: UILabel!
-    @IBOutlet var courseLbl: UILabel!
+    
+    @IBOutlet weak var nameLbl: UILabel!
+    @IBOutlet weak var privacyLbl: UILabel!
+    @IBOutlet weak var typeLbl: UILabel!
+    @IBOutlet weak var idLbl: UILabel!
+    @IBOutlet weak var courseLbl: NSLayoutConstraint!
+    
 
     func populateFields(group_id: String) {
         idLbl.text = group_id
