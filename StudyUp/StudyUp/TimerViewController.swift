@@ -109,6 +109,7 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         // Prevents multiple timers running
         if timerRunning == false {
             timerCount = Int(timePicker.countDownDuration)
+            sessionTime = 3000
             timerRunning = true
             
             // Timer function buttons
