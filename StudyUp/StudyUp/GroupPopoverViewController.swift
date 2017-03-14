@@ -9,8 +9,17 @@
 import UIKit
 
 class GroupPopoverViewController: UIViewController {
-    
 
+    @IBOutlet var nameLbl: UILabel!
+    @IBOutlet var typeLbl: UILabel!
+    @IBOutlet var idLbl: UILabel!
+    @IBOutlet var privacyLbl: UILabel!
+    @IBOutlet var courseLbl: UILabel!
+
+    func populateFields(group_id: String) {
+        idLbl.text = group_id
+    }
+    
     /*
     // MARK: - Navigation
 

@@ -77,24 +77,24 @@ class StudyGroup: NSObject {
                 let group = StudyGroup()
                 
                 for (key, element) in dictionary {
-                    print(element)
+                    //print(element)
                     group.id = key as String
-                    print(group.id)
+                    //print(group.id)
                     group.name = (element["name"] as? String)!
                     group.type = (element["type"] as? String)!
-                    print(group.name)
-                    print(group.type)
+                    //print(group.name)
+                    //print(group.type)
                     var location = element["location"] as? [String: AnyObject]
-                    print(location ?? "Not asfsdfd")
+                    //print(location ?? "Not asfsdfd")
                     //if location == nil { continue } // Stop in cause there is an error and location is nil
                     let arr : NSMutableArray = location?["l"] as! NSMutableArray
                     
                     let lat = arr[0]
                     let lon = arr[1]
-                    print(lat)
-                    print(lon)
+                    //print(lat)
+                    //print(lon)
                     group.location = CLLocation(latitude: lat as! CLLocationDegrees, longitude: lon as! CLLocationDegrees)
-                    print(group.location)
+                    //print(group.location)
                     //groups.add(group)
                     
                     let anno = MapAnnotation(group: group)
@@ -138,12 +138,17 @@ class MapAnnotation : NSObject, MKAnnotation {
     var groupType: String = "Default"
     var groupTag: String = "Default"
     var title: String?
+    var subtitle: String?
+    var id: String?
     
     
     init(group : StudyGroup) {
         self.coordinate = group.location.coordinate
         self.groupType = group.type
         self.groupTag = group.name
+        self.id = group.id
         self.title = self.groupTag
+        self.subtitle = self.id
+        
     }
 }
