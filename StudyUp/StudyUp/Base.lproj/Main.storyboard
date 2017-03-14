@@ -133,8 +133,8 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="bql-cY-TE6">
-                                <rect key="frame" x="16" y="98" width="343" height="150"/>
+                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="bql-cY-TE6">
+                                <rect key="frame" x="32" y="98" width="343" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="K36-Lb-2Km"/>
                                 </constraints>
@@ -271,13 +271,23 @@
                                     <action selector="endButtonPressed:" destination="Fpl-gr-NWa" eventType="touchUpInside" id="NyI-77-wBL"/>
                                 </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x3l-id-Mvp">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x3l-id-Mvp">
                                 <rect key="frame" x="16" y="98" width="343" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="8Xg-Ha-eia"/>
+                                    <constraint firstAttribute="width" constant="343" id="vCb-Hf-NEb"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                             </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7zl-83-Pwl">
-                                <rect key="frame" x="218" y="202" width="77" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Time:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jwV-FV-Mry">
+                                <rect key="frame" x="145" y="194" width="85" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7zl-83-Pwl">
+                                <rect key="frame" x="145" y="214" width="85" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -287,29 +297,37 @@
                         <constraints>
                             <constraint firstItem="dVN-DC-UNF" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="3Y3-GR-T8o"/>
                             <constraint firstItem="x3l-id-Mvp" firstAttribute="top" secondItem="bql-cY-TE6" secondAttribute="top" id="3tK-P7-TUM"/>
+                            <constraint firstItem="jwV-FV-Mry" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="6FT-G6-vMM"/>
+                            <constraint firstItem="7zl-83-Pwl" firstAttribute="centerX" secondItem="bql-cY-TE6" secondAttribute="centerX" constant="1" id="7lg-Sd-Md6"/>
                             <constraint firstItem="rI4-aQ-CBZ" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="7py-wz-hNu"/>
                             <constraint firstItem="x3l-id-Mvp" firstAttribute="width" secondItem="bql-cY-TE6" secondAttribute="width" id="85d-q5-R0T"/>
+                            <constraint firstItem="7zl-83-Pwl" firstAttribute="top" secondItem="TP1-hP-5gs" secondAttribute="bottom" constant="154" id="8YK-8N-gV8"/>
                             <constraint firstItem="dVN-DC-UNF" firstAttribute="top" secondItem="6xI-He-Wtk" secondAttribute="bottom" constant="24" id="BIf-H1-cfu"/>
                             <constraint firstItem="xsY-k6-zF5" firstAttribute="top" secondItem="rCr-Rh-ePr" secondAttribute="bottom" constant="6" id="DBf-Zp-hun"/>
                             <constraint firstItem="rCr-Rh-ePr" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="DIj-d5-Oum"/>
                             <constraint firstItem="q0Q-oN-moc" firstAttribute="top" secondItem="ndD-Bf-Yzg" secondAttribute="bottom" constant="24" id="Jt9-FI-rVV"/>
+                            <constraint firstItem="x3l-id-Mvp" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="KYs-eL-aun"/>
                             <constraint firstItem="a6b-3h-9Dl" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="LOx-wj-7RW"/>
+                            <constraint firstItem="jwV-FV-Mry" firstAttribute="centerX" secondItem="bql-cY-TE6" secondAttribute="centerX" id="LQw-UF-McY"/>
                             <constraint firstItem="TP1-hP-5gs" firstAttribute="width" secondItem="6Zu-NK-k2o" secondAttribute="width" id="ON6-cq-gdY"/>
                             <constraint firstItem="bql-cY-TE6" firstAttribute="leading" secondItem="6Zu-NK-k2o" secondAttribute="leading" constant="16" id="QF5-B0-A2V" userLabel="Time Picker.leading = leadingMargin"/>
                             <constraint firstItem="6xI-He-Wtk" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="QZr-3I-Gpz"/>
                             <constraint firstItem="TP1-hP-5gs" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="R74-DP-Lkv"/>
                             <constraint firstItem="Tls-P3-gAL" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="VFa-lV-uay"/>
+                            <constraint firstItem="7zl-83-Pwl" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="W94-KE-uZZ"/>
                             <constraint firstItem="6xI-He-Wtk" firstAttribute="top" secondItem="ndD-Bf-Yzg" secondAttribute="bottom" constant="24" id="WpU-PW-0aB" userLabel="Resume Studying.top = Smart Study View.bottom + 24"/>
                             <constraint firstItem="xsY-k6-zF5" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="WvQ-Ok-8wk"/>
                             <constraint firstItem="q0Q-oN-moc" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="Z7E-Jb-uGQ"/>
                             <constraint firstItem="a6b-3h-9Dl" firstAttribute="top" secondItem="6xI-He-Wtk" secondAttribute="bottom" constant="24" id="ZEl-Yc-Od7"/>
                             <constraint firstItem="ndD-Bf-Yzg" firstAttribute="width" secondItem="bql-cY-TE6" secondAttribute="width" id="aKI-Mi-cps"/>
                             <constraint firstItem="rI4-aQ-CBZ" firstAttribute="top" secondItem="rCr-Rh-ePr" secondAttribute="bottom" constant="8" id="bTa-pL-lUh"/>
+                            <constraint firstItem="bql-cY-TE6" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="bu2-Yt-cqW"/>
                             <constraint firstItem="Tls-P3-gAL" firstAttribute="width" secondItem="bql-cY-TE6" secondAttribute="width" id="dE5-0C-DSH" userLabel="View.width = 350"/>
                             <constraint firstItem="ndD-Bf-Yzg" firstAttribute="top" secondItem="Tls-P3-gAL" secondAttribute="bottom" constant="16" id="etX-xh-bUi"/>
                             <constraint firstItem="Tls-P3-gAL" firstAttribute="top" secondItem="rCr-Rh-ePr" secondAttribute="bottom" constant="12" id="glt-AZ-fLd"/>
                             <constraint firstItem="bql-cY-TE6" firstAttribute="top" secondItem="TP1-hP-5gs" secondAttribute="bottom" constant="38" id="iT9-g8-ode"/>
                             <constraint firstItem="Tls-P3-gAL" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="mu2-yP-IYx"/>
+                            <constraint firstItem="jwV-FV-Mry" firstAttribute="top" secondItem="TP1-hP-5gs" secondAttribute="bottom" constant="134" id="q4E-VR-E32"/>
                             <constraint firstItem="ndD-Bf-Yzg" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="qLz-yN-YSM"/>
                             <constraint firstItem="TP1-hP-5gs" firstAttribute="top" secondItem="6Zu-NK-k2o" secondAttribute="top" id="sNe-9l-SSP"/>
                             <constraint firstAttribute="trailing" secondItem="bql-cY-TE6" secondAttribute="trailing" constant="16" id="v4v-bs-u2k" userLabel="Time Picker.trailing = trailingMargin"/>
@@ -329,6 +347,7 @@
                         <outlet property="smartStudyView" destination="ndD-Bf-Yzg" id="XZs-XN-1Jv"/>
                         <outlet property="startButton" destination="a6b-3h-9Dl" id="PlP-Bz-B9G"/>
                         <outlet property="timePicker" destination="bql-cY-TE6" id="If0-bI-6f7"/>
+                        <outlet property="totalTextLabel" destination="jwV-FV-Mry" id="FOL-Jc-qOs"/>
                         <outlet property="totalTimeLabel" destination="7zl-83-Pwl" id="Y6v-qV-mqh"/>
                     </connections>
                 </viewController>

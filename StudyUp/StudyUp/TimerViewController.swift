@@ -24,7 +24,8 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     @IBOutlet weak var timePicker: UIDatePicker!
     @IBOutlet weak var countDownLabel: UILabel!
     @IBOutlet weak var totalTimeLabel: UILabel!
-     
+    @IBOutlet weak var totalTextLabel: UILabel!
+    
     @IBOutlet weak var coursePickerButton: UIButton!
     @IBOutlet weak var coursePicker: UIPickerView!
     
@@ -70,11 +71,11 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     @IBAction func smartStudyToggled(_ sender: AnyObject) {
         if smartStudyToggle.isOn{
             smartStudyView.isHidden = false
-            totalTimeLabel.isHidden = false
         }
         else {
             smartStudyView.isHidden = true
-            totalTimeLabel.isHidden = false
+            totalTimeLabel.isHidden = true
+            totalTextLabel.isHidden = true
         }
     }
     
@@ -102,9 +103,12 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     // Main functionality of timer
     // Uses timerCount to display the timer value and initializes timer
     @IBAction func startButtonPressed(_ sender: UIButton) {
-        if smartStudyToggle.isOn{
+        /*if smartStudyToggle.isOn{
             breakButton.isHidden = false
-        }
+        }*/
+        smartStudyToggleView.isHidden = false
+        smartStudyToggle.isHidden = false
+        coursePickerButton.isHidden = true
         
         if timerRunning == false {
             timerCount = Int(timePicker.countDownDuration)
@@ -114,11 +118,11 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
             breakButton.isHidden = false
             timePicker.isHidden = true
             countDownLabel.isHidden = false
-            smartStudyToggleView.isHidden = true
             coursePickerButton.isHidden = true
-            totalTimeLabel.isHidden = false
+
             if smartStudyToggle.isOn{
                 totalTimeLabel.isHidden = false
+                totalTextLabel.isHidden = false
             }
             runTimer()
         }
@@ -127,7 +131,6 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     func runTimer(){
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(TimerViewController.updateCounter)), userInfo: nil, repeats: true)
         coursePicker.isHidden = true
-        smartStudyToggle.isHidden = true
         coursePickerButton.isHidden = true
     }
     
@@ -159,25 +162,17 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     
     @IBAction func breakBtnPressed(_ sender: UIButton) {
         resumeButton.isHidden = false
+        coursePickerButton.isHidden = true
+        smartStudyToggle.isHidden = false
         breakButton.isHidden = true
-        if smartStudyToggle.isOn {
-            smartStudyToggle.isHidden = false
-        }
-        else{
-            smartStudyToggle.isHidden = true
-        }
         timer.invalidate()
     }
     
     @IBAction func resumeBtnPressed(_ sender: UIButton) {
         breakButton.isHidden = false
+        coursePickerButton.isHidden = true
         resumeButton.isHidden = true
-        if smartStudyToggle.isOn {
-            smartStudyToggle.isHidden = false
-        }
-        else{
-            smartStudyToggle.isHidden = true
-        }
+
         runTimer()
     }
     
@@ -192,15 +187,16 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         timePicker.isHidden = false
         countDownLabel.isHidden = true
         totalTimeLabel.isHidden = true
+        totalTextLabel.isHidden = true
         smartStudyToggleView.isHidden = false
+        smartStudyToggle.isHidden = false
         coursePickerButton.isHidden = false
 
     }
     
     // Method to format time into HH:MM:SS
     func timeString(time:TimeInterval) -> String {
-        smartStudyToggleView.isHidden = false
-        coursePickerButton.isHidden = false
+        coursePickerButton.isHidden = true
         
         let hours = Int(time) / 3600
         let minutes = Int(time) / 60 % 60
