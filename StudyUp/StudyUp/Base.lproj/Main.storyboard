@@ -124,8 +124,7 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="bql-cY-TE6">
-                                <frame key="frameInset" minX="32" minY="98" width="343" height="150"/>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="bql-cY-TE6">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="K36-Lb-2Km"/>
                                 </constraints>
@@ -252,7 +251,6 @@
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x3l-id-Mvp">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="8Xg-Ha-eia"/>
-                                    <constraint firstAttribute="width" constant="343" id="vCb-Hf-NEb"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                             </label>
@@ -262,8 +260,7 @@
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7zl-83-Pwl">
-                                <frame key="frameInset" minX="145" minY="214" width="85" height="21"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7zl-83-Pwl">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -279,7 +276,6 @@
                             <constraint firstItem="dVN-DC-UNF" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="3Y3-GR-T8o"/>
                             <constraint firstItem="x3l-id-Mvp" firstAttribute="top" secondItem="bql-cY-TE6" secondAttribute="top" id="3tK-P7-TUM"/>
                             <constraint firstItem="jwV-FV-Mry" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="6FT-G6-vMM"/>
-                            <constraint firstItem="7zl-83-Pwl" firstAttribute="centerX" secondItem="bql-cY-TE6" secondAttribute="centerX" constant="1" id="7lg-Sd-Md6"/>
                             <constraint firstItem="rI4-aQ-CBZ" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="7py-wz-hNu"/>
                             <constraint firstItem="x3l-id-Mvp" firstAttribute="width" secondItem="bql-cY-TE6" secondAttribute="width" id="85d-q5-R0T"/>
                             <constraint firstItem="7zl-83-Pwl" firstAttribute="top" secondItem="TP1-hP-5gs" secondAttribute="bottom" constant="154" id="8YK-8N-gV8"/>
@@ -291,7 +287,6 @@
                             <constraint firstItem="x3l-id-Mvp" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="KYs-eL-aun"/>
                             <constraint firstItem="2tj-Rx-JHo" firstAttribute="height" secondItem="bql-cY-TE6" secondAttribute="height" id="KyN-UR-bKe"/>
                             <constraint firstItem="a6b-3h-9Dl" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="LOx-wj-7RW"/>
-                            <constraint firstItem="jwV-FV-Mry" firstAttribute="centerX" secondItem="bql-cY-TE6" secondAttribute="centerX" id="LQw-UF-McY"/>
                             <constraint firstItem="TP1-hP-5gs" firstAttribute="width" secondItem="6Zu-NK-k2o" secondAttribute="width" id="ON6-cq-gdY"/>
                             <constraint firstItem="bql-cY-TE6" firstAttribute="leading" secondItem="6Zu-NK-k2o" secondAttribute="leading" constant="16" id="QF5-B0-A2V" userLabel="Time Picker.leading = leadingMargin"/>
                             <constraint firstItem="6xI-He-Wtk" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="QZr-3I-Gpz"/>
@@ -305,7 +300,6 @@
                             <constraint firstItem="2tj-Rx-JHo" firstAttribute="top" secondItem="bql-cY-TE6" secondAttribute="top" id="ZHm-ki-32T"/>
                             <constraint firstItem="ndD-Bf-Yzg" firstAttribute="width" secondItem="bql-cY-TE6" secondAttribute="width" id="aKI-Mi-cps"/>
                             <constraint firstItem="rI4-aQ-CBZ" firstAttribute="top" secondItem="rCr-Rh-ePr" secondAttribute="bottom" constant="8" id="bTa-pL-lUh"/>
-                            <constraint firstItem="bql-cY-TE6" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="bu2-Yt-cqW"/>
                             <constraint firstItem="Tls-P3-gAL" firstAttribute="width" secondItem="bql-cY-TE6" secondAttribute="width" id="dE5-0C-DSH" userLabel="View.width = 350"/>
                             <constraint firstItem="ndD-Bf-Yzg" firstAttribute="top" secondItem="Tls-P3-gAL" secondAttribute="bottom" constant="16" id="etX-xh-bUi"/>
                             <constraint firstItem="2tj-Rx-JHo" firstAttribute="width" secondItem="bql-cY-TE6" secondAttribute="width" id="ezH-Ta-KJM"/>
@@ -1159,7 +1153,7 @@
         <image name="home_btn" width="24" height="28"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="IGP-P3-Wa6"/>
+        <segue reference="07Y-u1-pUF"/>
         <segue reference="8kh-6S-Lb6"/>
     </inferredMetricsTieBreakers>
 </document>
