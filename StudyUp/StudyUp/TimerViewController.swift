@@ -18,9 +18,12 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     var timerRunning = false
     var timer = Timer()
     var timerEnabled = false
+    var sessionTime = 3000 // 3000 seconds = 50 min sessions
+    var breakTime = 600 // = 10 min break
 
     @IBOutlet weak var timePicker: UIDatePicker!
     @IBOutlet weak var countDownLabel: UILabel!
+    @IBOutlet weak var totalTimeLabel: UILabel!
      
     @IBOutlet weak var coursePickerButton: UIButton!
     @IBOutlet weak var coursePicker: UIPickerView!
@@ -61,13 +64,17 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         smartStudyView.isHidden = true
     }
     
-    // Toggles smartStudy, currently has no function
+    // Toggles smartStudy
+    // Small timer = total study time
+    // Large timer = session length
     @IBAction func smartStudyToggled(_ sender: AnyObject) {
         if smartStudyToggle.isOn{
             smartStudyView.isHidden = false
+            totalTimeLabel.isHidden = false
         }
         else {
             smartStudyView.isHidden = true
+            totalTimeLabel.isHidden = false
         }
     }
     
@@ -95,6 +102,10 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     // Main functionality of timer
     // Uses timerCount to display the timer value and initializes timer
     @IBAction func startButtonPressed(_ sender: UIButton) {
+        if smartStudyToggle.isOn{
+            breakButton.isHidden = false
+        }
+        
         if timerRunning == false {
             timerCount = Int(timePicker.countDownDuration)
             timerRunning = true
@@ -103,24 +114,42 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
             breakButton.isHidden = false
             timePicker.isHidden = true
             countDownLabel.isHidden = false
-            
-            if smartStudyToggle.isOn{
-                breakButton.isHidden = false;
-            }
             smartStudyToggleView.isHidden = true
             coursePickerButton.isHidden = true
-            
+            totalTimeLabel.isHidden = false
+            if smartStudyToggle.isOn{
+                totalTimeLabel.isHidden = false
+            }
             runTimer()
         }
     }
     
     func runTimer(){
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(TimerViewController.updateCounter)), userInfo: nil, repeats: true)
+        coursePicker.isHidden = true
+        smartStudyToggle.isHidden = true
+        coursePickerButton.isHidden = true
     }
     
     func updateCounter() {
         timerCount -= 1
-        countDownLabel.text = timeString(time: TimeInterval(timerCount))
+        sessionTime -= 1
+        
+        // Smart Study ON counter with small total timer
+        if smartStudyToggle.isOn{
+            if (timerCount > sessionTime){
+                countDownLabel.text = timeString(time: TimeInterval(sessionTime))
+                totalTimeLabel.text = timeString(time: TimeInterval(timerCount))
+            }
+            else {
+                countDownLabel.text = timeString(time: TimeInterval(timerCount))
+                totalTimeLabel.text = timeString(time: TimeInterval(timerCount))
+            }
+        }
+        // Only one counter
+        else{
+            countDownLabel.text = timeString(time: TimeInterval(timerCount))
+        }
         
         if timerCount == 0 {
             timer.invalidate()
@@ -131,12 +160,24 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     @IBAction func breakBtnPressed(_ sender: UIButton) {
         resumeButton.isHidden = false
         breakButton.isHidden = true
+        if smartStudyToggle.isOn {
+            smartStudyToggle.isHidden = false
+        }
+        else{
+            smartStudyToggle.isHidden = true
+        }
         timer.invalidate()
     }
     
     @IBAction func resumeBtnPressed(_ sender: UIButton) {
         breakButton.isHidden = false
         resumeButton.isHidden = true
+        if smartStudyToggle.isOn {
+            smartStudyToggle.isHidden = false
+        }
+        else{
+            smartStudyToggle.isHidden = true
+        }
         runTimer()
     }
     
@@ -150,6 +191,7 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         resumeButton.isHidden = true
         timePicker.isHidden = false
         countDownLabel.isHidden = true
+        totalTimeLabel.isHidden = true
         smartStudyToggleView.isHidden = false
         coursePickerButton.isHidden = false
 
