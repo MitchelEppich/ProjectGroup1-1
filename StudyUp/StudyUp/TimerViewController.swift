@@ -23,6 +23,7 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
 
     @IBOutlet weak var timePicker: UIDatePicker!
     @IBOutlet weak var countDownLabel: UILabel!
+    @IBOutlet weak var breakTimeLabel: UILabel!
     @IBOutlet weak var totalTimeLabel: UILabel!
     @IBOutlet weak var totalTextLabel: UILabel!
     
@@ -136,10 +137,12 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     }
     
     func updateCounter() {
+        
+        // Decrement timers
         timerCount -= 1
         sessionTime -= 1
         
-        // Smart Study ON counter with small total timer
+        // Smart Study ON - counter with small total timer
         if smartStudyToggle.isOn{
             if (timerCount > sessionTime){
                 countDownLabel.text = timeString(time: TimeInterval(sessionTime))
@@ -168,12 +171,28 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         smartStudyToggle.isHidden = false
         breakButton.isHidden = true
         timer.invalidate()
+        
+        // Show the break time timer
+        // Need to make another timer to run the break time
+        if smartStudyToggle.isOn{
+            countDownLabel.isHidden = true
+            breakTimeLabel.isHidden = false
+            if (timerCount > sessionTime){
+                breakTimeLabel.text = timeString(time: TimeInterval(breakTime))
+            }
+            else{
+                breakTime = ((1/6)*timerCount)
+                breakTimeLabel.text = timeString(time: TimeInterval(breakTime))
+            }
+        }
     }
     
     @IBAction func resumeBtnPressed(_ sender: UIButton) {
         breakButton.isHidden = false
         coursePickerButton.isHidden = true
         resumeButton.isHidden = true
+        breakTimeLabel.isHidden = true
+        countDownLabel.isHidden = false
 
         runTimer()
     }
@@ -194,6 +213,7 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         countDownLabel.isHidden = true
         totalTimeLabel.isHidden = true
         totalTextLabel.isHidden = true
+        breakTimeLabel.isHidden = true
         
         // Button UI
         smartStudyToggleView.isHidden = false

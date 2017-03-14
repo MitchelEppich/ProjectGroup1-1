@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -292,6 +292,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2tj-Rx-JHo">
+                                <rect key="frame" x="16" y="98" width="343" height="150"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -302,11 +308,13 @@
                             <constraint firstItem="rI4-aQ-CBZ" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="7py-wz-hNu"/>
                             <constraint firstItem="x3l-id-Mvp" firstAttribute="width" secondItem="bql-cY-TE6" secondAttribute="width" id="85d-q5-R0T"/>
                             <constraint firstItem="7zl-83-Pwl" firstAttribute="top" secondItem="TP1-hP-5gs" secondAttribute="bottom" constant="154" id="8YK-8N-gV8"/>
+                            <constraint firstItem="2tj-Rx-JHo" firstAttribute="centerX" secondItem="bql-cY-TE6" secondAttribute="centerX" id="AAi-hk-evh"/>
                             <constraint firstItem="dVN-DC-UNF" firstAttribute="top" secondItem="6xI-He-Wtk" secondAttribute="bottom" constant="24" id="BIf-H1-cfu"/>
                             <constraint firstItem="xsY-k6-zF5" firstAttribute="top" secondItem="rCr-Rh-ePr" secondAttribute="bottom" constant="6" id="DBf-Zp-hun"/>
                             <constraint firstItem="rCr-Rh-ePr" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="DIj-d5-Oum"/>
                             <constraint firstItem="q0Q-oN-moc" firstAttribute="top" secondItem="ndD-Bf-Yzg" secondAttribute="bottom" constant="24" id="Jt9-FI-rVV"/>
                             <constraint firstItem="x3l-id-Mvp" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="KYs-eL-aun"/>
+                            <constraint firstItem="2tj-Rx-JHo" firstAttribute="height" secondItem="bql-cY-TE6" secondAttribute="height" id="KyN-UR-bKe"/>
                             <constraint firstItem="a6b-3h-9Dl" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="LOx-wj-7RW"/>
                             <constraint firstItem="jwV-FV-Mry" firstAttribute="centerX" secondItem="bql-cY-TE6" secondAttribute="centerX" id="LQw-UF-McY"/>
                             <constraint firstItem="TP1-hP-5gs" firstAttribute="width" secondItem="6Zu-NK-k2o" secondAttribute="width" id="ON6-cq-gdY"/>
@@ -319,11 +327,13 @@
                             <constraint firstItem="xsY-k6-zF5" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="WvQ-Ok-8wk"/>
                             <constraint firstItem="q0Q-oN-moc" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="Z7E-Jb-uGQ"/>
                             <constraint firstItem="a6b-3h-9Dl" firstAttribute="top" secondItem="6xI-He-Wtk" secondAttribute="bottom" constant="24" id="ZEl-Yc-Od7"/>
+                            <constraint firstItem="2tj-Rx-JHo" firstAttribute="top" secondItem="bql-cY-TE6" secondAttribute="top" id="ZHm-ki-32T"/>
                             <constraint firstItem="ndD-Bf-Yzg" firstAttribute="width" secondItem="bql-cY-TE6" secondAttribute="width" id="aKI-Mi-cps"/>
                             <constraint firstItem="rI4-aQ-CBZ" firstAttribute="top" secondItem="rCr-Rh-ePr" secondAttribute="bottom" constant="8" id="bTa-pL-lUh"/>
                             <constraint firstItem="bql-cY-TE6" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="bu2-Yt-cqW"/>
                             <constraint firstItem="Tls-P3-gAL" firstAttribute="width" secondItem="bql-cY-TE6" secondAttribute="width" id="dE5-0C-DSH" userLabel="View.width = 350"/>
                             <constraint firstItem="ndD-Bf-Yzg" firstAttribute="top" secondItem="Tls-P3-gAL" secondAttribute="bottom" constant="16" id="etX-xh-bUi"/>
+                            <constraint firstItem="2tj-Rx-JHo" firstAttribute="width" secondItem="bql-cY-TE6" secondAttribute="width" id="ezH-Ta-KJM"/>
                             <constraint firstItem="Tls-P3-gAL" firstAttribute="top" secondItem="rCr-Rh-ePr" secondAttribute="bottom" constant="12" id="glt-AZ-fLd"/>
                             <constraint firstItem="bql-cY-TE6" firstAttribute="top" secondItem="TP1-hP-5gs" secondAttribute="bottom" constant="38" id="iT9-g8-ode"/>
                             <constraint firstItem="Tls-P3-gAL" firstAttribute="centerX" secondItem="6Zu-NK-k2o" secondAttribute="centerX" id="mu2-yP-IYx"/>
@@ -337,6 +347,7 @@
                     </view>
                     <connections>
                         <outlet property="breakButton" destination="q0Q-oN-moc" id="UZX-d6-QG6"/>
+                        <outlet property="breakTimeLabel" destination="2tj-Rx-JHo" id="svf-Lt-Pcf"/>
                         <outlet property="countDownLabel" destination="x3l-id-Mvp" id="KIe-S9-d5c"/>
                         <outlet property="coursePicker" destination="rI4-aQ-CBZ" id="e5v-mn-yvI"/>
                         <outlet property="coursePickerButton" destination="rCr-Rh-ePr" id="LfT-Uc-74g"/>
@@ -1073,7 +1084,7 @@
         <image name="home_btn" width="24" height="28"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="07Y-u1-pUF"/>
         <segue reference="8kh-6S-Lb6"/>
-        <segue reference="4Q4-YY-gyn"/>
     </inferredMetricsTieBreakers>
 </document>
