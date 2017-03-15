@@ -61,7 +61,7 @@ class UserProfile : NSObject {
                     "bio" : self.bio,
                     "email" : self.email,
                     ]
-        let userUpdates = [PATH : user]
+        let userUpdates = ["users/\((FIRAuth.auth()?.currentUser?.uid)!)" : user]
         ref.updateChildValues(userUpdates)
     }
     
