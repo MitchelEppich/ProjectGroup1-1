@@ -181,6 +181,15 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         if breakTime <= 0 {
             breakTimer.invalidate()
             breakRunning = false
+            let alertController = UIAlertController(title: "Break Ended", message: "Time to study!", preferredStyle: UIAlertControllerStyle.alert)
+            
+            let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default)
+            {
+                (result : UIAlertAction) -> Void in
+                print("You pressed OK")
+            }
+            alertController.addAction(okAction)
+            self.present(alertController, animated: true, completion: nil)
         }
     }
     
