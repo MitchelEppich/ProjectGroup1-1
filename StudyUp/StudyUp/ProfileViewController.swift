@@ -26,16 +26,17 @@ class ProfileViewController: UIViewController,UINavigationControllerDelegate, UI
     
     // used for connections with the timer
     @IBOutlet weak var courseName: UILabel!
-    @IBOutlet var courseProgress: UIView!
+    @IBOutlet var courseProgress: UIProgressView!
     
     
     // click for edit
     @IBOutlet weak var profileEdit: UIButton!
-    @IBOutlet weak var profileDone: UIButton!
     
+    @IBOutlet weak var add: UIButton!
     
     // hidden
     @IBOutlet weak var profileImageEdit: UIButton!
+
     
     
     
@@ -50,10 +51,11 @@ class ProfileViewController: UIViewController,UINavigationControllerDelegate, UI
         //later:  take user data from server/local
         
         // set initial status to not editable
-        profileDone.isHidden = true
+        
         profileBio.isEditable = false
         profileFaculty.isEditable = false
         profileImageEdit.isHidden = true
+        add.isHidden = true
         
         loadUserInformation()
         
@@ -64,6 +66,8 @@ class ProfileViewController: UIViewController,UINavigationControllerDelegate, UI
         // Dispose of any resources that can be recreated.
     }
     
+    
+    // Firebase interation ------------------------------------------------------------------------
     
     func loadUserInformation() {
         
@@ -84,6 +88,11 @@ class ProfileViewController: UIViewController,UINavigationControllerDelegate, UI
         self.profileFaculty.text = self.user.email
     }
     
+    
+    // Edit profile ------------------------------------------------------------------------
+    
+    
+    
     // click on edit to enable editing on image, bio, and faculty
     @IBAction func editProfile(_ sender: AnyObject) {
         
@@ -101,6 +110,10 @@ class ProfileViewController: UIViewController,UINavigationControllerDelegate, UI
             
         } else {
             // allows user to:
+            
+            // code for when profile is in edit mode :
+            
+            
             // edit bio
             profileBio.isEditable = true
             // edit faculty name
@@ -109,10 +122,46 @@ class ProfileViewController: UIViewController,UINavigationControllerDelegate, UI
             profileImageEdit.isHidden = false
             editEnable = true
             profileEdit.setTitle("Done", for: UIControlState.normal)
+            
+            
+            // add course
+            add.isHidden = false
+            
         }
         
     }
     
+    
+    // add course
+    
+
+    @IBAction func addCourse(_ sender: AnyObject) {
+        // allow user to add course
+        
+        
+    }
+    
+    
+    
+    
+    
+    
+    // Display ---------------------------------------------------------------------------
+    
+    
+    // displaying prograss of a single course
+    func displayPrograss(courseDisplayed : Course? ){
+        
+        courseName.text = courseDisplayed!.courseID
+        
+        let prograssRatio = Double(courseDisplayed!.courseTime) / Double(courseDisplayed!.suggestedTime)
+        courseProgress.progress = Float(prograssRatio)
+        
+        
+    }
+    
+    
+    // Allow user to pick custom image ----------------------------------------------------------
     
     
     // call image picker to edit profile picture
