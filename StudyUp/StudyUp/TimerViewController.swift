@@ -17,9 +17,12 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     var timerCount = 60
     var timerRunning = false
     var timer = Timer()
+    var breakTimer = Timer()
+    var breakRunning = false
     var timerEnabled = false
-    var sessionTime = 3000 // 3000 seconds = 50 min sessions
+    var sessionTime = 3001 // 3000 seconds = 50 min sessions
     var breakTime = 600 // = 10 min break
+    var breakRatio = Double(1/6)
 
     @IBOutlet weak var timePicker: UIDatePicker!
     @IBOutlet weak var countDownLabel: UILabel!
@@ -109,7 +112,8 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         // Prevents multiple timers running
         if timerRunning == false {
             timerCount = Int(timePicker.countDownDuration)
-            sessionTime = 3000
+            timerCount += 1
+            sessionTime = 3001
             timerRunning = true
             
             // Timer function buttons
@@ -166,6 +170,20 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         }
     }
     
+    func runBreak(){
+        breakTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(TimerViewController.updateBreak)), userInfo: nil, repeats: true)
+    }
+    
+    func updateBreak(){
+        breakTime -= 1
+        breakTimeLabel.text = timeString(time: TimeInterval(breakTime))
+        
+        if breakTime <= 0 {
+            breakTimer.invalidate()
+            breakRunning = false
+        }
+    }
+    
     @IBAction func breakBtnPressed(_ sender: UIButton) {
         resumeButton.isHidden = false
         coursePickerButton.isHidden = true
@@ -173,18 +191,24 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         breakButton.isHidden = true
         timer.invalidate()
         
-        // Show the break time timer
-        // Need to make another timer to run the break time
-        if smartStudyToggle.isOn{
-            countDownLabel.isHidden = true
-            breakTimeLabel.isHidden = false
-            if (timerCount > sessionTime){
-                breakTimeLabel.text = timeString(time: TimeInterval(breakTime))
+        // Break timer for Smart Study
+        if breakRunning == false{
+            breakTime = 600
+            breakRunning = true
+            
+            // Show the break time timer
+            if smartStudyToggle.isOn{
+                countDownLabel.isHidden = true
+                breakTimeLabel.isHidden = false
+                if (timerCount > sessionTime){
+                    breakTimeLabel.text = timeString(time: TimeInterval(breakTime))
+                }
+                else{
+                    breakTime = Int(breakRatio * Double(timerCount))
+                    breakTimeLabel.text = timeString(time: TimeInterval(breakTime))
+                }
             }
-            else{
-                breakTime = ((1/6)*timerCount)
-                breakTimeLabel.text = timeString(time: TimeInterval(breakTime))
-            }
+            runBreak()
         }
     }
     
@@ -194,7 +218,9 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         resumeButton.isHidden = true
         breakTimeLabel.isHidden = true
         countDownLabel.isHidden = false
-
+        
+        breakTimer.invalidate()
+        breakRunning = false
         runTimer()
     }
     
@@ -202,6 +228,9 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     @IBAction func endButtonPressed(_ sender: UIButton) {
         timer.invalidate()
         timerRunning = false
+        breakTimer.invalidate()
+        breakRunning = false
+        
         
         // Timer buttons
         startButton.isHidden = false
@@ -225,8 +254,6 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     
     // Method to format time into HH:MM:SS
     func timeString(time:TimeInterval) -> String {
-        coursePickerButton.isHidden = true
-        
         let hours = Int(time) / 3600
         let minutes = Int(time) / 60 % 60
         let seconds = Int(time) % 60
