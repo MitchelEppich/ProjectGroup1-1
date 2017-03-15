@@ -22,7 +22,7 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     var timerEnabled = false
     var sessionTime = 3001 // 3000 seconds = 50 min sessions
     var breakTime = 600 // = 10 min break
-    var breakRatio = Double(1/6)
+    var breakRatio : Double = 1/6
 
     @IBOutlet weak var timePicker: UIDatePicker!
     @IBOutlet weak var countDownLabel: UILabel!
