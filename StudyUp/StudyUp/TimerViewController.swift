@@ -105,8 +105,8 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     // Main functionality of timer
     // Uses timerCount to display the timer value and initializes timer
     @IBAction func startButtonPressed(_ sender: UIButton) {
-        smartStudyToggleView.isHidden = false
-        smartStudyToggle.isHidden = false
+        smartStudyToggleView.isHidden = true
+        //smartStudyToggle.isHidden = false
         coursePickerButton.isHidden = true
         
         // Prevents multiple timers running
@@ -196,7 +196,7 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     @IBAction func breakBtnPressed(_ sender: UIButton) {
         resumeButton.isHidden = false
         coursePickerButton.isHidden = true
-        smartStudyToggle.isHidden = false
+        //smartStudyToggleView.isHidden = true
         breakButton.isHidden = true
         timer.invalidate()
         
@@ -256,7 +256,7 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         
         // Button UI
         smartStudyToggleView.isHidden = false
-        smartStudyToggle.isHidden = false
+        //smartStudyToggle.isHidden = false
         coursePickerButton.isHidden = false
         smartStudyToggle.isUserInteractionEnabled = true
     }
