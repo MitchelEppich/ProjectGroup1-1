@@ -1153,6 +1153,9 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WeT-Vo-ifZ">
                                 <state key="normal" title="Student Learning Commons"/>
+                                <connections>
+                                    <action selector="learningCommonsPressed:" destination="43g-lm-fd8" eventType="touchUpInside" id="1cE-1C-U1D"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bA-iK-9Qq">
                                 <attributedString key="attributedText">
@@ -1166,16 +1169,40 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vzm-OE-L2C">
+                                <state key="normal" title="Academic Advising"/>
+                                <connections>
+                                    <action selector="academicAdvisingPressed:" destination="43g-lm-fd8" eventType="touchUpInside" id="fZX-5F-mDr"/>
+                                    <action selector="learningCommonsPressed:" destination="43g-lm-fd8" eventType="touchUpInside" id="pfp-ng-I96"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J6T-gI-lyB">
+                                <attributedString key="attributedText">
+                                    <fragment content="Plan your degree, Degree requirements, Choose a major">
+                                        <attributes>
+                                            <color key="NSColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="12" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="H2Z-bf-jxm" firstAttribute="top" secondItem="Qxc-ZO-sdU" secondAttribute="top" id="22H-P2-y5j"/>
-                            <constraint firstItem="WeT-Vo-ifZ" firstAttribute="top" secondItem="wy7-nq-jZn" secondAttribute="bottom" constant="48" id="4bO-TZ-eft"/>
+                            <constraint firstItem="WeT-Vo-ifZ" firstAttribute="top" secondItem="wy7-nq-jZn" secondAttribute="bottom" constant="24" id="4bO-TZ-eft"/>
                             <constraint firstItem="H2Z-bf-jxm" firstAttribute="width" secondItem="Qxc-ZO-sdU" secondAttribute="width" id="Civ-T4-bX8"/>
+                            <constraint firstItem="Vzm-OE-L2C" firstAttribute="leading" secondItem="Qxc-ZO-sdU" secondAttribute="leadingMargin" constant="-6" id="Gt7-FD-lKM"/>
                             <constraint firstAttribute="leadingMargin" secondItem="WeT-Vo-ifZ" secondAttribute="leading" id="IfD-41-iXS"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5bA-iK-9Qq" secondAttribute="trailing" id="KPZ-rr-6mr"/>
+                            <constraint firstItem="Vzm-OE-L2C" firstAttribute="top" secondItem="5bA-iK-9Qq" secondAttribute="bottom" constant="24" id="QTT-vG-jAk"/>
+                            <constraint firstItem="J6T-gI-lyB" firstAttribute="leading" secondItem="Vzm-OE-L2C" secondAttribute="leading" id="RNY-1Q-WO0"/>
                             <constraint firstItem="DYI-XV-hEf" firstAttribute="top" secondItem="H2Z-bf-jxm" secondAttribute="bottom" constant="16" id="YpT-4U-gKB"/>
                             <constraint firstItem="5bA-iK-9Qq" firstAttribute="leading" secondItem="WeT-Vo-ifZ" secondAttribute="leading" id="adz-i9-b1u"/>
+                            <constraint firstItem="J6T-gI-lyB" firstAttribute="top" secondItem="Vzm-OE-L2C" secondAttribute="bottom" constant="8" id="ehq-0z-lIh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="J6T-gI-lyB" secondAttribute="trailing" constant="6" id="fVi-A6-uBY"/>
                             <constraint firstItem="wy7-nq-jZn" firstAttribute="leading" secondItem="DYI-XV-hEf" secondAttribute="leading" id="iaS-P2-fw2"/>
                             <constraint firstAttribute="leadingMargin" secondItem="DYI-XV-hEf" secondAttribute="leading" id="juM-jz-pnx"/>
                             <constraint firstItem="H2Z-bf-jxm" firstAttribute="centerX" secondItem="Qxc-ZO-sdU" secondAttribute="centerX" id="q42-64-S7o"/>
@@ -1187,7 +1214,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="szr-14-5Iu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="130" y="233"/>
+            <point key="canvasLocation" x="128.80000000000001" y="232.53373313343329"/>
         </scene>
         <!--Group Search View Controller-->
         <scene sceneID="URj-Ha-AV6">

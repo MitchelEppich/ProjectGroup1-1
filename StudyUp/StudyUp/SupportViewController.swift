@@ -28,6 +28,15 @@ class SupportViewController: UIViewController {
         UIApplication.shared.open(url!)
     }
 
+    @IBAction func learningCommonsPressed(_ sender: AnyObject) {
+        let url = URL(string :"http://www.lib.sfu.ca/about/branches-depts/slc")
+        UIApplication.shared.open(url!)
+    }
+    
+    @IBAction func academicAdvisingPressed(_ sender: AnyObject) {
+        let url = URL(string :"https://www.sfu.ca/students/academicadvising.html")
+        UIApplication.shared.open(url!)
+    }
     /*
     // MARK: - Navigation
 
