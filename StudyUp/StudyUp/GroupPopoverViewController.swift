@@ -11,15 +11,23 @@ import UIKit
 class GroupPopoverViewController: UIViewController {
 
     
-    @IBOutlet weak var nameLbl: UILabel!
+    
+    @IBOutlet weak var navigationBar: UINavigationBar!
+    @IBOutlet weak var courseLbl: UILabel!
+    @IBOutlet weak var studyTypeLbl: UILabel!
     @IBOutlet weak var privacyLbl: UILabel!
-    @IBOutlet weak var typeLbl: UILabel!
+    
     @IBOutlet weak var idLbl: UILabel!
-    @IBOutlet weak var courseLbl: NSLayoutConstraint!
+    
     
 
     func populateFields(group_id: String) {
         idLbl.text = group_id
+        //navigationBar.titleTextAttributes = group_name
+        //courseLbl.text = group_course
+        //studyTypeLbl.text =
+        //privacyLbl.text =
+        
     }
     
     /*
