@@ -1150,7 +1150,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wy7-nq-jZn">
                                 <attributedString key="attributedText">
                                     <fragment>
-                                        <string key="content">Our goal at Health and Counselling is to provide effective health care within SFU. Our health clinic (doctors and nurses), counselling, psychiatrist, physiotherapist, and health promotion team are here to collectively and positively influence your health and well-being.</string>
+                                        <string key="content">Our health clinic (doctors and nurses), counselling, psychiatrist, physiotherapist, and health promotion team are here to collectively and positively influence your health and well-being.</string>
                                         <attributes>
                                             <font key="NSFont" size="12" name=".AppleSystemUIFont"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
@@ -1181,7 +1181,6 @@
                                 <state key="normal" title="Academic Advising"/>
                                 <connections>
                                     <action selector="academicAdvisingPressed:" destination="43g-lm-fd8" eventType="touchUpInside" id="fZX-5F-mDr"/>
-                                    <action selector="learningCommonsPressed:" destination="43g-lm-fd8" eventType="touchUpInside" id="pfp-ng-I96"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J6T-gI-lyB">
@@ -1196,26 +1195,50 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ffz-kF-rty">
+                                <state key="normal" title="Simon Fraser Student Society"/>
+                                <connections>
+                                    <action selector="sfssPressed:" destination="43g-lm-fd8" eventType="touchUpInside" id="dfI-E3-ShS"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPa-es-qu8">
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">The Simon Fraser Student Society is a student-led organization that represents and advocates for the interests of undergraduate students at SFU.</string>
+                                        <attributes>
+                                            <color key="NSColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="12" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="charWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="H2Z-bf-jxm" firstAttribute="top" secondItem="Qxc-ZO-sdU" secondAttribute="top" id="22H-P2-y5j"/>
-                            <constraint firstItem="WeT-Vo-ifZ" firstAttribute="top" secondItem="wy7-nq-jZn" secondAttribute="bottom" constant="24" id="4bO-TZ-eft"/>
+                            <constraint firstItem="Ffz-kF-rty" firstAttribute="top" secondItem="J6T-gI-lyB" secondAttribute="bottom" constant="16" id="2bg-a0-0lI"/>
+                            <constraint firstItem="WeT-Vo-ifZ" firstAttribute="top" secondItem="wy7-nq-jZn" secondAttribute="bottom" constant="16" id="4bO-TZ-eft"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TPa-es-qu8" secondAttribute="trailing" constant="6" id="7g7-LG-pDc"/>
+                            <constraint firstItem="TPa-es-qu8" firstAttribute="top" secondItem="Ffz-kF-rty" secondAttribute="bottom" id="BiY-jB-2N9"/>
                             <constraint firstItem="H2Z-bf-jxm" firstAttribute="width" secondItem="Qxc-ZO-sdU" secondAttribute="width" id="Civ-T4-bX8"/>
                             <constraint firstItem="Vzm-OE-L2C" firstAttribute="leading" secondItem="Qxc-ZO-sdU" secondAttribute="leadingMargin" constant="-6" id="Gt7-FD-lKM"/>
                             <constraint firstAttribute="leadingMargin" secondItem="WeT-Vo-ifZ" secondAttribute="leading" id="IfD-41-iXS"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5bA-iK-9Qq" secondAttribute="trailing" id="KPZ-rr-6mr"/>
-                            <constraint firstItem="Vzm-OE-L2C" firstAttribute="top" secondItem="5bA-iK-9Qq" secondAttribute="bottom" constant="24" id="QTT-vG-jAk"/>
+                            <constraint firstItem="Vzm-OE-L2C" firstAttribute="top" secondItem="5bA-iK-9Qq" secondAttribute="bottom" constant="16" id="QTT-vG-jAk"/>
                             <constraint firstItem="J6T-gI-lyB" firstAttribute="leading" secondItem="Vzm-OE-L2C" secondAttribute="leading" id="RNY-1Q-WO0"/>
                             <constraint firstItem="DYI-XV-hEf" firstAttribute="top" secondItem="H2Z-bf-jxm" secondAttribute="bottom" constant="16" id="YpT-4U-gKB"/>
+                            <constraint firstItem="Ffz-kF-rty" firstAttribute="leading" secondItem="Qxc-ZO-sdU" secondAttribute="leadingMargin" constant="-6" id="Z2r-ss-Aju"/>
                             <constraint firstItem="5bA-iK-9Qq" firstAttribute="leading" secondItem="WeT-Vo-ifZ" secondAttribute="leading" id="adz-i9-b1u"/>
-                            <constraint firstItem="J6T-gI-lyB" firstAttribute="top" secondItem="Vzm-OE-L2C" secondAttribute="bottom" constant="8" id="ehq-0z-lIh"/>
+                            <constraint firstItem="J6T-gI-lyB" firstAttribute="top" secondItem="Vzm-OE-L2C" secondAttribute="bottom" id="ehq-0z-lIh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="J6T-gI-lyB" secondAttribute="trailing" constant="6" id="fVi-A6-uBY"/>
                             <constraint firstItem="wy7-nq-jZn" firstAttribute="leading" secondItem="DYI-XV-hEf" secondAttribute="leading" id="iaS-P2-fw2"/>
                             <constraint firstAttribute="leadingMargin" secondItem="DYI-XV-hEf" secondAttribute="leading" id="juM-jz-pnx"/>
                             <constraint firstItem="H2Z-bf-jxm" firstAttribute="centerX" secondItem="Qxc-ZO-sdU" secondAttribute="centerX" id="q42-64-S7o"/>
-                            <constraint firstItem="wy7-nq-jZn" firstAttribute="top" secondItem="DYI-XV-hEf" secondAttribute="bottom" constant="8" id="us9-eZ-4OF"/>
-                            <constraint firstItem="5bA-iK-9Qq" firstAttribute="top" secondItem="WeT-Vo-ifZ" secondAttribute="bottom" constant="8" id="vyK-oA-37w"/>
+                            <constraint firstItem="wy7-nq-jZn" firstAttribute="top" secondItem="DYI-XV-hEf" secondAttribute="bottom" id="us9-eZ-4OF"/>
+                            <constraint firstItem="5bA-iK-9Qq" firstAttribute="top" secondItem="WeT-Vo-ifZ" secondAttribute="bottom" id="vyK-oA-37w"/>
+                            <constraint firstItem="TPa-es-qu8" firstAttribute="leading" secondItem="Ffz-kF-rty" secondAttribute="leading" id="ww0-Ps-qxp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="wy7-nq-jZn" secondAttribute="trailing" id="yvF-Zj-3Et"/>
                         </constraints>
                     </view>

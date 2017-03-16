@@ -37,6 +37,12 @@ class SupportViewController: UIViewController {
         let url = URL(string :"https://www.sfu.ca/students/academicadvising.html")
         UIApplication.shared.open(url!)
     }
+    
+    @IBAction func sfssPressed(_ sender: AnyObject) {
+        let url = URL(string :"http://www.sfss.ca/")
+        UIApplication.shared.open(url!)
+    }
+    
     /*
     // MARK: - Navigation
 
