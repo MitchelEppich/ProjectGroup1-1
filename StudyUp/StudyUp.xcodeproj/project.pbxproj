@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		476249CF779CF6C21E00C87D /* Pods_StudyUpUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA92F567B6262D2296C9DEF6 /* Pods_StudyUpUITests.framework */; };
+		589017091E7B2E2800C65610 /* SupportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589017081E7B2E2800C65610 /* SupportViewController.swift */; };
 		6505DC561E75C81F0063EB58 /* VerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6505DC551E75C81F0063EB58 /* VerifyViewController.swift */; };
 		6505DC581E7687570063EB58 /* GroupSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6505DC571E7687570063EB58 /* GroupSearchViewController.swift */; };
 		6505DC5A1E76953F0063EB58 /* GroupPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6505DC591E76953F0063EB58 /* GroupPopoverViewController.swift */; };
@@ -69,6 +70,7 @@
 
 /* Begin PBXFileReference section */
 		38F8493B351F439C30BABC32 /* Pods-StudyUpTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StudyUpTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StudyUpTests/Pods-StudyUpTests.debug.xcconfig"; sourceTree = "<group>"; };
+		589017081E7B2E2800C65610 /* SupportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportViewController.swift; sourceTree = "<group>"; };
 		6505DC551E75C81F0063EB58 /* VerifyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyViewController.swift; sourceTree = "<group>"; };
 		6505DC571E7687570063EB58 /* GroupSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupSearchViewController.swift; sourceTree = "<group>"; };
 		6505DC591E76953F0063EB58 /* GroupPopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupPopoverViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +165,14 @@
 				FAB7930E110CFDF516FA5A47 /* Pods-StudyUpUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		589017051E7B295100C65610 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				589017081E7B2E2800C65610 /* SupportViewController.swift */,
+			);
+			name = Support;
 			sourceTree = "<group>";
 		};
 		650BE4161E689456001CC0D8 = {
@@ -267,6 +277,7 @@
 				65BFBA201E6B32D2001630B6 /* Profile */,
 				65BFBA1F1E6B32CB001630B6 /* Group */,
 				65BFBA1E1E6B32C1001630B6 /* Homepage */,
+				589017051E7B295100C65610 /* Support */,
 				65BFBA1D1E6B32B9001630B6 /* Map */,
 			);
 			name = ViewControllers;
@@ -643,6 +654,7 @@
 			files = (
 				65BFBA351E6C0248001630B6 /* StudyGroup.swift in Sources */,
 				650BE42B1E689456001CC0D8 /* StudyUp.xcdatamodeld in Sources */,
+				589017091E7B2E2800C65610 /* SupportViewController.swift in Sources */,
 				6565DFF31E6ACCAD002683F3 /* GFBase32Utils.m in Sources */,
 				6565DFF91E6ACCAD002683F3 /* GFGeoHashQuery.m in Sources */,
 				6565DFF01E6ACCAD002683F3 /* GeoFire.m in Sources */,
