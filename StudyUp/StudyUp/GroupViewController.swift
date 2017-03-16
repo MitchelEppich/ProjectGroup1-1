@@ -19,6 +19,7 @@ class GroupViewController: UIViewController, MKMapViewDelegate, CLLocationManage
     
     
     @IBOutlet var groupNameTF: UITextField!
+
     @IBOutlet var groupTypePicker: UIPickerView!
     @IBOutlet var hiddenToggle: UISwitch!
     @IBOutlet var adminProtToggle: UISwitch!
