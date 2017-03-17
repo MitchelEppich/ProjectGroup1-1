@@ -74,7 +74,7 @@ class ProfileViewController: UIViewController,UINavigationControllerDelegate, UI
         FIRDatabase.database().reference().child("users/\((FIRAuth.auth()?.currentUser?.uid)!)").observeSingleEvent(of: .value, with: { (snapshot) in
             if let user = snapshot.value as? [String: AnyObject] {
                 self.user.name = user["name"] as? String
-                self.user.bio = user["bio"] as? String
+                self.user.bio = (user["bio"] as? String)!
                 self.user.email = user["email"] as? String
             }
             self.setUserInformation()

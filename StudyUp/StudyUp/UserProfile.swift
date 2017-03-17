@@ -19,9 +19,9 @@ class UserProfile : NSObject {
     
     var name : String!
     var email : String!
-    var bio : String?
+    var bio : String = "I am yet to personalize my description."
     var major : String?
-    var courses : NSMutableArray?
+    var courses : Dictionary = [String:Int]()
     
     //var deviceID : String! = UIDevice.current.identifierForVendor!.uuidString
     
@@ -29,6 +29,9 @@ class UserProfile : NSObject {
     
     override init() {
         PATH = "users/\((FIRAuth.auth()?.currentUser?.uid))"
+        
+        courses["cmpt"] = 2
+        courses["arch"] = 8
     }
     
     func logout () {
@@ -57,10 +60,13 @@ class UserProfile : NSObject {
     }
     
     func update() {
+        
         let user = ["name" : self.name,
                     "bio" : self.bio,
                     "email" : self.email,
-                    ]
+                    "course" : self.courses
+                    ] as [String : Any]
+        
         let userUpdates = ["users/\((FIRAuth.auth()?.currentUser?.uid)!)" : user]
         ref.updateChildValues(userUpdates)
     }
