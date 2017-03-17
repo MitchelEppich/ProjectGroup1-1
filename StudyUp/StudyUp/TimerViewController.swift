@@ -100,6 +100,7 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         coursePicker.isHidden = true
         smartStudyView.isHidden = false
         smartStudyToggleView.isHidden = false
+        startButton.isEnabled = true
     }
     
     // Main functionality of timer
@@ -239,7 +240,7 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         timerRunning = false
         breakTimer.invalidate()
         breakRunning = false
-        
+        startButton.isEnabled = false
         
         // Timer buttons
         startButton.isHidden = false

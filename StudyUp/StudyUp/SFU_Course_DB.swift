@@ -11,6 +11,7 @@ import Foundation
 
 class SFU_Course_db {
     let course = [
+        "GENERAL",
         "ARCH",
         "BISC",
         "BUEC",
