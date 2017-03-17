@@ -19,7 +19,7 @@ class GroupViewController: UIViewController, MKMapViewDelegate, CLLocationManage
     
     
     @IBOutlet var groupNameTF: UITextField!
-
+    @IBOutlet var groupCoursePicker: UIPickerView!
     @IBOutlet var groupTypePicker: UIPickerView!
     @IBOutlet var hiddenToggle: UISwitch!
     @IBOutlet var adminProtToggle: UISwitch!
@@ -54,6 +54,7 @@ class GroupViewController: UIViewController, MKMapViewDelegate, CLLocationManage
         super.viewDidLoad()
 
         groupTypePicker.delegate = self
+        groupCoursePicker.delegate = self
         
         //Looks for single or multiple taps.
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(GroupViewController.dismissKeyboard))
