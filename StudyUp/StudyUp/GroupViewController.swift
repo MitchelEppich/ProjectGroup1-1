@@ -102,7 +102,12 @@ class GroupViewController: UIViewController, MKMapViewDelegate, CLLocationManage
     
     // Returns the number of cells in the picker
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return StudyGroup().pickerDataArray.count
+        if pickerView == groupTypePicker{
+            return StudyGroup().pickerDataArray.count
+        }
+        else{
+            return courses.count
+        }
     }
     
     //Calls this function when the tap is recognized.
