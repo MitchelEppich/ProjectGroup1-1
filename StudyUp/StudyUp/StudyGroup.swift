@@ -45,6 +45,7 @@ class StudyGroup: NSObject {
     var course : String?
     var type : String = group_type.social.rawValue
     var privacy : String = group_privacy.open.rawValue
+    var desc : String? = "This group does not have a description."
     var members : [Int]?
     
     var coordinate : CLLocationCoordinate2D?
@@ -131,6 +132,53 @@ class StudyGroup: NSObject {
 //        title = self.name
 //        return self as! MKAnnotation
 //    }
+    
+    func save() {
+        let ref = FIRDatabase.database().reference()
+        
+        let dictionary = [
+            "id" : id,
+            "name" : name,
+            "desc" : desc ?? "No description for this group.",
+            "course" : course ?? "No Course",
+            "type" : type,
+            "privacy" : privacy,
+            "loc" : [
+                "coord" : [
+                    "lon" : location.coordinate.longitude,
+                    "lat" : location.coordinate.latitude
+                ]
+            ]
+        ] as [String : Any]
+        
+        let path = "groups/\(privacy)/\(course ?? "No Course")/\(type)/\(name)"
+        let en_ref = ref.child("groups/\(privacy)/\(course ?? "No Course")/\(type)/\(name)")
+        
+        en_ref.setValue(dictionary)
+        
+        ref.child("group_ref").setValue([
+            id : path
+            ])
+    }
+    
+    func load(id : String) {
+        let ref = FIRDatabase.database().reference()
+        let path = ref.child("group_ref/\(id)").observeSingleEvent(of: .value, with: { (snapshot) in
+            
+        })
+        
+        ref.observe(.childAdded, with: { (snapshot) in
+            if let dictionary = snapshot.value as? [String : Any] {
+                self.setValuesForKeys(dictionary)
+                let loc = dictionary["loc/coord"] as AnyObject
+                self.location = CLLocation(latitude: (loc["lat"] as? CLLocationDegrees)!, longitude: (loc["lon"] as? CLLocationDegrees)!)
+                print(dictionary)
+            }
+            
+            print(self.name)
+            print(self.location)
+        })
+    }
 }
 
 class MapAnnotation : NSObject, MKAnnotation {
