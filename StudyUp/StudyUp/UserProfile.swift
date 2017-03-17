@@ -19,7 +19,7 @@ class UserProfile : NSObject {
     
     var name : String!
     var email : String!
-    var bio : String = "I am yet to personalize my description."
+    var bio : String? = "I am yet to personalize my description."
     var major : String?
     var courses : Dictionary = [String:Int]()
     
