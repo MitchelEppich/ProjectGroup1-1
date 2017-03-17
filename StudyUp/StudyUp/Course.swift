@@ -34,7 +34,8 @@ class Course : NSObject {
         self.courseCode = number
         
         self.courseTime = 0
-        self.maxTime = 12*60*60 // 12 hours
+        // Mitchel commented this out as it was throwing and error
+        //self.maxTime = 12*60*60 // 12 hours
     
         
     
