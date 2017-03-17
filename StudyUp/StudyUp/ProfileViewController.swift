@@ -154,7 +154,7 @@ class ProfileViewController: UIViewController,UINavigationControllerDelegate, UI
         
         courseName.text = courseDisplayed!.courseID
         
-        let prograssRatio = Double(courseDisplayed!.courseTime) / Double(courseDisplayed!.suggestedTime)
+        let prograssRatio = Double(courseDisplayed!.courseTime) / Double(courseDisplayed!.maxTime)
         courseProgress.progress = Float(prograssRatio)
         
         

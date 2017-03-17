@@ -14,7 +14,7 @@ class Course : NSObject {
     var courseCode : Int?
     
     var courseTime : TimeInterval! // timeString from TimerViewController
-    var suggestedTime : TimeInterval! // allows a ratio to be created
+    var maxTime : TimeInterval! // allows a ratio to be created
     
     
     func updateProfile(){
@@ -27,11 +27,27 @@ class Course : NSObject {
         
     }
     
-    func getTime( time: TimeInterval){
+    
+    func createProfile(ID: String?, number:Int?){
         
-        // get the time from timer
+        self.courseID = ID
+        self.courseCode = number
+        
+        self.courseTime = 0
+        self.maxTime = 12*60*60 // 12 hours
+    
+        
+    
+    }
+    
+    func addTime( time: TimeInterval){
+        
+        // get the time from timer = self.courseTime
+        self.courseTime = self.courseTime + time
         
     }
+    
+    // func clear time?
     
     
 }
