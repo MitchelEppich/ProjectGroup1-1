@@ -17,6 +17,7 @@ class GroupViewController: UIViewController, MKMapViewDelegate, CLLocationManage
     
     var firebase = Firebase()
     
+    let courses = SFU_Course_db().course
     
     @IBOutlet var groupNameTF: UITextField!
     @IBOutlet var groupCoursePicker: UIPickerView!
@@ -77,15 +78,21 @@ class GroupViewController: UIViewController, MKMapViewDelegate, CLLocationManage
     
     // Populates the picker view with the data in our StudyGroup model Object
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        group.type = StudyGroup().pickerDataArray[row]
-        if group.type == StudyGroup.group_type.none.rawValue {
-            createGroupBtn.isEnabled = false
-            createGroupBtn.alpha = 0.5
-        } else {
-            createGroupBtn.isEnabled = true
-            createGroupBtn.alpha = 1
+        if pickerView == groupTypePicker {
+            group.type = StudyGroup().pickerDataArray[row]
+            if group.type == StudyGroup.group_type.none.rawValue {
+                createGroupBtn.isEnabled = false
+                createGroupBtn.alpha = 0.5
+            } else {
+                createGroupBtn.isEnabled = true
+                createGroupBtn.alpha = 1
+            }
+            return group.type
         }
-        return group.type
+        else {
+            return courses[row]
+        }
+        
     }
     
     // Returns the number of picker components
