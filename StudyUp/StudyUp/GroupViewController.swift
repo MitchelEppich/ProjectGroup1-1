@@ -74,7 +74,7 @@ class GroupViewController: UIViewController, MKMapViewDelegate, CLLocationManage
         
         
         self.group.save()
-        //self.group.load(id: group.id)
+        self.group.retreive(id: group.id)
     }
     
     // Populates the picker view with the data in our StudyGroup model Object

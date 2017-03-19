@@ -47,6 +47,7 @@ class StudyGroup: NSObject {
     var privacy : String = group_privacy.open.rawValue
     var desc : String? = "This group does not have a description."
     var members : [Int]?
+    var loc : AnyObject?
     
     var coordinate : CLLocationCoordinate2D?
     var title : String?
@@ -135,7 +136,6 @@ class StudyGroup: NSObject {
     
     func save() {
         let ref = FIRDatabase.database().reference()
-        
         let dictionary = [
             "id" : id,
             "name" : name,
@@ -150,33 +150,56 @@ class StudyGroup: NSObject {
                 ]
             ]
         ] as [String : Any]
-        
+
         let path = "groups/\(privacy)/\(course ?? "No Course")/\(type)/\(name)"
         let en_ref = ref.child("groups/\(privacy)/\(course ?? "No Course")/\(type)/\(name)")
-        
         en_ref.setValue(dictionary)
-        
-        ref.child("group_ref").setValue([
+        ref.child("group_ref").updateChildValues([
             id : path
             ])
     }
     
-    func load(id : String) {
+    func load(info : [String : Any]) {
+        self.setValuesForKeys(info)
+        loc = loc?["coord"] as AnyObject?
+        self.location = CLLocation(latitude: (loc?["lat"] as? CLLocationDegrees)!, longitude: (loc?["lon"] as? CLLocationDegrees)!)
+    }
+    
+    func retreive(id : String) {
         let ref = FIRDatabase.database().reference()
-        let path = ref.child("group_ref/\(id)").observeSingleEvent(of: .value, with: { (snapshot) in
-            
-        })
-        
-        ref.observe(.childAdded, with: { (snapshot) in
+        // Acquire path to the group
+        _ = ref.child("group_ref").observeSingleEvent(of: .value, with: { (snapshot) in
             if let dictionary = snapshot.value as? [String : Any] {
-                self.setValuesForKeys(dictionary)
-                let loc = dictionary["loc/coord"] as AnyObject
-                self.location = CLLocation(latitude: (loc["lat"] as? CLLocationDegrees)!, longitude: (loc["lon"] as? CLLocationDegrees)!)
-                print(dictionary)
+                self.PATH = dictionary["\(id)"] as! String!
+                // Acquire group information
+                ref.child("\(self.PATH)").observeSingleEvent(of: .value, with: { (snapshot) in
+                    if let dictionary = snapshot.value as? [String : Any] {
+                        self.load(info : dictionary)
+                    }
+                })
             }
-            
-            print(self.name)
-            print(self.location)
+        })
+    }
+    
+    func retreiveAll(mapView : MKMapView) {
+        let ref = FIRDatabase.database().reference()
+        _ = ref.child("groups").observeSingleEvent(of: .value, with: { (snapshot) in
+            if let dictionary = snapshot.value as? [String : [String : [String : [String : Any]]]] {
+                for (privacy, courses) in dictionary { // Loop through privacy : courses
+                    if privacy == "closed" { continue }
+                    for (_, types) in courses {// Loop through course : types
+                        for (_, groups) in types {// Loop through type : groups
+                            for (_, info) in groups { // Loop through group : info
+                                let group = StudyGroup()
+                                group.load(info: info as! [String : Any])
+                                
+                                let anno = MapAnnotation(group: group)
+                                mapView.addAnnotation(anno)
+                            }
+                        }
+                    }
+                }
+            }
         })
     }
 }

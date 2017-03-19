@@ -132,8 +132,9 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         let sg = StudyGroup()
         
         sg.delegate = self
-        
-        sg.retrieveAllStudyGroups(mapView: self.mapView)
+        print("YESSSSSSS")
+        sg.retreiveAll(mapView: self.mapView)
+        //sg.retrieveAllStudyGroups(mapView: self.mapView)
     }
     
     func retreiveStudyGroups(group_list: AnyObject) {
